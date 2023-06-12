@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Bootstrap, jQuery, PopperJS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+        <!-- External scripts -->
+        <script src="parser.js" defer></script>
+    </head>
+
+    <body>
+        <div class="container py-5">
+            <textarea id="response" class="form-control" placeholder="Response HTML from Timetable" style="min-height: 7rem"></textarea>
+            <button class="btn btn-success mt-2" onclick="parse()">Parse</button>
+        </div>
+        
+        <div id="junk" style="display: none"></div>
+    </body>
+</html>

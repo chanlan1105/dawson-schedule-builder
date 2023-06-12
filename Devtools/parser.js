@@ -1,0 +1,57 @@
+function parse() {
+
+    $("#junk").html($("#response").val());
+
+    var courses = {};
+
+    $(".course-wrap").each(function() {
+        const $course = $(this);
+
+        const courseNum = $course.find(".cnumber")[0].innerText;
+        const courseName = $course.find(".ctitle")[0].innerText;
+        
+        let sections = [];
+
+        $course.find(".section-details").each(function() {
+            const $section = $(this);
+
+            const _text = $section.html().replace(/[\t|\n|\r]+/g, "");
+            const ID = _text.match(/(?<=<label class="col-md-2">Section<\/label><div class="col-md-10"><strong>)[0-9]{5}(?=<\/strong><\/div>)/)?.[0];
+            const title = _text.match(/(?<=<label class="col-md-2">Section Title<\/label><div class="col-md-10">).+?(?=<\/div>)/)?.[0];
+            const teacher = _text.match(/(?<=<label class="col-md-2">Teachers?<\/label><div class="col-md-10">).+?(?=<\/div>)/)?.[0];
+            let schedule = [];
+            const intensive = /(?<=<label class="col-md-2">Section Title<\/label><div class="col-md-10">).+\((intensive|pre-semester|compressed)\).+(?=<\/div>)/i.test(_text) ? true : undefined;
+
+            $section.find(".schedule-details tr").each(function() {
+                const $row = $(this);
+
+                const day = ({monday: "M", tuesday: "T", wednesday: "W", thursday: "R", friday: "F"})[$row.find("[data-label=\"Day\"]")[0].innerText.toLowerCase()];
+                const [startTime, endTime] = $row.find("[data-label=\"Time\"]")[0].innerText.split(" - ").map(t => {
+                    const time = t.substring(0, t.indexOf(" "));
+                    let [hrs, min] = time.split(":");
+
+                    if (t.includes("PM") && hrs != "12") hrs = Number(hrs) + 12;
+
+                    return `${hrs}${min}`;
+                });
+                schedule.push([ day, startTime, endTime ]);
+            });
+
+            // Remove duplicates in Schedule
+            schedule = schedule.map(JSON.stringify).filter((e,i,a) => i === a.indexOf(e)).map(JSON.parse);
+
+            sections.push({
+                ID,
+                title,
+                teacher,
+                schedule,
+                intensive
+            });
+        });
+
+        courses[courseNum] = { courseName, sections }; 
+    });
+
+    console.log(courses);
+
+}

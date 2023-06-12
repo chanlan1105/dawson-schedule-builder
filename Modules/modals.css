@@ -1,0 +1,6 @@
+.alert-modal {
+	z-index: 1100;
+}
+.alert-modal .modal-body {
+	box-shadow: 2px 2px 5px rgba(108, 117, 125, 0.8);
+}

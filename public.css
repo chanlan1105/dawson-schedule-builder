@@ -1,0 +1,337 @@
+html {
+    --lightgray: rgb(200, 200, 200);
+}
+
+icon {
+	font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+
+	vertical-align: sub;
+}
+icon.small, icon[small] {
+	font-size: .9375rem;
+	margin-bottom: -0.125rem;
+}
+icon.large, icon[large] {
+	font-size: 1.6875rem;
+}
+icon.bold, icon[bold] {
+	font-weight: bold;
+}
+icon.xlarge, icon[xlarge] {
+	font-size: 2.0625rem;
+}
+icon.outline, icon[outline], icon.outlined, icon[outlined] {
+    font-family: "Material Icons Outlined";
+}
+
+::-webkit-scrollbar {
+	width: .7rem;
+	height: .7rem;
+}
+::-webkit-scrollbar-thumb {
+	background: rgba(100, 100, 100, 0.6);
+	border-radius: .8rem;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: rgba(100, 100, 100, 1);
+}
+
+#navbar {
+    padding: 0.7rem 2rem;
+    box-shadow: 0px -0.125rem 0.3125rem 0.3125rem rgba(108, 117, 125, 0.8);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+#navbar .navbar-brand {
+    flex-grow: 1;
+}
+.nav-icon {
+	font-size: 1.5em;
+	position: relative;
+	top: .1rem;
+	margin-right: .3rem;
+}
+.nav-link {
+	cursor: pointer;
+}
+
+.popover {
+    box-shadow: .125rem .125rem .3rem rgba(108, 117, 125, 0.8);
+}
+
+.dropdown-menu {
+	box-shadow: .125rem .125rem .3rem rgba(108, 117, 125, 0.8);
+}
+.dropdown-item {	
+	transition: background-color .15s ease-in-out;
+}
+.dropdown-icon {
+	font-size: 1.25rem;
+	position: relative;
+	top: -.05rem;
+	margin-right: .3rem;
+}
+
+#main-content > div:first-child {
+    padding: 0;
+}
+#main-content > div:first-child > div {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#schedule-container {
+    display: flex;
+    flex-flow: column;
+}
+#schedule-header {
+    display: grid;
+    flex-grow: 1;
+    align-content: center;
+    grid-template-columns: 4rem repeat(5, minmax(0, 1fr));
+
+    height: 2rem;
+}
+#schedule-header > div {
+    flex-grow: 1;
+    text-align: center;
+}
+#schedule-header > div:first-child {
+    flex-grow: .5;
+    max-width: 4rem;
+    min-width: 4rem;
+}
+#schedule-main {
+    display: grid;
+    margin-top: 1rem;
+    grid-template-columns: 4rem repeat(5, minmax(0, 1fr));
+}
+#schedule-main > div {
+    display: grid;
+    grid-auto-rows: 2rem;
+}
+#schedule-main > div:first-child {
+    text-align: center;
+    flex-grow: .5;
+    max-width: 5rem;
+
+    position: relative;
+    top: -.8rem;
+}
+#schedule-main > div:not(:first-child) {
+    flex-grow: 1;
+}
+#schedule-main > div:not(:first-child) > div {
+    border-top: .0625rem solid var(--lightgray);
+    padding: .25rem;
+}
+#schedule-main .hidden {
+    display: none;
+}
+
+#course-teacher {
+    min-height: 6rem;
+    max-height: 10rem;
+    resize: vertical;
+}
+#course-search-best-accordion label {
+    font-size: .9rem;
+}
+#course-search-best-accordion p {
+    font-size: .9rem;
+    margin-bottom: .3rem;
+}
+#course-search-best-accordion input:invalid {
+    border-color: #dc3545;
+    padding-right: calc(1.5em + 0.75rem);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23dc3545' viewBox='-2 -2 7 7'%3e%3cpath stroke='%23dc3545' d='M0 0l3 3m0-3L0 3'/%3e%3ccircle r='.5'/%3e%3ccircle cx='3' r='.5'/%3e%3ccircle cy='3' r='.5'/%3e%3ccircle cx='3' cy='3' r='.5'/%3e%3c/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center right calc(0.375em + 0.1875rem);
+    background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+#course-search-best-accordion input:invalid:focus {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.2rem rgba(220,53,69,.25);
+}
+
+@media (min-width: 992px) {
+    #course-search-best-accordion .row {
+        flex-flow: column;
+    }
+
+    #course-options-container {
+        position: absolute;
+    }
+}
+@media (max-width: 991px) {
+    #course-options-container {
+        margin-bottom: 1rem;
+    }
+    #course-options {
+        display: flex;
+        flex-flow: row;
+        overflow: auto;
+    }
+    #course-options .card {
+        min-width: 15rem;
+    }
+    #course-options .card.intensive {
+        min-width: 30rem;
+    }
+    #course-options .card .card-body {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+    }
+}
+#course-options > div.card p {
+    margin-bottom: .5rem;
+}
+#course-options div.card-body p:not(:last-child) {
+    font-weight: bold;
+}
+#course-options div.card-body p:last-child {
+    font-size: .9em;
+    margin-bottom: 0;
+}
+#course-options > div.card {
+    transition: background-color .25s ease-in-out;
+    margin-bottom: .2rem;
+}
+#course-options > div.card:not(.intensive) {
+    cursor: pointer;
+}
+#course-options > div.card:not(.active):not(.intensive):hover {
+    background-color: rgb(240, 240, 240);
+}
+#course-options .card.active {
+    background-color: rgb(62, 62, 62);
+    cursor: default;
+}
+#course-options .course-confirm-btns {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 75%;
+
+    font-size: .8rem;
+    color: white;
+}
+#course-options .course-confirm-btns .btn-group {
+    width: 100%;
+}
+
+@keyframes flash {
+    0% {
+        opacity: 0.3;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    60% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 0.3;
+    }
+}
+
+.course-bubble {
+    border-radius: .3rem;
+    box-shadow: .1rem .1rem .3rem #0000004a;
+    font-size: .8rem;
+    overflow: hidden;
+    height: 100%;
+    padding: .1rem .4rem;
+}
+.course-bubble.preview {
+    animation: flash 1.5s linear 0s infinite;
+}
+.course-bubble-conflict {
+    border: .125rem dashed rgb(194, 63, 63);
+    background-color: rgb(255, 182, 182);
+    color: rgb(153, 26, 26);
+    font-weight: bold;
+}
+.course-bubble-red {
+    border: .0625rem solid hsl(0, 81%, 36%);
+    background-color: hsl(0, 81%, 46%);
+    color: white;
+}
+.course-bubble-blue {
+    border: .0625rem solid hsl(246, 64%, 41%);
+    background-color: hsl(246, 64%, 50%);
+    color: white;
+}
+.course-bubble-green {
+    border: .0625rem solid hsl(124, 81%, 22%);
+    background-color: hsl(117, 81%, 30%);
+    color: white;
+}
+.course-bubble-orange {
+    border: .0625rem solid hsl(28, 73%, 30%);
+    background-color: hsl(28, 73%, 40%);
+    color: white;
+}
+.course-bubble-purple {
+    border: .0625rem solid hsl(303, 81%, 28%);
+    background-color: hsl(303, 81%, 38%);
+    color: white;
+}
+.course-bubble-teal {
+    border: .0625rem solid hsl(184, 63%, 34%);
+    background-color: hsl(184, 63%, 38%);
+    color: white;
+}
+.course-bubble-yellow {
+    border: .0625rem solid hsl(60, 72%, 44%);
+    background-color: hsl(60, 72%, 54%);
+    color: black;
+}
+.course-bubble-cyan {
+    border: .0625rem solid hsl(220, 51%, 41%);
+    background-color: hsl(220, 51%, 51%);
+    color: white;
+}
+.course-bubble-lime {
+    border: .0625rem solid hsl(79, 88%, 40%);
+    background-color: hsl(79, 88%, 50%);
+    color: black;
+}
+.course-bubble .course-title {
+    font-weight: bold;
+}
+.course-bubble .course-delete {
+    cursor: pointer;
+    float: right;
+
+    position: relative;
+    top: -.2rem;
+    opacity: 0;
+
+    transition: top .25s ease-in-out, opacity .25s ease-in-out;
+
+    font-size: 1rem;
+}
+.course-bubble:hover .course-delete {
+    top: .2rem;
+    opacity: .8;
+}
+.course-bubble .course-delete:hover {
+    font-weight: bold;
+}
