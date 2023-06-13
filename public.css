@@ -142,6 +142,15 @@ icon.outline, icon[outline], icon.outlined, icon[outlined] {
     display: none;
 }
 
+#schedule.export {
+    position: absolute;
+    width: 65rem;
+    max-width: unset;
+}
+#schedule.export .course-bubble {
+    box-shadow: none;
+}
+
 #course-teacher {
     min-height: 6rem;
     max-height: 10rem;

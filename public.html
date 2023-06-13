@@ -19,6 +19,8 @@
 
         <!-- External Scripts -->
         <script src="Data/f2023.js"></script>
+        <script src="Modules/html2canvas.js"></script>
+        <script src="Modules/export.js"></script>
         <script src="Modules/modals.js"></script>
         <script src="Modules/autocomplete.js"></script>
         <script src="main.js" defer></script>
@@ -39,9 +41,17 @@
                         <icon class="nav-icon">menu</icon> Menu
                     </div>
                     <div class="dropdown-menu dropdown-menu-right mr-3">
+                        <div class="dropdown-header">Schedule Tools</div>
+                        <button class="dropdown-item" onclick="clearSchedule()"><icon class="dropdown-icon">delete</icon> Clear Schedule</button>
+                        <button class="dropdown-item" onclick="exportSchedule('img')"><icon class="dropdown-icon">image</icon> Export Schedule as PNG</button>
+                        <button class="dropdown-item" onclick="exportSchedule('pdf')"><icon class="dropdown-icon">picture_as_pdf</icon> Export Schedule as PDF</button>
+                        <button class="dropdown-item" onclick="exportSchedule('pdf')"><icon class="dropdown-icon">print</icon> Print Schedule</button>
+                        
+                        <div class="dropdown-divider"></div>
+
+                        <div class="dropdown-header">Help</div>
                         <button class="dropdown-item" onclick="$('#intro-modal').modal('show')"><icon class="dropdown-icon">info</icon> About</button>
                         <button class="dropdown-item" onclick="startTutorial()"><icon class="dropdown-icon">help</icon> Launch Tutorial</button>
-                        <button class="dropdown-item" onclick="clearSchedule()"><icon class="dropdown-icon">delete</icon> Clear Schedule</button>
                     </div>
                 </li>
             </ul>
@@ -197,7 +207,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-9">
+                <div class="col-lg-9" id="schedule">
 
                     <div id="schedule-container">
 
@@ -215,8 +225,7 @@
                             <div id="t1000"></div><div id="t1030"></div><div id="t1100"></div><div id="t1130"></div><div id="t1200"></div><div id="t1230"></div><div id="t1300"></div><div id="t1330"></div><div id="t1400"></div><div id="t1430"></div><div id="t1500"></div><div id="t1530"></div><div id="t1600"></div><div id="t1630"></div><div id="t1700"></div><div id="t1730"></div><div id="t1800"></div></div><div><div id="w800"></div><div id="w830"></div><div id="w900"></div><div id="w930"></div><div id="w1000"></div><div id="w1030"></div><div id="w1100"></div><div id="w1130"></div><div id="w1200"></div><div id="w1230"></div><div id="w1300"></div><div id="w1330"></div><div id="w1400"></div><div id="w1430"></div><div id="w1500"></div><div id="w1530"></div><div id="w1600"></div><div id="w1630"></div><div id="w1700"></div><div id="w1730"></div><div id="w1800"></div></div><div><div id="r800"></div><div id="r830"></div><div id="r900"></div><div id="r930"></div><div id="r1000"></div><div id="r1030"></div><div id="r1100"></div><div id="r1130"></div><div id="r1200"></div><div id="r1230"></div><div id="r1300"></div><div id="r1330"></div><div id="r1400"></div><div id="r1430"></div><div id="r1500"></div><div id="r1530"></div><div id="r1600"></div><div id="r1630"></div><div id="r1700"></div><div id="r1730"></div><div id="r1800"></div></div><div><div id="f800"></div><div id="f830"></div><div id="f900"></div><div id="f930"></div><div id="f1000"></div><div id="f1030"></div><div id="f1100"></div><div id="f1130"></div><div id="f1200"></div><div id="f1230"></div><div id="f1300"></div><div id="f1330"></div><div id="f1400"></div><div id="f1430"></div><div id="f1500"></div><div id="f1530"></div><div id="f1600"></div><div id="f1630"></div><div id="f1700"></div><div id="f1730"></div><div id="f1800"></div></div>
                         </div>
 
-                        <h4>Intensive Courses</h4>
-
+                        <h4 id="schedule-intensives-header">Intensive Courses</h4>
                         <div id="schedule-intensives">
 
                             

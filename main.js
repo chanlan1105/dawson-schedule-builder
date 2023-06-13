@@ -706,3 +706,22 @@ function confirmAdd($el, courseCode, section) {
 
     // createCourseBubbles(courseCode, section, true);
 }
+
+function exportSchedule(type) {
+    switch (type) {
+        case "img" :
+            confirm("Exclude intensive courses? (Recommended: Yes)").then(res => {
+                if (res) $("#schedule-intensives, #schedule-intensives-header").hide();
+
+                // Prep elements for export to image
+                $("#schedule").addClass("export");
+                saveAsImg($("#schedule")[0]);
+
+                // Return elements to their original state
+                $("#schedule").removeClass("export");
+                $("#schedule-intensives, #schedule-intensives-header").show();
+            });
+            
+            break;
+    }
+}
