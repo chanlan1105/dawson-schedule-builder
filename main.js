@@ -110,7 +110,7 @@ function startUp() {
     });
     $("#navbar-menu").popover({
         title: "Tutorial",
-        content: "If your browser cookies are enabled, your schedule will be saved on this device. You can clear it from this menu.<br><button class='btn btn-link' onclick='tutorial(5)'>Finish</button>",
+        content: "If your browser cookies are enabled, your schedule will be saved on this device. You can clear it from this menu.<br>You can also export or print your schedule.<br><button class='btn btn-link' onclick='tutorial(5)'>Finish</button>",
         html: true,
         sanitize: false,
         trigger: "manual",
@@ -121,6 +121,34 @@ function startUp() {
     // Check if first time user
     if (localStorage.getItem("lucas/schedule/seenIntro") != "true") {
         $("#intro-modal").modal("show");
+    }
+
+    // Check for "new" message
+    if (localStorage.getItem("lucas/schedule/seenExport") != "true" &&
+        localStorage.getItem("lucas/schedule/seenIntro") == "true") {
+        $("#navbar-menu").popover("dispose");
+        $("#navbar-menu").popover({
+            title: "New! Export your schedule",
+            content: "You can now export your schedule as a PNG or print it from this menu",
+            bondary: "viewport",
+            trigger: "manual"
+        });
+        $("#navbar-menu").popover("show");
+
+        setTimeout(() => {
+            $("#navbar-menu").popover("dispose");
+            $("#navbar-menu").popover({
+                title: "Tutorial",
+                content: "If your browser cookies are enabled, your schedule will be saved on this device. You can clear it from this menu.<br>You can also export or print your schedule.<br><button class='btn btn-link' onclick='tutorial(5)'>Finish</button>",
+                html: true,
+                sanitize: false,
+                trigger: "manual",
+                offset: "3",
+                boundary: "viewport"
+            });
+
+            localStorage.setItem("lucas/schedule/seenExport", "true");
+        }, 10000);
     }
 }
 
@@ -726,7 +754,7 @@ function exportSchedule(type) {
         
         case "pdf" :
             return alert("This function is not been fully developed. You can save your schedule as a PDF by selecting the \"Print\" option, and choosing \"Save as PDF\" from the print dialog box.");
-            
+
             // Prep elements for export
             $("#schedule").addClass("export");
             saveAsPDF($("#schedule")[0]);
