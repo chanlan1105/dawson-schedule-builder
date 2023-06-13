@@ -25,16 +25,26 @@ function parse() {
             $section.find(".schedule-details tr").each(function() {
                 const $row = $(this);
 
-                const day = ({monday: "M", tuesday: "T", wednesday: "W", thursday: "R", friday: "F"})[$row.find("[data-label=\"Day\"]")[0].innerText.toLowerCase()];
-                const [startTime, endTime] = $row.find("[data-label=\"Time\"]")[0].innerText.split(" - ").map(t => {
-                    const time = t.substring(0, t.indexOf(" "));
-                    let [hrs, min] = time.split(":");
+                if (!intensive) {
+                    const day = ({monday: "M", tuesday: "T", wednesday: "W", thursday: "R", friday: "F"})[$row.find("[data-label=\"Day\"]")[0].innerText.toLowerCase()];
+                    const [startTime, endTime] = $row.find("[data-label=\"Time\"]")[0].innerText.split(" - ").map(t => {
+                        const time = t.substring(0, t.indexOf(" "));
+                        let [hrs, min] = time.split(":");
 
-                    if (t.includes("PM") && hrs != "12") hrs = Number(hrs) + 12;
+                        if (t.includes("PM") && hrs != "12") hrs = Number(hrs) + 12;
 
-                    return `${hrs}${min}`;
-                });
-                schedule.push([ day, startTime, endTime ]);
+                        return `${hrs}${min}`;
+                    });
+
+                    schedule.push([ day, startTime, endTime ]);
+                }
+                else {
+                    const day = $row.find("[data-label=\"Day\"]")[0].innerText + " " + $row.find("[data-label=\"Start Date\"]")[0].innerText;
+                    const time = $row.find("[data-label=\"Time\"]")[0].innerText;
+                    const room = $row.find("[data-label=\"Room\"]")[0].innerText;
+
+                    schedule.push([ day, time, room ]);
+                }
             });
 
             // Remove duplicates in Schedule

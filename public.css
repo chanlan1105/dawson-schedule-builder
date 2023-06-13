@@ -211,10 +211,10 @@ icon.outline, icon[outline], icon.outlined, icon[outlined] {
     transition: background-color .25s ease-in-out;
     margin-bottom: .2rem;
 }
-#course-options > div.card:not(.intensive) {
+#course-options > div.card {
     cursor: pointer;
 }
-#course-options > div.card:not(.active):not(.intensive):hover {
+#course-options > div.card:not(.active):hover {
     background-color: rgb(240, 240, 240);
 }
 #course-options .card.active {
@@ -334,4 +334,26 @@ icon.outline, icon[outline], icon.outlined, icon[outlined] {
 }
 .course-bubble .course-delete:hover {
     font-weight: bold;
+}
+
+.intensive-section {
+    display: grid;
+    margin-bottom: 1rem;
+    grid-template-columns: 1fr minmax(max-content, 2fr);
+}
+.intensive-section .course-title {
+    font-weight: bold;
+    margin-bottom: .2rem;
+}
+.intensive-section .course-code, .intensive-section .course-teacher {
+    font-size: .85rem;
+}
+.intensive-times {
+    font-size: .85rem;
+}
+.intensive-section .course-title {
+    cursor: pointer;
+}
+.intensive-section .course-title:hover {
+    text-decoration: line-through;
 }
