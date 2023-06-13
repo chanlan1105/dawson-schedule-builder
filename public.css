@@ -36,6 +36,13 @@ icon.outline, icon[outline], icon.outlined, icon[outlined] {
     font-family: "Material Icons Outlined";
 }
 
+button:disabled {
+    cursor: not-allowed;
+}
+button.dropdown-item:disabled {
+    pointer-events: all;
+}
+
 ::-webkit-scrollbar {
 	width: .7rem;
 	height: .7rem;

@@ -723,5 +723,25 @@ function exportSchedule(type) {
             });
             
             break;
+        
+        case "pdf" :
+            return alert("This function is not been fully developed. You can save your schedule as a PDF by selecting the \"Print\" option, and choosing \"Save as PDF\" from the print dialog box.");
+            
+            // Prep elements for export
+            $("#schedule").addClass("export");
+            saveAsPDF($("#schedule")[0]);
+
+            // Return elements to their original state
+            $("#schedule").removeClass("export");
+            break;
+
+        case "print" :
+            // Prep elements for export
+            $("#schedule").addClass("export");
+            print($("#schedule")[0]);
+
+            // Return elements to their original state
+            $("#schedule").removeClass("export");
+            break;
     }
 }

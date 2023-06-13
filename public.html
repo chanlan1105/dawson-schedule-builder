@@ -20,6 +20,7 @@
         <!-- External Scripts -->
         <script src="Data/f2023.js"></script>
         <script src="Modules/html2canvas.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
         <script src="Modules/export.js"></script>
         <script src="Modules/modals.js"></script>
         <script src="Modules/autocomplete.js"></script>
@@ -44,8 +45,8 @@
                         <div class="dropdown-header">Schedule Tools</div>
                         <button class="dropdown-item" onclick="clearSchedule()"><icon class="dropdown-icon">delete</icon> Clear Schedule</button>
                         <button class="dropdown-item" onclick="exportSchedule('img')"><icon class="dropdown-icon">image</icon> Export Schedule as PNG</button>
-                        <button class="dropdown-item" onclick="exportSchedule('pdf')"><icon class="dropdown-icon">picture_as_pdf</icon> Export Schedule as PDF</button>
-                        <button class="dropdown-item" onclick="exportSchedule('pdf')"><icon class="dropdown-icon">print</icon> Print Schedule</button>
+                        <button class="dropdown-item" onclick="exportSchedule('pdf')" disabled><icon class="dropdown-icon">picture_as_pdf</icon> Export Schedule as PDF</button>
+                        <button class="dropdown-item" onclick="exportSchedule('print')"><icon class="dropdown-icon">print</icon> Print Schedule</button>
                         
                         <div class="dropdown-divider"></div>
 
