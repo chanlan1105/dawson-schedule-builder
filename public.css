@@ -251,6 +251,10 @@ button.dropdown-item:disabled {
 #course-options .course-confirm-btns .btn-group {
     width: 100%;
 }
+#course-complementary-warning {
+    display: none;
+    font-size: .8rem;
+}
 
 @keyframes flash {
     0% {

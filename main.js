@@ -1,6 +1,7 @@
-﻿const parsedCourseNames = Object.entries(courses).map(c => c[0] + " " + c[1].courseName);
+﻿const parsedCourseNames = Object.entries(courses).map(c => c[0] + " " + c[1].courseName).concat(["Complementary Courses"]);
 const colours = ["red", "blue", "green", "orange", "purple", "teal", "yellow", "cyan", "lime"];
 var currentColour = 0;
+const complementaryRegex = /[A-Z0-9]{3}-B[XW][ACLMPSTX]-(?:03|DW)/;
 
 var courseSchedule;
 const courseSchedule_key = "lucas/courseSchedule";
@@ -88,7 +89,7 @@ function startUp() {
     $("#course, #course-search-day, #course-options, #navbar-menu").addClass("tutorial");
     $("#course").popover({
         title: "Tutorial",
-        content: "Start by typing the name of a course or its code. Then select your course from the dropdown menu.",
+        content: "Start by typing the name of a course or its code. Then select your course from the dropdown menu. Tip: Searching for a complementary course? Type \"Complementary\".",
         trigger: "manual",
         offset: "3",
         boundary: "viewport"
@@ -191,13 +192,13 @@ function startTutorial() {
     tutorial();
 }
 
-function createCourseOptionTiles(courseCode, options) {
+function createCourseOptionTiles(courseCode, options, complementary = false) {
     // Creates the clickable options upon searching for a course
 
     const $card = $("<div></div>").addClass("card");
     const $cardBody = $("<div></div>").addClass("card-body");
 
-    $("#course-options").html("");
+    if (!complementary) $("#course-options").html("");
 
     // Create one tile per course option
     for (let i in options) {
@@ -206,8 +207,8 @@ function createCourseOptionTiles(courseCode, options) {
         const $title = $("<p></p>");
 
         // Populate tile with appropriate information
-        $title.text(options[i].title ?? "");
-        $info.html(`Teacher: ${options[i].teacher}<br>Section: ${options[i].ID}`);
+        $title.text(options[i].title ?? courses[courseCode].courseName);
+        $info.html(`Teacher: ${options[i].teacher}<br>${complementary ? `${courseCode} sect. ${options[i].ID}` : `Section: ${options[i].ID}`}`);
 
         if (options[i].intensive) {
             $times.text("This is an intensive, pre-semester, or compressed course. You can find the details of this course as well as Dawson's Intensive and Compressed Course Policy in the Timetable and Registration Guide.");
@@ -220,7 +221,7 @@ function createCourseOptionTiles(courseCode, options) {
         
         // Onclick handler: Allow the user to add the course to their schedule, if applicable
         const _$cardBody = $cardBody.clone();
-        options[i].title && _$cardBody.append($title);
+        (options[i].title || complementary) && _$cardBody.append($title);
         _$cardBody.append($info, $times);
 
         const _$card = $card.clone();
@@ -268,7 +269,7 @@ function searchTeachers(courseCode, teachers) {
     const options = courses[courseCode].sections.filter(s => teachers.includes(s.teacher));
     createCourseOptionTiles(courseCode, options);
 }
-function searchDay(courseCode, days, strict) {
+function searchDay(courseCode, days, strict, complementary = false) {
     const intensive = courses[courseCode].sections.filter(s => s.intensive);
     const options = courses[courseCode].sections.filter(s => !s.intensive).filter(s => {
         // Find class times that match specified days
@@ -277,11 +278,11 @@ function searchDay(courseCode, days, strict) {
         if (strict && matchedSchedule.length == s.schedule.length || !strict && matchedSchedule.length) return true;
         else return false;
     });
-    createCourseOptionTiles(courseCode, intensive.concat(options));
+    createCourseOptionTiles(courseCode, intensive.concat(options), complementary);
 
     return options.length;
 }
-function searchBest(courseCode, before, after) {
+function searchBest(courseCode, before, after, complementary = false) {
     // Start by eliminating all courses that conflict, without intensives
     let fit = courses[courseCode].sections.filter(s => !s.intensive).filter(s => !checkConflict(s.schedule));
 
@@ -348,13 +349,13 @@ function searchBest(courseCode, before, after) {
     });
 
     const options = courses[courseCode].sections.filter(s => s.intensive).concat(fit);
-    createCourseOptionTiles(courseCode, options);
+    createCourseOptionTiles(courseCode, options, complementary);
 
     return options.length;
 }
-function searchAll(courseCode) {
+function searchAll(courseCode, complementary = false) {
     const options = courses[courseCode].sections;
-    createCourseOptionTiles(courseCode, options);
+    createCourseOptionTiles(courseCode, options, complementary);
 }
 
 autocomplete($("#course"), parsedCourseNames, 3, function() {
@@ -368,13 +369,24 @@ autocomplete($("#course"), parsedCourseNames, 3, function() {
     if (tutorialRunning && tutorialStep == 0) {
         tutorial(1);
     }
+
+    if ($("#course").val() == "Complementary Courses") {
+        $("#course-search-section, #course-search-teacher").prop("disabled", true);
+        $("#course-complementary-warning").show();
+    }
+    else {
+        $("#course-search-section, #course-search-teacher").prop("disabled", false);
+        $("#course-complementary-warning").hide();
+    }
 });
 
 $(".course-search-options button").on("click", function() {
     const courseCode = $("#course").val().match(/([A-Z0-9]{3}-){2}[A-Z0-9]{2}(?= )/)?.[0];
+    const complementary = $("#course").val() == "Complementary Courses";
 
-    if (!courseCode || !(courseCode in courses)) return $("#course-error").show();
+    if (!complementary && (!courseCode || !(courseCode in courses))) return $("#course-error").show();
     else if (courseCode in courseSchedule) return $("#course-duplicate").show();
+
     $("#course-error, #course-duplicate").hide();
 
     if ($(this).hasClass("active")) return;
@@ -425,7 +437,13 @@ $(".course-search-options button").on("click", function() {
 
         case "course-search-all" :
             $("#course-search-accordion .collapse").collapse("hide");
-            searchAll(courseCode);
+
+            if (complementary) {
+                Object.keys(courses).filter(code => complementaryRegex.test(code)).forEach(code => searchAll(code, true));
+            }
+            else {
+                searchAll(courseCode);
+            }
             break;
     }
     
@@ -442,15 +460,20 @@ $("#course-search-day-btn").on("click", function() {
     const strict = $("#course-search-day-strict").is(":checked");
 
     const courseCode = $("#course").val().match(/([A-Z0-9]{3}-){2}[A-Z0-9]{2}(?= )/)?.[0];
+    const complementary = $("#course").val() == "Complementary Courses";
 
-    if (!courseCode || !(courseCode in courses)) return $("#course-error").show();
+    if (!complementary && (!courseCode || !(courseCode in courses))) return $("#course-error").show();
     else if (courseCode in courseSchedule) return $("#course-duplicate").show();
 
     $("#course-error, #course-duplicate").hide();
 
-    const res = searchDay(courseCode, selectedDays, strict);
+    const res = complementary ?
+        Object.keys(courses)
+            .filter(code => complementaryRegex.test(code))
+            .map(code => searchDay(code, selectedDays, strict, true)) :
+        searchDay(courseCode, selectedDays, strict);
 
-    if (!res) $("#course-search-day-empty").show();
+    if (!complementary && !res || complementary && !res.filter(l => l).length) $("#course-search-day-empty").show();
 
     $(this).prop("disabled", false).text("Search");
 });
@@ -470,15 +493,20 @@ $("#course-search-best-btn").on("click", function() {
     ];
 
     const courseCode = $("#course").val().match(/([A-Z0-9]{3}-){2}[A-Z0-9]{2}(?= )/)?.[0];
+    const complementary = $("#course").val() == "Complementary Courses";
 
-    if (!courseCode || !(courseCode in courses)) return $("#course-error").show();
+    if (!complementary && (!courseCode || !(courseCode in courses))) return $("#course-error").show();
     else if (courseCode in courseSchedule) return $("#course-duplicate").show();
 
     $("#course-error, #course-duplicate").hide();
 
-    const res = searchBest(courseCode, before, after);
+    const res = complementary ?
+        Object.keys(courses)
+            .filter(code => complementaryRegex.test(code))
+            .map(code => searchBest(code, before, after, true)) :
+        searchBest(courseCode, before, after);
 
-    if (!res) $("#course-search-best-empty").show();
+    if (!complementary && !res || complementary && !res.filter(l => l).length) $("#course-search-day-empty").show();
 
     $(this).prop("disabled", false).text("Search");
 });
@@ -656,6 +684,8 @@ function cancelPreview() {
     $(`.blocked.preview`).removeClass();
 }
 function addCourse(courseCode, section) {
+    if (courseCode in courseSchedule) return alert("You already have that course in your schedule.");
+
     const res = createCourseBubbles(courseCode, section);
 
     if (!res) return;
