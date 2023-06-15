@@ -1,4 +1,4 @@
-﻿const parsedCourseNames = Object.entries(courses).map(c => c[0] + " " + c[1].courseName).concat(["Complementary Courses"]);
+﻿const parsedCourseNames = Object.entries(courses).map(c => c[0] + " " + c[1].courseName).concat(["Complementary Courses", "ENR-SCI-XX Enriched Science"]);
 const colours = ["red", "blue", "green", "orange", "purple", "teal", "yellow", "cyan", "lime"];
 var currentColour = 0;
 const complementaryRegex = /[A-Z0-9]{3}-B[XW][ACLMPSTX]-(?:03|DW)/;
