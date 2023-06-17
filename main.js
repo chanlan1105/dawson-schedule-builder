@@ -644,7 +644,7 @@ function addIntensive(courseCode, section) {
     // Prep jQuery elements
     const [$intensive, $details, $title, $code, $teacher] = Array(5).fill(null).map(() => $("<div></div>"));
     
-    $intensive.addClass("intensive-section");
+    $intensive.addClass(`intensive-section ${courseCode}`);
     $details.addClass("intensive-details");
     $title.addClass("course-title");
     $code.addClass("course-code");
