@@ -14,6 +14,7 @@ String.prototype.safe = function() {
 
 $("#intro-modal").on("hide.bs.modal", () => {
     localStorage.setItem("lucas/schedule/seenIntro", "true");
+    localStorage.setItem("lucas/schedule/seenExport", "true");
 });
 
 function startUp() {
