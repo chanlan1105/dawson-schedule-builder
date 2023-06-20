@@ -69,6 +69,32 @@ function startUp() {
         ]
     };
 
+    // Initiate datetimepickers
+    $("#course-start-min").datetimepicker({
+        format: "H[:]mm",
+        stepping: 30,
+        defaultDate: moment({ hour: 8 }),
+        minDate: moment({ hour: 0 }),
+        maxDate: moment({ hour: 18 })
+    });
+    $("#course-end-max").datetimepicker({
+        format: "H[:]mm",
+        stepping: 30,
+        defaultDate: moment({ hour: 18 }),
+        minDate: moment({ hour: 8 }),
+        maxDate: moment({ hour: 24 })
+    });
+
+    $("#course-start-min").datetimepicker("date", moment({ hour: 8 }));
+    $("#course-end-max").datetimepicker("date", moment({ hour: 18 }));
+
+    $("#course-start-min").on("change.datetimepicker", e => {
+        $("#course-end-max").datetimepicker("minDate", e.date);
+    });
+    $("#course-end-max").on("change.datetimepicker", e => {
+        $("#course-start-min").datetimepicker("maxDate", e.date);
+    });
+
     // Load schedule from localStorage
     try {
         courseSchedule = JSON.parse(localStorage.getItem(courseSchedule_key) ?? `{}`);
@@ -283,9 +309,30 @@ function searchDay(courseCode, days, strict, complementary = false) {
 
     return options.length;
 }
-function searchBest(courseCode, before, after, complementary = false) {
+function searchBest(courseCode, params, complementary = false) {
+    // Deconstruct params
+    const { before, after, startTime, endTime } = params;
+
     // Start by eliminating all courses that conflict, without intensives
     let fit = courses[courseCode].sections.filter(s => !s.intensive).filter(s => !checkConflict(s.schedule));
+
+    // Filter courses that start at or after allowed start time
+    fit = fit.filter(s => {
+        // Find times in schedule that match condition. If they all match, that section is valid
+        const timesFit = s.schedule.filter(t => Number(t[1]) >= Number(startTime));
+
+        if (timesFit.length == s.schedule.length) return true;
+        else return false;
+    });
+
+    // Filter courses that end at or before allowed end time
+    fit = fit.filter(s => {
+        // Find times in schedule that match condition. If they all match, that section is valid
+        const timesFit = s.schedule.filter(t => Number(t[2]) <= Number(endTime));
+
+        if (timesFit.length == s.schedule.length) return true;
+        else return false;
+    });
 
     // Find courses that match break before condition
     fit = fit.filter(s => {
@@ -366,6 +413,7 @@ autocomplete($("#course"), parsedCourseNames, 3, function() {
     $(".course-search-options button.active").removeClass("active");
     $("#course-search-accordion .collapse.show").collapse("hide");
     $("#course-search-accordion .invalid-feedback").hide();
+    $("#course-search-accordion").removeClass("validated");
 
     if (tutorialRunning && tutorialStep == 0) {
         tutorial(1);
@@ -479,11 +527,18 @@ $("#course-search-day-btn").on("click", function() {
     $(this).prop("disabled", false).text("Search");
 });
 $("#course-search-best-btn").on("click", function() {
-    if ($("#course-search-best-accordion").has("input:invalid").length) return $("#course-search-best-err").show();
+    if ($("#course-search-best-accordion").has("input:invalid").length) {
+        // Check if there are any problems with user inputs,
+        // if so, show error message.
+        $("#course-search-best-err").show();
+        $("#course-search-best-accordion").addClass("validated");
+        return;
+    }
 
     $("#course-search-best-accordion .invalid-feedback").hide();
 
     $(this).prop("disabled", true).html("Searching&hellip;");
+
     const before = [
         $("#course-break-before-min").val(),
         $("#course-break-before-max").val()
@@ -492,6 +547,8 @@ $("#course-search-best-btn").on("click", function() {
         $("#course-break-after-min").val(),
         $("#course-break-after-max").val()
     ];
+    const startTime = $("#course-start-min").datetimepicker("date").format("Hmm");
+    const endTime = $("#course-end-max").datetimepicker("date").format("Hmm");
 
     const courseCode = $("#course").val().match(/([A-Z0-9]{3}-){2}[A-Z0-9]{2}(?= )/)?.[0];
     const complementary = $("#course").val() == "Complementary Courses";
@@ -504,8 +561,8 @@ $("#course-search-best-btn").on("click", function() {
     const res = complementary ?
         Object.keys(courses)
             .filter(code => complementaryRegex.test(code))
-            .map(code => searchBest(code, before, after, true)) :
-        searchBest(courseCode, before, after);
+            .map(code => searchBest(code, { before, after, startTime, endTime }, true)) :
+        searchBest(courseCode, { before, after, startTime, endTime });
 
     if (!complementary && !res || complementary && !res.filter(l => l).length) $("#course-search-day-empty").show();
 

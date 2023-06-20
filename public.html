@@ -8,6 +8,13 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+        <!-- MomentJS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+
+        <!-- Tempus Dominus (datetimepicker) -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/js/tempusdominus-bootstrap-4.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/css/tempusdominus-bootstrap-4.min.css" />
         
         <!-- External Styles -->
         <link rel="stylesheet" type="text/css" href="public.css" />
@@ -16,6 +23,7 @@
 
         <!-- Icons -->
         <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
         <!-- External Scripts -->
         <script src="Data/f2023.js"></script>
@@ -64,6 +72,7 @@
 
                 <div class="col-lg-3 overflow-auto">
 
+                    <!-- Sidebar for course section selection -->
                     <div id="course-options-container">
                         <div class="form-group autocomplete">
                             <label for="course"><big>Select a course:</big> <small style="display:block">Note: Some courses exist for multiple programs, eg. 201-103-DW Calculus I for Social Science and 201-NYA-05 Calculus I for Science. Check your <i>Progression Chart</i> to ensure you are selecting the correct course.</small></label>
@@ -89,6 +98,7 @@
                             <button id="course-search-all" type="button" class="btn btn-outline-primary">Try All</button>
                         </div>
 
+                        <!-- Accordion for additional course search options -->
                         <div id="course-search-accordion" class="mt-2">
                             <div id="course-search-section-accordion" class="collapse" data-parent="#course-search-accordion">
                                 <div class="form-group">
@@ -152,6 +162,7 @@
                                 <p>This option will find the best sections to fit your schedule given the constraints you provide. Note that only sections that fit your current schedule will be proposed.</p>
 
                                 <div class="row">
+                                    <!-- Break before class inputs -->
                                     <div class="col mb-2">
                                         <label>Prefer break before class to be:</label>
 
@@ -174,6 +185,8 @@
                                             </div>
                                         </div>
                                     </div>
+
+                                    <!-- Break after class inputs -->
                                     <div class="col mb-2">
                                         <label>Prefer break after class to be:</label>
 
@@ -198,9 +211,26 @@
                                     </div>
                                 </div>
 
-                                <button type="button" id="course-search-best-btn" class="btn btn-sm btn-success">Search</button>
+                                <!-- Preferred class time input -->
+                                <label>Prefer that classes:</label>
 
-                                <div class="invalid-feedback" id="course-search-best-err">There are one or more errors that must be addressed. Make sure that your minimum and maximum break times are some multiple of 30 minutes and that they are coherent.</div>
+                                <div class="input-group input-group-sm mb-1">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">Start at or after</span>
+                                    </div>
+                                    <input id="course-start-min" type="text" class="form-control datetimepicker-input" data-toggle="datetimepicker" data-target="#course-start-min" value="8:00" required />
+                                </div>
+                                
+                                <div class="input-group input-group-sm mb-1">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">End at or before</span>
+                                    </div>
+                                    <input id="course-end-max" type="text" class="form-control datetimepicker-input" data-toggle="datetimepicker" data-target="#course-end-max" value="18:00" />
+                                </div>
+
+                                <button type="button" id="course-search-best-btn" class="btn btn-sm btn-success mt-2">Search</button>
+
+                                <div class="invalid-feedback" id="course-search-best-err">There are one or more errors that must be addressed. Make sure that your minimum and maximum break times are some multiple of 30 minutes.</div>
                                 <div class="invalid-feedback" id="course-search-best-empty">Sorry, there are no sections of this course which match your selection criteria.</div>
 
                             </div>
@@ -212,6 +242,7 @@
                     </div>
                 </div>
 
+                <!-- Main scheduled display -->
                 <div class="col-lg-9" id="schedule">
 
                     <div id="schedule-container">
