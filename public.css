@@ -248,11 +248,13 @@ main.export #course-options-sidebar {
     padding-right: .4rem;
     line-height: 1.35rem;
 }
-#course-options div.card-body p:not(:last-child) {
+.course-option-title, .course-option-teacher, .course-option-section {
     font-weight: bold;
 }
+.course-option-note, .course-option-schedule {
+    font-size: .78rem !important;
+}
 #course-options div.card-body p:last-child {
-    font-size: .78rem;
     margin-bottom: 0;
 }
 #course-options > div.card {

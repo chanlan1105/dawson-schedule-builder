@@ -19,9 +19,11 @@ function parse() {
             const ID = _text.match(/(?<=<label class="col-md-2">Section<\/label><div class="col-md-10"><strong>)[0-9]{5}(?=<\/strong><\/div>)/)?.[0];
             const title = _text.match(/(?<=<label class="col-md-2">Section Title<\/label><div class="col-md-10">).+?(?=<\/div>)/)?.[0];
             const teacher = _text.match(/(?<=<label class="col-md-2">Teachers?<\/label><div class="col-md-10">).+?(?=<\/div>)/)?.[0];
-            let schedule = [];
+            const note = _text.match(/(?<=<label class="col-md-2">Comment<\/label><div class="col-md-10">).+?(?=<\/div>)/)?.[0];
+
             const intensive = /(?<=<label class="col-md-2">Section Title<\/label><div class="col-md-10">).+\((intensive|pre-semester|compressed)\).+(?=<\/div>)/i.test(_text) ? true : undefined;
 
+            let schedule = [];
             $section.find(".schedule-details tr").each(function() {
                 const $row = $(this);
 
@@ -55,6 +57,7 @@ function parse() {
                 title,
                 teacher,
                 schedule,
+                note,
                 intensive
             });
         });

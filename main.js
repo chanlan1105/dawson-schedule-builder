@@ -64,7 +64,8 @@ function startUp() {
                         "1430",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "Select this course to add the Enriched Science seminar and activity periods to your mock schedule."
             }
         ]
     };
@@ -229,15 +230,17 @@ function createCourseOptionTiles(courseCode, options, complementary = false) {
 
     // Create one tile per course option
     for (let i in options) {
-        const $teacher = $("<p></p>");
-        const $section = $("<p></p>");
-        const $times = $("<p></p>");
-        const $title = $("<p></p>");
+        const $teacher = $("<p></p>").addClass("course-option-teacher");
+        const $section = $("<p></p>").addClass("course-option-section");
+        const $times = $("<p></p>").addClass("course-option-schedule");
+        const $title = $("<p></p>").addClass("course-option-title");
+        const $note = $("<p></p>").addClass("course-option-note");
 
         // Populate tile with appropriate information
         $title.text(options[i].title ?? courses[courseCode].courseName);
         $teacher.text(`Teacher: ${options[i].teacher}`);
         $section.html(complementary ? `${courseCode} sect. ${options[i].ID}` : `Section: ${options[i].ID}`);
+        $note.html(options[i].note);
 
         if (options[i].intensive) {
             $times.text("This is an intensive, pre-semester, or compressed course. You can find the details of this course as well as Dawson's Intensive and Compressed Course Policy in the Timetable and Registration Guide.");
@@ -248,10 +251,11 @@ function createCourseOptionTiles(courseCode, options, complementary = false) {
             ));
         }
         
-        // Onclick handler: Allow the user to add the course to their schedule, if applicable
+        // Create an instance of a card and append elements
         const _$cardBody = $cardBody.clone();
         (options[i].title || complementary) && _$cardBody.append("<icon>article</icon>", $title);
         _$cardBody.append("<icon>person_outline</icon>", $teacher, "<icon>tag</icon>", $section, "<icon>schedule</icon>", $times);
+        options[i].note && _$cardBody.append("<icon>notes</icon>", $note);
 
         const _$card = $card.clone();
         _$card.append(_$cardBody);
@@ -259,6 +263,7 @@ function createCourseOptionTiles(courseCode, options, complementary = false) {
             _$card.addClass("intensive");
         }
 
+        // Onclick handler: Allow the user to add the course to their schedule, if applicable
         _$card.on("click", function() {
             if ($(this).hasClass("active")) return;
             confirmAdd($(this), courseCode, +options[i].ID);

@@ -412,6 +412,7 @@
         "sections": [
             {
                 "ID": "00001",
+                "title": "Race, Ethnicity and Migration",
                 "teacher": "Cornelia Howell",
                 "schedule": [
                     [
@@ -440,7 +441,8 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Child Studies"
             },
             {
                 "ID": "00003",
@@ -520,7 +522,8 @@
                         "1600",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             }
         ]
     },
@@ -621,10 +624,12 @@
                         "1600",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             },
             {
                 "ID": "12001",
+                "title": "Race, Ethnicity and Migration",
                 "teacher": "Cornelia Howell",
                 "schedule": [
                     [
@@ -637,7 +642,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "This is a Learning Communities section. Students registering for this section MUST ALSO TAKE 330-1N1-DW 12004 and 300-1R1-DW 12002."
             }
         ]
     },
@@ -679,7 +685,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Child Studies"
             }
         ]
     },
@@ -688,7 +695,7 @@
         "sections": [
             {
                 "ID": "00001",
-                "teacher": "Verity Whalen",
+                "teacher": "TBA-381-A",
                 "schedule": [
                     [
                         "T",
@@ -710,7 +717,7 @@
             {
                 "ID": "00001",
                 "title": "Culture on the Move",
-                "teacher": "Jennifer E. Smith",
+                "teacher": "Verity Whalen",
                 "schedule": [
                     [
                         "M",
@@ -743,7 +750,8 @@
                         "1400",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "Radiation Oncology"
             },
             {
                 "ID": "00002",
@@ -759,7 +767,8 @@
                         "1400",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "Radiation Oncology"
             }
         ]
     },
@@ -780,7 +789,8 @@
                         "1400",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "Medical Ultrasound Tech"
             },
             {
                 "ID": "00002",
@@ -796,7 +806,8 @@
                         "1600",
                         "1800"
                     ]
-                ]
+                ],
+                "note": "On Reserve<br>Medical Ultrasound Tech"
             }
         ]
     },
@@ -827,7 +838,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Biomed Lab Tech"
             },
             {
                 "ID": "00002",
@@ -853,7 +865,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Biomed Lab Tech"
             }
         ]
     },
@@ -879,11 +892,12 @@
                         "1200",
                         "1400"
                     ]
-                ]
+                ],
+                "note": "Biomed Lab Tech"
             },
             {
                 "ID": "00002",
-                "teacher": "Andrew Wieczorek",
+                "teacher": "TBA-101-B",
                 "schedule": [
                     [
                         "W",
@@ -900,7 +914,8 @@
                         "1200",
                         "1400"
                     ]
-                ]
+                ],
+                "note": "On Reserve<br>Biomed Lab Tech"
             }
         ]
     },
@@ -921,7 +936,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Psychology"
             },
             {
                 "ID": "00002",
@@ -937,7 +953,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Psychology"
             },
             {
                 "ID": "00003",
@@ -953,7 +970,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Psychology"
             },
             {
                 "ID": "00004",
@@ -969,7 +987,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Psychology"
             },
             {
                 "ID": "00005",
@@ -985,7 +1004,8 @@
                         "1430",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "Psychology"
             },
             {
                 "ID": "00006",
@@ -1001,7 +1021,8 @@
                         "1430",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "Psychology"
             },
             {
                 "ID": "00007",
@@ -1017,7 +1038,8 @@
                         "1130",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "Psychology"
             },
             {
                 "ID": "00008",
@@ -1033,7 +1055,8 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Psychology"
             },
             {
                 "ID": "00009",
@@ -1049,7 +1072,8 @@
                         "1430",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "Psychology"
             },
             {
                 "ID": "00010",
@@ -1065,7 +1089,8 @@
                         "1600",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "Psychology<br>This section is compatible and available for Child Studies."
             }
         ]
     },
@@ -1091,7 +1116,8 @@
                         "1200",
                         "1400"
                     ]
-                ]
+                ],
+                "note": "Nursing"
             },
             {
                 "ID": "00002",
@@ -1112,7 +1138,8 @@
                         "900",
                         "1100"
                     ]
-                ]
+                ],
+                "note": "Nursing"
             },
             {
                 "ID": "00003",
@@ -1133,7 +1160,8 @@
                         "1500",
                         "1700"
                     ]
-                ]
+                ],
+                "note": "Nursing"
             },
             {
                 "ID": "00004",
@@ -1154,7 +1182,8 @@
                         "900",
                         "1100"
                     ]
-                ]
+                ],
+                "note": "Nursing"
             },
             {
                 "ID": "00005",
@@ -1175,7 +1204,8 @@
                         "1200",
                         "1400"
                     ]
-                ]
+                ],
+                "note": "Nursing"
             },
             {
                 "ID": "00006",
@@ -1196,7 +1226,8 @@
                         "1500",
                         "1700"
                     ]
-                ]
+                ],
+                "note": "Nursing"
             }
         ]
     },
@@ -1222,7 +1253,8 @@
                         "1000",
                         "1100"
                     ]
-                ]
+                ],
+                "note": "Nursing"
             },
             {
                 "ID": "00002",
@@ -1243,7 +1275,8 @@
                         "1100",
                         "1200"
                     ]
-                ]
+                ],
+                "note": "Nursing"
             },
             {
                 "ID": "00003",
@@ -1264,7 +1297,8 @@
                         "1300",
                         "1400"
                     ]
-                ]
+                ],
+                "note": "Nursing"
             },
             {
                 "ID": "00004",
@@ -1285,7 +1319,8 @@
                         "1400",
                         "1500"
                     ]
-                ]
+                ],
+                "note": "Nursing"
             }
         ]
     },
@@ -1311,7 +1346,8 @@
                         "1100",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "Physiotherapy Tech"
             },
             {
                 "ID": "00002",
@@ -1332,7 +1368,8 @@
                         "900",
                         "1100"
                     ]
-                ]
+                ],
+                "note": "Physiotherapy Tech"
             },
             {
                 "ID": "00003",
@@ -1353,7 +1390,8 @@
                         "1300",
                         "1500"
                     ]
-                ]
+                ],
+                "note": "Physiotherapy Tech"
             }
         ]
     },
@@ -1374,7 +1412,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Psychology"
             },
             {
                 "ID": "00002",
@@ -1390,7 +1429,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Psychology"
             },
             {
                 "ID": "00003",
@@ -1406,7 +1446,8 @@
                         "1430",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "Psychology"
             },
             {
                 "ID": "00004",
@@ -1422,7 +1463,8 @@
                         "1430",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "Psychology"
             },
             {
                 "ID": "00005",
@@ -1438,7 +1480,8 @@
                         "1130",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "Psychology"
             },
             {
                 "ID": "00006",
@@ -1454,11 +1497,12 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Psychology"
             },
             {
                 "ID": "00007",
-                "teacher": "Suzanne Kunicki",
+                "teacher": "Christine Lafleur",
                 "schedule": [
                     [
                         "T",
@@ -1470,11 +1514,12 @@
                         "1430",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "Psychology"
             },
             {
                 "ID": "00008",
-                "teacher": "Suzanne Kunicki",
+                "teacher": "Christine Lafleur",
                 "schedule": [
                     [
                         "T",
@@ -1486,7 +1531,8 @@
                         "1600",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "Psychology"
             },
             {
                 "ID": "12001",
@@ -1502,7 +1548,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Psychology<br>This is a Learning Communities section. Students registering for this section MUST ALSO TAKE 350-1N1-DW 12003."
             },
             {
                 "ID": "12002",
@@ -1518,7 +1565,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Psychology<br>This is a Learning Communities section. Students registering for this section MUST ALSO TAKE 350-1N1-DW 12003."
             }
         ]
     },
@@ -1709,7 +1757,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Enriched Science<br>This is a Learning Communities section. Students registering for this section MUST ALSO TAKE 202-BZF-05 12001."
             },
             {
                 "ID": "12002",
@@ -1730,7 +1779,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Enriched Science<br>This is a Learning Communities section. Students registering for this section MUST ALSO TAKE 202-BZF-05 12002."
             },
             {
                 "ID": "12003",
@@ -1751,7 +1801,8 @@
                         "1130",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "This is a Learning Communities section. Students registering for this section MUST ALSO TAKE 202-BZF-05 12003."
             },
             {
                 "ID": "12004",
@@ -1772,7 +1823,8 @@
                         "1130",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "This is a Learning Communities section. Students registering for this section MUST ALSO TAKE 202-BZF-05 12004."
             }
         ]
     },
@@ -1845,7 +1897,8 @@
                         "1400",
                         "1700"
                     ]
-                ]
+                ],
+                "note": "This is a Learning Communities section. Students registering for this section MUST ALSO TAKE  109-103-MQ 12001."
             }
         ]
     },
@@ -1871,7 +1924,8 @@
                         "800",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Enriched Science"
             },
             {
                 "ID": "00002",
@@ -1892,7 +1946,8 @@
                         "1100",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "Enriched Science"
             },
             {
                 "ID": "00003",
@@ -1997,7 +2052,8 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Environmental Science"
             },
             {
                 "ID": "00008",
@@ -2018,7 +2074,8 @@
                         "1430",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "Environmental Science"
             },
             {
                 "ID": "00009",
@@ -2165,7 +2222,8 @@
                         "1130",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             },
             {
                 "ID": "00016",
@@ -2186,7 +2244,8 @@
                         "1130",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             }
         ]
     },
@@ -2474,7 +2533,8 @@
                         "1130",
                         "1330"
                     ]
-                ]
+                ],
+                "note": "COMPRESSED: August 18 to November 11, 2023"
             },
             {
                 "ID": "00002",
@@ -2495,7 +2555,8 @@
                         "1400",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "COMPRESSED: August 18 to November 11, 2023"
             }
         ]
     },
@@ -2521,7 +2582,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "COMPRESSED: August 18 to November 11, 2023"
             },
             {
                 "ID": "00002",
@@ -2542,7 +2604,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "COMPRESSED: August 18 to November 11, 2023"
             }
         ]
     },
@@ -2568,7 +2631,8 @@
                         "1400",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "COMPRESSED: August 18 to November 11, 2023"
             },
             {
                 "ID": "00002",
@@ -2589,7 +2653,8 @@
                         "1130",
                         "1330"
                     ]
-                ]
+                ],
+                "note": "COMPRESSED: August 18 to November 11, 2023"
             }
         ]
     },
@@ -2615,7 +2680,8 @@
                         "1000",
                         "1100"
                     ]
-                ]
+                ],
+                "note": "COMPRESSED: August 18 to November 11, 2023"
             }
         ]
     },
@@ -2646,7 +2712,8 @@
                         "1400",
                         "1700"
                     ]
-                ]
+                ],
+                "note": "COMPRESSED: August 18 to November 11, 2023"
             },
             {
                 "ID": "00002",
@@ -2672,7 +2739,8 @@
                         "1030",
                         "1330"
                     ]
-                ]
+                ],
+                "note": "COMPRESSED: August 18 to November 11, 2023"
             }
         ]
     },
@@ -2805,7 +2873,8 @@
                         "1430",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "This section will be offered partially on-line. Students registering for this section are expected to have individual access to the internet."
             },
             {
                 "ID": "00009",
@@ -2853,7 +2922,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "This section will be offered partially on-line. Students registering for this section are expected to have individual access to the internet."
             },
             {
                 "ID": "00012",
@@ -2869,7 +2939,8 @@
                         "1130",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "This section is compatible and available for Travel and Tourism."
             },
             {
                 "ID": "00013",
@@ -2885,7 +2956,8 @@
                         "1600",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             }
         ]
     },
@@ -2906,7 +2978,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "International Business Studies"
             },
             {
                 "ID": "00002",
@@ -2922,7 +2995,8 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Commerce"
             },
             {
                 "ID": "00003",
@@ -2938,7 +3012,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Commerce"
             },
             {
                 "ID": "00004",
@@ -2954,7 +3029,8 @@
                         "1430",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "Commerce"
             },
             {
                 "ID": "00005",
@@ -2986,7 +3062,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Commerce"
             },
             {
                 "ID": "00007",
@@ -3002,7 +3079,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Commerce"
             },
             {
                 "ID": "00008",
@@ -3018,7 +3096,8 @@
                         "1430",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "This section will be offered partially on-line. Students registering for this section are expected to have individual access to the internet."
             },
             {
                 "ID": "00009",
@@ -3034,7 +3113,8 @@
                         "1430",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "International Business Studies"
             },
             {
                 "ID": "00010",
@@ -3066,7 +3146,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Commerce<br>This section will be offered partially on-line. Students registering for this section are expected to have individual access to the internet."
             },
             {
                 "ID": "00012",
@@ -3098,7 +3179,8 @@
                         "1600",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             }
         ]
     },
@@ -3119,7 +3201,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Commerce"
             },
             {
                 "ID": "00002",
@@ -3156,7 +3239,8 @@
                         "1130",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "This section is compatible and available for International Business Studies."
             },
             {
                 "ID": "00002",
@@ -3230,7 +3314,8 @@
                         "1600",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "International Business Studies"
             }
         ]
     },
@@ -3251,7 +3336,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Computer Science"
             },
             {
                 "ID": "00002",
@@ -3267,7 +3353,8 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Computer Science"
             },
             {
                 "ID": "00003",
@@ -3283,7 +3370,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Computer Science"
             },
             {
                 "ID": "00004",
@@ -3299,7 +3387,8 @@
                         "1130",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "Computer Science"
             }
         ]
     },
@@ -3321,7 +3410,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "This section will be offered partially on-line. Students registering for this section are expected to have individual access to the internet."
             }
         ]
     },
@@ -3480,7 +3570,8 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "This section will be offered partially on-line. Students registering for this section are expected to have individual access to the internet."
             },
             {
                 "ID": "00003",
@@ -3496,7 +3587,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "This section will be offered partially on-line. Students registering for this section are expected to have individual access to the internet."
             },
             {
                 "ID": "00004",
@@ -3533,7 +3625,8 @@
                         "1600",
                         "1800"
                     ]
-                ]
+                ],
+                "note": "This section will be offered partially on-line. Students registering for this section are expected to have individual access to the internet."
             },
             {
                 "ID": "00002",
@@ -3713,7 +3806,8 @@
                         "1200",
                         "1400"
                     ]
-                ]
+                ],
+                "note": "This section will be offered partially on-line. Students registering for this section are expected to have individual access to the internet."
             },
             {
                 "ID": "00002",
@@ -3729,7 +3823,8 @@
                         "1600",
                         "1800"
                     ]
-                ]
+                ],
+                "note": "This section will be offered partially on-line. Students registering for this section are expected to have individual access to the internet."
             },
             {
                 "ID": "00003",
@@ -3766,7 +3861,8 @@
                         "1200",
                         "1400"
                     ]
-                ]
+                ],
+                "note": "This section will be offered partially on-line. Students registering for this section are expected to have individual access to the internet."
             },
             {
                 "ID": "00002",
@@ -3782,7 +3878,8 @@
                         "1200",
                         "1400"
                     ]
-                ]
+                ],
+                "note": "This section will be offered partially on-line. Students registering for this section are expected to have individual access to the internet."
             }
         ]
     },
@@ -3888,7 +3985,8 @@
                         "1200",
                         "1400"
                     ]
-                ]
+                ],
+                "note": "This section will be offered partially on-line. Students registering for this section are expected to have individual access to the internet."
             }
         ]
     },
@@ -4025,7 +4123,8 @@
                         "1600",
                         "1800"
                     ]
-                ]
+                ],
+                "note": "This section will be offered partially on-line. Students registering for this section are expected to have individual access to the internet."
             }
         ]
     },
@@ -4051,7 +4150,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "ESP/DSP"
             },
             {
                 "ID": "00002",
@@ -4072,7 +4172,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "ESP/DSP"
             }
         ]
     },
@@ -4221,7 +4322,8 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Environmental Science"
             },
             {
                 "ID": "00006",
@@ -4242,7 +4344,8 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Environmental Science"
             },
             {
                 "ID": "00007",
@@ -4305,11 +4408,12 @@
                         "830",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             },
             {
                 "ID": "00010",
-                "teacher": "TBA-202-B",
+                "teacher": "Ciser Camilo Cabarcas Nunez",
                 "schedule": [
                     [
                         "M",
@@ -4347,7 +4451,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Enriched Science<br>This is a Learning Communities section. Students registering for this section MUST ALSO TAKE 101-BZE-05 12001."
             },
             {
                 "ID": "12002",
@@ -4368,7 +4473,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Enriched Science<br>This is a Learning Communities section. Students registering for this section MUST ALSO TAKE 101-BZE-05 12002."
             },
             {
                 "ID": "12003",
@@ -4389,7 +4495,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "This is a Learning Communities section. Students registering for this section MUST ALSO TAKE 101-BZE-05 12003."
             },
             {
                 "ID": "12004",
@@ -4410,7 +4517,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "This is a Learning Communities section. Students registering for this section MUST ALSO TAKE 101-BZE-05 12004."
             }
         ]
     },
@@ -4436,7 +4544,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Lab Tech"
             },
             {
                 "ID": "00002",
@@ -4457,7 +4566,8 @@
                         "800",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Enriched Science"
             },
             {
                 "ID": "00003",
@@ -4478,7 +4588,8 @@
                         "800",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Enriched Science"
             },
             {
                 "ID": "00004",
@@ -4499,7 +4610,8 @@
                         "800",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Enriched Science"
             },
             {
                 "ID": "00005",
@@ -4520,7 +4632,8 @@
                         "800",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Enriched Science"
             },
             {
                 "ID": "00006",
@@ -4625,7 +4738,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Environmental Science"
             },
             {
                 "ID": "00011",
@@ -4646,7 +4760,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Environmental Science"
             },
             {
                 "ID": "00012",
@@ -4940,16 +5055,17 @@
                         "1100",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             },
             {
                 "ID": "00026",
-                "teacher": "TBA-202-A",
+                "teacher": "Brian Seivewright, Ciser Camilo Cabarcas Nunez",
                 "schedule": [
                     [
                         "M",
-                        "1600",
-                        "1730"
+                        "830",
+                        "1000"
                     ],
                     [
                         "T",
@@ -4958,8 +5074,8 @@
                     ],
                     [
                         "W",
-                        "1600",
-                        "1730"
+                        "830",
+                        "1000"
                     ]
                 ]
             }
@@ -5075,12 +5191,12 @@
             },
             {
                 "ID": "00006",
-                "teacher": "TBA-202-A",
+                "teacher": "Ciser Camilo Cabarcas Nunez, Daniel Baril",
                 "schedule": [
                     [
-                        "T",
-                        "1130",
-                        "1300"
+                        "M",
+                        "1300",
+                        "1430"
                     ],
                     [
                         "R",
@@ -5089,8 +5205,8 @@
                     ],
                     [
                         "R",
-                        "1130",
-                        "1300"
+                        "1000",
+                        "1130"
                     ]
                 ]
             },
@@ -5113,7 +5229,8 @@
                         "800",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             }
         ]
     },
@@ -5134,7 +5251,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "All Arts, Literature, and Communication profiles"
             },
             {
                 "ID": "00002",
@@ -5150,7 +5268,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "All Arts, Literature, and Communication profiles"
             }
         ]
     },
@@ -5205,7 +5324,8 @@
                         "1000",
                         "1400"
                     ]
-                ]
+                ],
+                "note": "Cinema-Communications"
             },
             {
                 "ID": "00002",
@@ -5216,7 +5336,8 @@
                         "1000",
                         "1400"
                     ]
-                ]
+                ],
+                "note": "Cinema-Communications"
             },
             {
                 "ID": "00003",
@@ -5227,7 +5348,8 @@
                         "1400",
                         "1800"
                     ]
-                ]
+                ],
+                "note": "Cinema-Communications"
             },
             {
                 "ID": "00004",
@@ -5238,7 +5360,8 @@
                         "1000",
                         "1400"
                     ]
-                ]
+                ],
+                "note": "Cinema-Communications"
             },
             {
                 "ID": "00005",
@@ -5249,7 +5372,8 @@
                         "1400",
                         "1800"
                     ]
-                ]
+                ],
+                "note": "Cinema-Communications"
             }
         ]
     },
@@ -5265,7 +5389,8 @@
                         "1130",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Cinema-Communications"
             }
         ]
     },
@@ -5281,7 +5406,8 @@
                         "830",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Cinema-Communications"
             },
             {
                 "ID": "00002",
@@ -5292,7 +5418,8 @@
                         "1430",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "Cinema-Communications"
             },
             {
                 "ID": "00003",
@@ -5303,7 +5430,8 @@
                         "830",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Cinema-Communications"
             },
             {
                 "ID": "00004",
@@ -5314,7 +5442,8 @@
                         "1430",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "Cinema-Communications"
             }
         ]
     },
@@ -5330,7 +5459,8 @@
                         "1000",
                         "1400"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, and Cinema-Communications"
             },
             {
                 "ID": "00002",
@@ -5341,7 +5471,8 @@
                         "1400",
                         "1800"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, and Cinema-Communications"
             },
             {
                 "ID": "00003",
@@ -5352,7 +5483,8 @@
                         "1000",
                         "1400"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, and Cinema-Communications"
             }
         ]
     },
@@ -5369,7 +5501,8 @@
                         "1400",
                         "1800"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, and Cinema-Communications"
             }
         ]
     },
@@ -5385,7 +5518,8 @@
                         "1000",
                         "1400"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, and Cinema-Communications"
             },
             {
                 "ID": "00002",
@@ -5396,7 +5530,8 @@
                         "1000",
                         "1400"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, and Cinema-Communications"
             }
         ]
     },
@@ -5412,7 +5547,8 @@
                         "1400",
                         "1800"
                     ]
-                ]
+                ],
+                "note": "Cinema-Communications"
             }
         ]
     },
@@ -5428,7 +5564,8 @@
                         "1430",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, Cinema-Communications, Interactive Media Arts, Literature, and Studio Arts"
             },
             {
                 "ID": "00002",
@@ -5439,7 +5576,8 @@
                         "830",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, Cinema-Communications, Interactive Media Arts, Literature, and Studio Arts"
             },
             {
                 "ID": "00003",
@@ -5450,7 +5588,8 @@
                         "1430",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, Cinema-Communications, Interactive Media Arts, Literature, and Studio Arts"
             },
             {
                 "ID": "00004",
@@ -5461,7 +5600,8 @@
                         "830",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "On Reserve<br>Arts and Culture, Cinema-Communications, Interactive Media Arts, Literature, and Studio Arts"
             }
         ]
     },
@@ -5477,7 +5617,8 @@
                         "830",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, Cinema-Commmunications, Interactive Media Arts, Literature, and Studio Arts"
             }
         ]
     },
@@ -5493,7 +5634,8 @@
                         "1130",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, Interactive Media Arts, Languages, Literature, and Studio Arts"
             }
         ]
     },
@@ -5509,7 +5651,8 @@
                         "1430",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, Cinema-Communications, Languages, Literature, Interactive Media Arts, and Studio Arts"
             },
             {
                 "ID": "00002",
@@ -5520,7 +5663,8 @@
                         "1430",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, Cinema-Communications, Languages, Literature, Interactive Media Arts, and Studio Arts"
             }
         ]
     },
@@ -5536,7 +5680,8 @@
                         "830",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, Cinema-Communications, Literature, Interactive Media Arts, and Studio Arts"
             },
             {
                 "ID": "00002",
@@ -5547,7 +5692,8 @@
                         "1430",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "On Reserve<br>Arts and Culture, Cinema-Communications, Literature, Interactive Media Arts, and Studio Arts"
             }
         ]
     },
@@ -5563,7 +5709,8 @@
                         "1400",
                         "1800"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, Cinema-Communications, Interactive Media Arts, Literature, and Studio Arts"
             }
         ]
     },
@@ -5579,7 +5726,8 @@
                         "1000",
                         "1400"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, Cinema-Communications, Interactive Media Arts, Literature, and Studio Arts"
             }
         ]
     },
@@ -5595,7 +5743,8 @@
                         "1400",
                         "1800"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, Cinema-Communications, Interactive Media Arts, Literature, and Studio Arts"
             },
             {
                 "ID": "00002",
@@ -5606,7 +5755,8 @@
                         "1000",
                         "1400"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, Cinema-Communications, Interactive Media Arts, Literature, and Studio Arts"
             }
         ]
     },
@@ -5622,7 +5772,8 @@
                         "1130",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, Cinema-Communications, Interactive Media Arts, Languages, Literature, and Studio Arts"
             },
             {
                 "ID": "00002",
@@ -5633,7 +5784,8 @@
                         "830",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, Cinema-Communications, Interactive Media Arts, Languages, Literature, and Studio Arts"
             }
         ]
     },
@@ -5649,7 +5801,8 @@
                         "1130",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, Cinema-Communications, Interactive Media Arts, Literature, and Studio Arts"
             }
         ]
     },
@@ -5750,7 +5903,8 @@
                         "1130",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             }
         ]
     },
@@ -5845,7 +5999,8 @@
                         "1030",
                         "1330"
                     ]
-                ]
+                ],
+                "note": "COMPRESSED: 10 weeks. Dates to be confirmed."
             },
             {
                 "ID": "00002",
@@ -5861,7 +6016,8 @@
                         "1330",
                         "1630"
                     ]
-                ]
+                ],
+                "note": "COMPRESSED: 10 weeks. Dates to be confirmed."
             },
             {
                 "ID": "00003",
@@ -5877,7 +6033,8 @@
                         "1030",
                         "1330"
                     ]
-                ]
+                ],
+                "note": "COMPRESSED: 10 weeks. Dates to be confirmed."
             },
             {
                 "ID": "00004",
@@ -5893,7 +6050,8 @@
                         "1330",
                         "1630"
                     ]
-                ]
+                ],
+                "note": "COMPRESSED: 10 weeks. Dates to be confirmed."
             }
         ]
     },
@@ -6348,7 +6506,8 @@
                         "1300",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "The fee is for the ASP Construction student safety card."
             },
             {
                 "ID": "00002",
@@ -6359,7 +6518,8 @@
                         "1300",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "The fee is for the ASP Construction student safety card."
             }
         ]
     },
@@ -6398,7 +6558,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             }
         ]
     },
@@ -6419,7 +6580,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Liberal Arts"
             }
         ]
     },
@@ -6458,7 +6620,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             }
         ]
     },
@@ -6979,7 +7142,7 @@
             },
             {
                 "ID": "00002",
-                "teacher": "Patricia Campbell",
+                "teacher": "Ellie Bodzay",
                 "schedule": [
                     [
                         "T",
@@ -7214,7 +7377,7 @@
             },
             {
                 "ID": "00004",
-                "teacher": "Josiane Gamgo",
+                "teacher": "TBA-420-D",
                 "schedule": [
                     [
                         "T",
@@ -7458,7 +7621,7 @@
         "sections": [
             {
                 "ID": "00001",
-                "teacher": "Josiane Gamgo",
+                "teacher": "TBA-420-D",
                 "schedule": [
                     [
                         "M",
@@ -7795,7 +7958,7 @@
         "sections": [
             {
                 "ID": "00001",
-                "teacher": "Behnam Karimi",
+                "teacher": "TBA-420-D",
                 "schedule": [
                     [
                         "W",
@@ -7807,11 +7970,12 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Business Management Marketing<br>Accounting and Management Tech"
             },
             {
                 "ID": "00002",
-                "teacher": "Behnam Karimi",
+                "teacher": "TBA-420-D",
                 "schedule": [
                     [
                         "M",
@@ -7823,11 +7987,12 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Accounting and Management Tech."
             },
             {
                 "ID": "00003",
-                "teacher": "Behnam Karimi",
+                "teacher": "TBA-420-C",
                 "schedule": [
                     [
                         "M",
@@ -7839,7 +8004,25 @@
                         "1600",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "Business Management Marketing"
+            },
+            {
+                "ID": "00004",
+                "teacher": "TBA-420-C",
+                "schedule": [
+                    [
+                        "T",
+                        "830",
+                        "1000"
+                    ],
+                    [
+                        "F",
+                        "830",
+                        "1000"
+                    ]
+                ],
+                "note": "Business Management Marketing<br>Accounting and Management Tech"
             }
         ]
     },
@@ -7883,7 +8066,7 @@
             {
                 "ID": "00003",
                 "title": "Introduction to Computers",
-                "teacher": "Behnam Karimi",
+                "teacher": "TBA-420-D",
                 "schedule": [
                     [
                         "W",
@@ -7900,7 +8083,7 @@
             {
                 "ID": "00004",
                 "title": "Introduction to Computers",
-                "teacher": "Behnam Karimi",
+                "teacher": "TBA-420-D",
                 "schedule": [
                     [
                         "M",
@@ -7929,7 +8112,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             }
         ]
     },
@@ -8036,7 +8220,8 @@
                         "1130",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "This is a Learning Communities section."
             },
             {
                 "ID": "00002",
@@ -8150,7 +8335,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Journeys"
             }
         ]
     },
@@ -8262,7 +8448,8 @@
                         "1130",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "This is a Learning Communities section. Students registering for this section MUST ALSO TAKE 345-102-MQ 12001."
             }
         ]
     },
@@ -8278,7 +8465,8 @@
                         "1200",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture"
             },
             {
                 "ID": "00002",
@@ -8289,7 +8477,8 @@
                         "1200",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture"
             }
         ]
     },
@@ -8310,7 +8499,8 @@
                         "800",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Languages"
             },
             {
                 "ID": "00002",
@@ -8326,7 +8516,8 @@
                         "1400",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "Languages"
             },
             {
                 "ID": "00003",
@@ -8342,7 +8533,8 @@
                         "1200",
                         "1400"
                     ]
-                ]
+                ],
+                "note": "On Reserve<br>Languages"
             }
         ]
     },
@@ -8363,7 +8555,8 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Languages"
             },
             {
                 "ID": "00002",
@@ -8379,7 +8572,8 @@
                         "1430",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "Languages"
             }
         ]
     },
@@ -8395,7 +8589,8 @@
                         "1130",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Languages"
             },
             {
                 "ID": "00002",
@@ -8406,7 +8601,8 @@
                         "830",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Languages"
             }
         ]
     },
@@ -8422,7 +8618,8 @@
                         "1400",
                         "1800"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture"
             }
         ]
     },
@@ -8443,7 +8640,8 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, Cinema-Communications, Interactive Media Arts, Languages, Literature, and Studio Arts"
             },
             {
                 "ID": "00002",
@@ -8459,7 +8657,8 @@
                         "1130",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, Cinema-Communications, Interactive Media Arts, Languages, Literature, and Studio Arts"
             }
         ]
     },
@@ -8475,7 +8674,8 @@
                         "1130",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, Cinema-Communications, Interactive Media Arts, Literature, and Studio Arts"
             },
             {
                 "ID": "00002",
@@ -8486,7 +8686,8 @@
                         "830",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, Cinema-Communications, Interactive Media Arts, Literature, and Studio Arts"
             }
         ]
     },
@@ -8507,7 +8708,8 @@
                         "1130",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, Cinema-Communications, Interactive Media Arts, Literature, and Studio Arts"
             }
         ]
     },
@@ -8523,7 +8725,8 @@
                         "830",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, Cinema-Communications, Interactive Media Arts, Literature, and Studio Arts"
             }
         ]
     },
@@ -9171,7 +9374,8 @@
                         "1300",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "COMPRESSED: August 21 to October 20 9:00-12:00, 13:00-16:00 HOSPITAL"
             }
         ]
     },
@@ -9252,7 +9456,8 @@
                         "1300",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "COMPRESSED: October 23 to December 20 9:00-12:00, 13:00-16:00 HOSPITAL"
             }
         ]
     },
@@ -9268,7 +9473,8 @@
                         "1000",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "3D Animation"
             },
             {
                 "ID": "00002",
@@ -9279,7 +9485,8 @@
                         "1430",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "3D Animation"
             }
         ]
     },
@@ -9295,7 +9502,8 @@
                         "1130",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, Cinema-Communications, Interactive Media Arts, Languages, Literature, and Studio Arts"
             },
             {
                 "ID": "00002",
@@ -9306,7 +9514,8 @@
                         "1130",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "On Reserve<br>Arts and Culture, Cinema-Communications, Interactive Media Arts, Languages, Literature, and Studio Arts"
             }
         ]
     },
@@ -9322,7 +9531,8 @@
                         "1400",
                         "1800"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, Cinema-Communications, Interactive Media Arts, Literature, and Studio Arts"
             }
         ]
     },
@@ -9455,7 +9665,8 @@
                         "1130",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "Law, Society and Justice"
             },
             {
                 "ID": "00009",
@@ -9567,7 +9778,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Child Studies"
             },
             {
                 "ID": "00016",
@@ -9711,7 +9923,8 @@
                         "1130",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             }
         ]
     },
@@ -9764,7 +9977,8 @@
                         "1430",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "Commerce"
             },
             {
                 "ID": "00004",
@@ -9828,7 +10042,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Commerce"
             },
             {
                 "ID": "00008",
@@ -9860,7 +10075,8 @@
                         "1130",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "International Business Studies"
             },
             {
                 "ID": "00010",
@@ -9876,7 +10092,8 @@
                         "1430",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "Law, Society and Justice"
             },
             {
                 "ID": "00011",
@@ -9892,7 +10109,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Law, Society and Justice"
             },
             {
                 "ID": "00012",
@@ -9908,7 +10126,8 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Commerce"
             },
             {
                 "ID": "00013",
@@ -9924,7 +10143,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Law, Society and Justice"
             },
             {
                 "ID": "00014",
@@ -9940,7 +10160,8 @@
                         "1600",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "Commerce"
             },
             {
                 "ID": "00015",
@@ -9972,7 +10193,8 @@
                         "1130",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "Commerce"
             },
             {
                 "ID": "00017",
@@ -9988,7 +10210,8 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Law, Society and Justice"
             },
             {
                 "ID": "00018",
@@ -10020,7 +10243,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Commerce"
             },
             {
                 "ID": "00020",
@@ -10036,7 +10260,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "International Business Studies"
             },
             {
                 "ID": "00021",
@@ -10084,7 +10309,8 @@
                         "1600",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "Law, Society and Justice"
             },
             {
                 "ID": "00024",
@@ -10100,7 +10326,8 @@
                         "1130",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             }
         ]
     },
@@ -10121,7 +10348,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "This section is compatible and available for Commerce."
             },
             {
                 "ID": "00002",
@@ -10137,7 +10365,8 @@
                         "1130",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "International Business Studies"
             },
             {
                 "ID": "00003",
@@ -10153,7 +10382,8 @@
                         "1600",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "This section is compatible and available for Commerce."
             },
             {
                 "ID": "00004",
@@ -10185,7 +10415,8 @@
                         "1130",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             }
         ]
     },
@@ -10206,7 +10437,8 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Environmental Studies"
             }
         ]
     },
@@ -10265,7 +10497,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "This section is compatible and available for International Business Studies."
             }
         ]
     },
@@ -10308,7 +10541,8 @@
                         "1600",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "Accounting and Management Tech"
             },
             {
                 "ID": "00002",
@@ -10324,7 +10558,8 @@
                         "1130",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "Marketing and Management Tech"
             },
             {
                 "ID": "00003",
@@ -10340,7 +10575,8 @@
                         "1430",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "Marketing and Management Tech"
             }
         ]
     },
@@ -10389,7 +10625,8 @@
                         "1000",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             }
         ]
     },
@@ -10458,7 +10695,8 @@
                         "1200",
                         "1400"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             }
         ]
     },
@@ -10527,7 +10765,8 @@
                         "1200",
                         "1400"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             }
         ]
     },
@@ -11045,7 +11284,8 @@
                         "1200",
                         "1400"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             },
             {
                 "ID": "00025",
@@ -11572,7 +11812,8 @@
                         "800",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             },
             {
                 "ID": "00065",
@@ -11861,7 +12102,8 @@
                         "1200",
                         "1400"
                     ]
-                ]
+                ],
+                "note": "Liberal Arts"
             },
             {
                 "ID": "00082",
@@ -11912,7 +12154,8 @@
                         "1000",
                         "1200"
                     ]
-                ]
+                ],
+                "note": "Journeys"
             },
             {
                 "ID": "00085",
@@ -12206,7 +12449,7 @@
             {
                 "ID": "00102",
                 "title": "Introduction to College English",
-                "teacher": "Tavish McDonell",
+                "teacher": "Felix Fuchs",
                 "schedule": [
                     [
                         "T",
@@ -12320,7 +12563,8 @@
                         "1200",
                         "1400"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             },
             {
                 "ID": "14001",
@@ -12332,7 +12576,8 @@
                         "1600",
                         "2000"
                     ]
-                ]
+                ],
+                "note": "New School"
             },
             {
                 "ID": "14002",
@@ -12344,7 +12589,8 @@
                         "1600",
                         "2000"
                     ]
-                ]
+                ],
+                "note": "New School"
             },
             {
                 "ID": "18001",
@@ -12356,7 +12602,8 @@
                         "1130",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Reflections"
             },
             {
                 "ID": "18002",
@@ -12368,7 +12615,8 @@
                         "1430",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "Reflections"
             }
         ]
     },
@@ -12796,7 +13044,8 @@
                         "1000",
                         "1200"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             }
         ]
     },
@@ -12954,7 +13203,8 @@
                         "800",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Liberal Arts"
             },
             {
                 "ID": "00010",
@@ -13667,7 +13917,8 @@
                         "1600",
                         "1800"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             },
             {
                 "ID": "18001",
@@ -13679,7 +13930,8 @@
                         "1430",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "Reflections"
             }
         ]
     },
@@ -13700,7 +13952,8 @@
                         "1200",
                         "1400"
                     ]
-                ]
+                ],
+                "note": "Literature"
             },
             {
                 "ID": "00002",
@@ -13716,7 +13969,8 @@
                         "1600",
                         "1800"
                     ]
-                ]
+                ],
+                "note": "Literature"
             }
         ]
     },
@@ -13738,7 +13992,8 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Literature"
             }
         ]
     },
@@ -13759,11 +14014,12 @@
                         "1600",
                         "1800"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, and Literature"
             },
             {
                 "ID": "00002",
-                "teacher": "TBA-603-D",
+                "teacher": "Tavish McDonell",
                 "schedule": [
                     [
                         "T",
@@ -13775,7 +14031,8 @@
                         "800",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, and Literature"
             }
         ]
     },
@@ -13796,7 +14053,8 @@
                         "1130",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, Cinema-Communications, Interactive Media Arts, Languages, Literature, and Studio Arts"
             }
         ]
     },
@@ -13817,7 +14075,8 @@
                         "800",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, Cinema-Communications, Interactive Media Arts, Literature, and Studio Arts"
             }
         ]
     },
@@ -13839,7 +14098,8 @@
                         "1130",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, Cinema-Communications, Interactive Media Arts, Literature, and Studio Arts"
             }
         ]
     },
@@ -14166,7 +14426,8 @@
                         "800",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             }
         ]
     },
@@ -14204,7 +14465,8 @@
                         "1000",
                         "1200"
                     ]
-                ]
+                ],
+                "note": "Journeys"
             }
         ]
     },
@@ -14225,7 +14487,8 @@
                         "1000",
                         "1200"
                     ]
-                ]
+                ],
+                "note": "This section is compatible and available for Journeys."
             },
             {
                 "ID": "00031",
@@ -14242,7 +14505,8 @@
                         "1000",
                         "1200"
                     ]
-                ]
+                ],
+                "note": "Journeys"
             }
         ]
     },
@@ -14264,7 +14528,8 @@
                         "1000",
                         "1200"
                     ]
-                ]
+                ],
+                "note": "Journeys"
             }
         ]
     },
@@ -14286,7 +14551,8 @@
                         "1000",
                         "1200"
                     ]
-                ]
+                ],
+                "note": "Journeys"
             }
         ]
     },
@@ -14307,7 +14573,8 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "This section is compatible and available for Journeys."
             },
             {
                 "ID": "00050",
@@ -14384,7 +14651,8 @@
                         "1600",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             }
         ]
     },
@@ -14405,7 +14673,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "This section is compatible and available for Journeys."
             },
             {
                 "ID": "00050",
@@ -14482,7 +14751,8 @@
                         "1600",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             }
         ]
     },
@@ -14641,7 +14911,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             }
         ]
     },
@@ -14741,7 +15012,8 @@
                         "1600",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             }
         ]
     },
@@ -14858,7 +15130,8 @@
                         "1130",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             }
         ]
     },
@@ -15020,7 +15293,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             }
         ]
     },
@@ -15182,7 +15456,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             }
         ]
     },
@@ -15235,7 +15510,8 @@
                         "1430",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "This section will be offered partially on-line. Students registering for this section are expected to have individual access to the internet."
             },
             {
                 "ID": "00040",
@@ -15376,7 +15652,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             }
         ]
     },
@@ -15570,7 +15847,8 @@
                         "1600",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             }
         ]
     },
@@ -15828,7 +16106,8 @@
                         "1600",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             }
         ]
     },
@@ -15882,7 +16161,8 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Ce cours s'adresse aux étudiants et étudiantes qui ont réussi le cours 602-103 avec une note d’au moins 75 % ou qui ont une très bonne maîtrise du français oral et écrit, et qui désirent aider des élèves en difficulté à se perfectionner en français oral et écrit. Pour pouvoir s’inscrire à ce cours, les étudiants doivent communiquer avec C. Paré par MIO [Message in Omnivox, My Dawson Portal]."
             },
             {
                 "ID": "00041",
@@ -15899,7 +16179,8 @@
                         "1600",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "Ce cours s'adresse aux étudiants et étudiantes qui ont réussi le cours 602-103 avec une note d’au moins 75 % ou qui ont une très bonne maîtrise du français oral et écrit, et qui désirent aider des élèves en difficulté à se perfectionner en français oral et écrit. Pour pouvoir s’inscrire à ce cours, les étudiants doivent communiquer avec C. Paré par MIO [Message in Omnivox, My Dawson Portal]."
             },
             {
                 "ID": "00060",
@@ -15915,7 +16196,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             }
         ]
     },
@@ -15968,7 +16250,8 @@
                         "1130",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "This section will be offered partially on-line. Students registering for this section are expected to have individual access to the internet."
             },
             {
                 "ID": "00004",
@@ -15988,7 +16271,7 @@
             },
             {
                 "ID": "00005",
-                "teacher": "Marc-André Levesque",
+                "teacher": "Smail Djaoud",
                 "schedule": [
                     [
                         "T",
@@ -16048,7 +16331,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "This section will be offered partially on-line. Students registering for this section are expected to have individual access to the internet."
             },
             {
                 "ID": "00009",
@@ -16097,7 +16381,8 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Ce cours s'adresse aux étudiants et étudiantes qui ont réussi le cours 602-103 avec une note d’au moins 75 % ou qui ont une très bonne maîtrise du français oral et écrit, et qui désirent aider des élèves en difficulté à se perfectionner en français oral et écrit. Pour pouvoir s’inscrire à ce cours, les étudiants doivent communiquer avec C. Paré par MIO [Message in Omnivox, My Dawson Portal]."
             },
             {
                 "ID": "00041",
@@ -16114,7 +16399,8 @@
                         "1600",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "Ce cours s'adresse aux étudiants et étudiantes qui ont réussi le cours 602-103 avec une note d’au moins 75 % ou qui ont une très bonne maîtrise du français oral et écrit, et qui désirent aider des élèves en difficulté à se perfectionner en français oral et écrit. Pour pouvoir s’inscrire à ce cours, les étudiants doivent communiquer avec C. Paré par MIO [Message in Omnivox, My Dawson Portal]."
             },
             {
                 "ID": "00060",
@@ -16130,7 +16416,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             }
         ]
     },
@@ -16276,7 +16563,8 @@
                         "1600",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             }
         ]
     },
@@ -16313,7 +16601,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "This section will be offered partially on-line. Students registering for this section are expected to have individual access to the internet."
             },
             {
                 "ID": "00003",
@@ -16378,7 +16667,8 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Ce cours s'adresse aux étudiants et étudiantes qui ont réussi le cours 602-103 avec une note d’au moins 75 % ou qui ont une très bonne maîtrise du français oral et écrit, et qui désirent aider des élèves en difficulté à se perfectionner en français oral et écrit. Pour pouvoir s’inscrire à ce cours, les étudiants doivent communiquer avec C. Paré par MIO [Message in Omnivox, My Dawson Portal]."
             },
             {
                 "ID": "00041",
@@ -16395,7 +16685,8 @@
                         "1600",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "Ce cours s'adresse aux étudiants et étudiantes qui ont réussi le cours 602-103 avec une note d’au moins 75 % ou qui ont une très bonne maîtrise du français oral et écrit, et qui désirent aider des élèves en difficulté à se perfectionner en français oral et écrit. Pour pouvoir s’inscrire à ce cours, les étudiants doivent communiquer avec C. Paré par MIO [Message in Omnivox, My Dawson Portal]."
             },
             {
                 "ID": "00060",
@@ -16411,7 +16702,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             }
         ]
     },
@@ -16433,7 +16725,8 @@
                         "1000",
                         "1200"
                     ]
-                ]
+                ],
+                "note": "Journeys"
             }
         ]
     },
@@ -16470,7 +16763,8 @@
                         "800",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             }
         ]
     },
@@ -16667,7 +16961,8 @@
                         "1600",
                         "1800"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             },
             {
                 "ID": "00061",
@@ -16683,7 +16978,8 @@
                         "1200",
                         "1400"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             },
             {
                 "ID": "00062",
@@ -16699,7 +16995,8 @@
                         "800",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             },
             {
                 "ID": "00063",
@@ -16707,15 +17004,16 @@
                 "schedule": [
                     [
                         "T",
-                        "1400",
-                        "1600"
+                        "800",
+                        "1000"
                     ],
                     [
-                        "R",
-                        "1400",
-                        "1600"
+                        "F",
+                        "800",
+                        "1000"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             }
         ]
     },
@@ -16884,7 +17182,7 @@
             },
             {
                 "ID": "00014",
-                "teacher": "Smail Djaoud",
+                "teacher": "Marc-André Levesque",
                 "schedule": [
                     [
                         "T",
@@ -17124,7 +17422,7 @@
             },
             {
                 "ID": "00029",
-                "teacher": "Smail Djaoud",
+                "teacher": "Marc-André Levesque",
                 "schedule": [
                     [
                         "M",
@@ -17296,7 +17594,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             },
             {
                 "ID": "00061",
@@ -17312,7 +17611,8 @@
                         "1600",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             },
             {
                 "ID": "00062",
@@ -17328,7 +17628,8 @@
                         "1600",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             }
         ]
     },
@@ -17337,6 +17638,7 @@
         "sections": [
             {
                 "ID": "00001",
+                "title": "Power and Place",
                 "teacher": "Sara Louise Kendall",
                 "schedule": [
                     [
@@ -17365,10 +17667,12 @@
                         "1130",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "International Business Studies"
             },
             {
                 "ID": "00003",
+                "title": "Power and Resistance",
                 "teacher": "Sara Louise Kendall",
                 "schedule": [
                     [
@@ -17413,7 +17717,8 @@
                         "1600",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "International Business Studies"
             },
             {
                 "ID": "00006",
@@ -17429,7 +17734,8 @@
                         "1130",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             }
         ]
     },
@@ -17498,10 +17804,12 @@
                         "1130",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             },
             {
                 "ID": "12001",
+                "title": "Power and Place",
                 "teacher": "Sara Louise Kendall",
                 "schedule": [
                     [
@@ -17514,10 +17822,12 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Social Change and Solidarity<br>This is a Learning Communities section. Students registering for this section MUST ALSO TAKE  387-1N1-DW 12001 and 330-1R1-DW 12004."
             },
             {
                 "ID": "12002",
+                "title": "Power and Resistance",
                 "teacher": "Sara Louise Kendall",
                 "schedule": [
                     [
@@ -17530,7 +17840,8 @@
                         "1430",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "This is a Learning Communities section. Students registering for this section MUST ALSO TAKE 330-1N1-DW 12003 and 300-1R1-DW 12005."
             }
         ]
     },
@@ -17551,7 +17862,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "International Business Studies<br>North South Studies"
             }
         ]
     },
@@ -17572,7 +17884,8 @@
                         "1430",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "Travel and Tourism"
             }
         ]
     },
@@ -17593,7 +17906,8 @@
                         "1600",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "Environmental Studies"
             }
         ]
     },
@@ -17716,7 +18030,8 @@
                         "1130",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "All Arts, Literature, and Communication profiles"
             },
             {
                 "ID": "00002",
@@ -17732,7 +18047,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "All Arts, Literature, and Communication profiles"
             },
             {
                 "ID": "00003",
@@ -17748,7 +18064,8 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "All Arts, Literature, and Communication profiles"
             },
             {
                 "ID": "00004",
@@ -17764,7 +18081,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "All Arts, Literature, and Communication profiles"
             }
         ]
     },
@@ -17785,7 +18103,8 @@
                         "1600",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "All Arts, Literature, and Communication profiles"
             }
         ]
     },
@@ -17806,7 +18125,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "All Arts, Literature, and Communication profiles"
             }
         ]
     },
@@ -18489,7 +18809,8 @@
                         "930",
                         "1330"
                     ]
-                ]
+                ],
+                "note": "Professional Photography"
             }
         ]
     },
@@ -18510,7 +18831,8 @@
                         "1430",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "All Arts, Literature, and Communication profiles"
             }
         ]
     },
@@ -18553,7 +18875,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "All Arts, Literature, and Communication profiles"
             }
         ]
     },
@@ -18596,7 +18919,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Psychology"
             },
             {
                 "ID": "00002",
@@ -18612,7 +18936,8 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Psychology"
             },
             {
                 "ID": "00003",
@@ -18660,7 +18985,8 @@
                         "1430",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "Commerce"
             },
             {
                 "ID": "00006",
@@ -18676,7 +19002,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             },
             {
                 "ID": "00007",
@@ -18692,7 +19019,8 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             }
         ]
     },
@@ -18713,7 +19041,8 @@
                         "800",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Social Change and Solidarity"
             },
             {
                 "ID": "00002",
@@ -18729,7 +19058,8 @@
                         "800",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Law, Society and Justice"
             },
             {
                 "ID": "00003",
@@ -18745,7 +19075,8 @@
                         "800",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Law, Society and Justice"
             },
             {
                 "ID": "00004",
@@ -18761,7 +19092,8 @@
                         "1600",
                         "1800"
                     ]
-                ]
+                ],
+                "note": "Law, Society and Justice"
             },
             {
                 "ID": "00005",
@@ -18793,7 +19125,8 @@
                         "1000",
                         "1200"
                     ]
-                ]
+                ],
+                "note": "Education, Family and Childhood"
             },
             {
                 "ID": "00007",
@@ -18809,7 +19142,8 @@
                         "1400",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "Education, Family and Childhood"
             },
             {
                 "ID": "00008",
@@ -18841,7 +19175,8 @@
                         "1600",
                         "1800"
                     ]
-                ]
+                ],
+                "note": "Society and Technology"
             },
             {
                 "ID": "00010",
@@ -18857,7 +19192,8 @@
                         "1400",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "Law, Society and Justice"
             },
             {
                 "ID": "00011",
@@ -18873,7 +19209,8 @@
                         "1600",
                         "1800"
                     ]
-                ]
+                ],
+                "note": "Law, Society and Justice"
             },
             {
                 "ID": "00012",
@@ -18889,7 +19226,8 @@
                         "1600",
                         "1800"
                     ]
-                ]
+                ],
+                "note": "Education, Family and Childhood"
             },
             {
                 "ID": "00013",
@@ -18905,7 +19243,8 @@
                         "1600",
                         "1800"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             },
             {
                 "ID": "00014",
@@ -18921,10 +19260,12 @@
                         "800",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             },
             {
                 "ID": "12001",
+                "title": "The Good Life?",
                 "teacher": "Lisa Steffen",
                 "schedule": [
                     [
@@ -18937,10 +19278,12 @@
                         "1000",
                         "1200"
                     ]
-                ]
+                ],
+                "note": "This is a Learning Communities section. Students registering for this section MUST ALSO TAKE 350-1N1-DW 12001 and 300-1R1-DW 12003."
             },
             {
                 "ID": "12002",
+                "title": "Gender and Society",
                 "teacher": "Nancy Rebelo",
                 "schedule": [
                     [
@@ -18953,10 +19296,12 @@
                         "800",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "This is a Learning Communities section. Students registering for this section MUST ALSO TAKE 387-1N1-DW 12002 and 300-1R1-DW 12006."
             },
             {
                 "ID": "12003",
+                "title": "Power and Resistance",
                 "teacher": "Benjamin Lander",
                 "schedule": [
                     [
@@ -18969,10 +19314,12 @@
                         "800",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "This is a Learning Communities section. Students registering for this section MUST ALSO TAKE 320-1N1-DW 12002  and 300-1R1-DW 12005."
             },
             {
                 "ID": "12004",
+                "title": "Race, Ethnicity and Migration",
                 "teacher": "Gesche Peters",
                 "schedule": [
                     [
@@ -18985,7 +19332,8 @@
                         "1600",
                         "1800"
                     ]
-                ]
+                ],
+                "note": "This is a Learning Communities section. Students registering for this section MUST ALSO TAKE 381-1N1-DW 12001 and 300-1R1-DW 12002."
             }
         ]
     },
@@ -19006,7 +19354,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Law, Society and Justice"
             },
             {
                 "ID": "00002",
@@ -19022,7 +19371,8 @@
                         "1430",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "Law, Society and Justice"
             },
             {
                 "ID": "00003",
@@ -19039,7 +19389,8 @@
                         "1430",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "Law, Society and Justice"
             },
             {
                 "ID": "00004",
@@ -19056,7 +19407,8 @@
                         "1130",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "Law, Society and Justice"
             },
             {
                 "ID": "00005",
@@ -19073,7 +19425,8 @@
                         "1430",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "Law, Society and Justice"
             },
             {
                 "ID": "00006",
@@ -19089,7 +19442,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             },
             {
                 "ID": "12001",
@@ -19106,7 +19460,8 @@
                         "1430",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "This is a Learning Communities section. Students registering for this section MUST ALSO TAKE 360-300-DW 12001."
             }
         ]
     },
@@ -19206,7 +19561,8 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Child Studies"
             },
             {
                 "ID": "00002",
@@ -19239,7 +19595,8 @@
                         "1600",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             }
         ]
     },
@@ -19260,7 +19617,8 @@
                         "1430",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "Liberal Arts"
             }
         ]
     },
@@ -19315,7 +19673,8 @@
                         "1130",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             }
         ]
     },
@@ -19549,8 +19908,7 @@
             },
             {
                 "ID": "00013",
-                "title": "Native Ways of Knowing",
-                "teacher": "Aditya Kumar Dewan",
+                "teacher": "Jennifer Koopman",
                 "schedule": [
                     [
                         "M",
@@ -19613,7 +19971,8 @@
                         "1400",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "Journeys"
             },
             {
                 "ID": "00018",
@@ -19630,7 +19989,8 @@
                         "1400",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "This section will be offered partially on-line. Students registering for this section are expected to have individual access to the internet."
             },
             {
                 "ID": "00019",
@@ -19647,7 +20007,8 @@
                         "1200",
                         "1400"
                     ]
-                ]
+                ],
+                "note": "This section will be offered partially on-line. Students registering for this section are expected to have individual access to the internet."
             },
             {
                 "ID": "00020",
@@ -19783,7 +20144,8 @@
                         "1400",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "This section will be offered partially on-line. Students registering for this section are expected to have individual access to the internet."
             },
             {
                 "ID": "00028",
@@ -19953,7 +20315,8 @@
                         "1000",
                         "1200"
                     ]
-                ]
+                ],
+                "note": "Liberal Arts"
             },
             {
                 "ID": "00038",
@@ -20156,7 +20519,8 @@
                         "1600",
                         "1800"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             },
             {
                 "ID": "14001",
@@ -20168,7 +20532,8 @@
                         "1600",
                         "2000"
                     ]
-                ]
+                ],
+                "note": "New School"
             },
             {
                 "ID": "14002",
@@ -20180,7 +20545,8 @@
                         "1600",
                         "2000"
                     ]
-                ]
+                ],
+                "note": "New School"
             },
             {
                 "ID": "18001",
@@ -20192,7 +20558,8 @@
                         "1000",
                         "1400"
                     ]
-                ]
+                ],
+                "note": "Reflections"
             },
             {
                 "ID": "18002",
@@ -20204,7 +20571,8 @@
                         "1430",
                         "1830"
                     ]
-                ]
+                ],
+                "note": "Reflections"
             },
             {
                 "ID": "18003",
@@ -20216,7 +20584,8 @@
                         "1000",
                         "1400"
                     ]
-                ]
+                ],
+                "note": "Reflections"
             }
         ]
     },
@@ -20340,7 +20709,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "This section will be offered partially on-line. Students registering for this section are expected to have individual access to the internet."
             },
             {
                 "ID": "00008",
@@ -20442,7 +20812,8 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Liberal Arts"
             },
             {
                 "ID": "00014",
@@ -20548,8 +20919,8 @@
             },
             {
                 "ID": "00020",
-                "title": "The Enlightenment and Romanticism",
-                "teacher": "Jean Coléno",
+                "title": "Folklore and Fairytale",
+                "teacher": "Jennifer Koopman",
                 "schedule": [
                     [
                         "M",
@@ -20578,7 +20949,8 @@
                         "1600",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "This section will be offered partially on-line. Students registering for this section are expected to have individual access to the internet."
             },
             {
                 "ID": "00022",
@@ -20633,6 +21005,7 @@
             },
             {
                 "ID": "00025",
+                "title": "Folklore and Fairytale",
                 "teacher": "Jennifer Koopman",
                 "schedule": [
                     [
@@ -20700,6 +21073,7 @@
             },
             {
                 "ID": "00029",
+                "title": "Folklore and Fairytale",
                 "teacher": "Jennifer Koopman",
                 "schedule": [
                     [
@@ -20779,7 +21153,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             },
             {
                 "ID": "12001",
@@ -20796,7 +21171,8 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "This is a Learning Communities section. Students registering for this section MUST ALSO TAKE 365-BXP-DW 12001.<br>This section will be offered partially on-line. Students registering for this section are expected to have individual access to the internet."
             }
         ]
     },
@@ -20835,7 +21211,8 @@
                         "1600",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "Of interest to students in Nursing."
             },
             {
                 "ID": "00003",
@@ -20907,8 +21284,8 @@
             },
             {
                 "ID": "00007",
-                "title": "Introduction to Ethics",
-                "teacher": "Jennifer Koopman",
+                "title": "Ethical Issues",
+                "teacher": "Jean Coléno",
                 "schedule": [
                     [
                         "M",
@@ -20988,7 +21365,8 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Of interest to students in Environmental Studies.<br>This section will be offered partially on-line. Students registering for this section are expected to have individual access to the internet."
             },
             {
                 "ID": "00012",
@@ -21141,7 +21519,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "This section will be offered partially on-line. Students registering for this section are expected to have individual access to the internet."
             },
             {
                 "ID": "00021",
@@ -21158,7 +21537,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "This section will be offered partially on-line. Students registering for this section are expected to have individual access to the internet."
             },
             {
                 "ID": "00022",
@@ -21174,7 +21554,8 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             },
             {
                 "ID": "18001",
@@ -21186,7 +21567,8 @@
                         "1430",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "Reflections"
             }
         ]
     },
@@ -22533,7 +22915,8 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "All Arts, Literature, and Communication profiles"
             },
             {
                 "ID": "00002",
@@ -22549,7 +22932,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "All Arts, Literature, and Communication profiles"
             },
             {
                 "ID": "00003",
@@ -22565,7 +22949,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "All Arts, Literature, and Communication profiles"
             },
             {
                 "ID": "00004",
@@ -22581,7 +22966,8 @@
                         "1130",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "All Arts, Literature, and Communication profiles"
             },
             {
                 "ID": "00005",
@@ -22597,7 +22983,8 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "All Arts, Literature, and Communication profiles"
             }
         ]
     },
@@ -22619,7 +23006,8 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "All Arts, Literature, and Communication profiles"
             }
         ]
     },
@@ -22640,7 +23028,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "All Arts, Literature, and Communication profiles"
             }
         ]
     },
@@ -22661,7 +23050,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "All Arts, Literature, and Communication profiles"
             }
         ]
     },
@@ -23167,7 +23557,8 @@
                         "1230",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Biomed Lab Tech"
             },
             {
                 "ID": "00002",
@@ -23183,7 +23574,8 @@
                         "1430",
                         "1630"
                     ]
-                ]
+                ],
+                "note": "Biomed Lab Tech"
             }
         ]
     },
@@ -23209,7 +23601,8 @@
                         "1200",
                         "1400"
                     ]
-                ]
+                ],
+                "note": "ESP/DSP"
             },
             {
                 "ID": "00002",
@@ -23277,7 +23670,8 @@
                         "1430",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "This section is compatible and available for Journeys."
             }
         ]
     },
@@ -23349,7 +23743,7 @@
             },
             {
                 "ID": "00004",
-                "teacher": "TBA-201-C",
+                "teacher": "Igor Gorelyshev",
                 "schedule": [
                     [
                         "M",
@@ -23370,7 +23764,7 @@
             },
             {
                 "ID": "00005",
-                "teacher": "TBA-201-C",
+                "teacher": "Igor Gorelyshev",
                 "schedule": [
                     [
                         "M",
@@ -23534,7 +23928,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             }
         ]
     },
@@ -23560,7 +23955,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Commerce"
             },
             {
                 "ID": "00002",
@@ -23581,7 +23977,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Commerce"
             },
             {
                 "ID": "00003",
@@ -23602,7 +23999,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Commerce"
             },
             {
                 "ID": "00004",
@@ -23623,7 +24021,8 @@
                         "1130",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "This section is compatible and available for International Business Studies."
             },
             {
                 "ID": "00005",
@@ -23691,7 +24090,8 @@
                         "1600",
                         "1800"
                     ]
-                ]
+                ],
+                "note": "Commerce"
             },
             {
                 "ID": "00002",
@@ -23712,7 +24112,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Commerce"
             },
             {
                 "ID": "00003",
@@ -23733,7 +24134,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "This section is compatible and available for International Business Studies."
             }
         ]
     },
@@ -23796,7 +24198,8 @@
                         "1000",
                         "1200"
                     ]
-                ]
+                ],
+                "note": "Civil Tech"
             },
             {
                 "ID": "00002",
@@ -23817,7 +24220,8 @@
                         "1000",
                         "1200"
                     ]
-                ]
+                ],
+                "note": "Civil Tech"
             }
         ]
     },
@@ -23838,7 +24242,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Lab Tech"
             }
         ]
     },
@@ -23859,7 +24264,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Lab Tech"
             }
         ]
     },
@@ -23880,7 +24286,8 @@
                         "1000",
                         "1200"
                     ]
-                ]
+                ],
+                "note": "Mech Tech"
             },
             {
                 "ID": "00002",
@@ -23896,7 +24303,8 @@
                         "1000",
                         "1200"
                     ]
-                ]
+                ],
+                "note": "On Reserve<br>Mech Tech"
             }
         ]
     },
@@ -23922,7 +24330,8 @@
                         "1000",
                         "1200"
                     ]
-                ]
+                ],
+                "note": "Mech Tech"
             }
         ]
     },
@@ -23948,7 +24357,8 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Electrotech"
             },
             {
                 "ID": "00002",
@@ -23969,7 +24379,8 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Electrotech"
             }
         ]
     },
@@ -24068,7 +24479,8 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Commerce"
             },
             {
                 "ID": "00002",
@@ -24089,7 +24501,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Commerce"
             },
             {
                 "ID": "00003",
@@ -24110,11 +24523,12 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Commerce"
             },
             {
                 "ID": "00004",
-                "teacher": "TBA-201-C",
+                "teacher": "Igor Gorelyshev",
                 "schedule": [
                     [
                         "M",
@@ -24131,11 +24545,12 @@
                         "1430",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "Commerce"
             },
             {
                 "ID": "00005",
-                "teacher": "TBA-201-C",
+                "teacher": "Igor Gorelyshev",
                 "schedule": [
                     [
                         "M",
@@ -24152,7 +24567,8 @@
                         "800",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Commerce"
             },
             {
                 "ID": "00006",
@@ -24173,7 +24589,8 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Commerce"
             },
             {
                 "ID": "00007",
@@ -24194,7 +24611,8 @@
                         "800",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "International Business Studies"
             },
             {
                 "ID": "00008",
@@ -24215,7 +24633,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "International Business Studies"
             },
             {
                 "ID": "00009",
@@ -24299,7 +24718,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             }
         ]
     },
@@ -24325,7 +24745,8 @@
                         "1200",
                         "1400"
                     ]
-                ]
+                ],
+                "note": "Science"
             },
             {
                 "ID": "00002",
@@ -24346,7 +24767,8 @@
                         "1600",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "Science"
             },
             {
                 "ID": "00003",
@@ -24367,7 +24789,8 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Science"
             },
             {
                 "ID": "00004",
@@ -24388,7 +24811,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Science<br>This section is compatible and available for Environmental Science."
             },
             {
                 "ID": "00005",
@@ -24409,7 +24833,8 @@
                         "800",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Science"
             },
             {
                 "ID": "00006",
@@ -24430,7 +24855,8 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Science"
             },
             {
                 "ID": "00007",
@@ -24451,7 +24877,8 @@
                         "800",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Science"
             },
             {
                 "ID": "00008",
@@ -24472,7 +24899,8 @@
                         "1130",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "Science"
             },
             {
                 "ID": "00009",
@@ -24493,7 +24921,8 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Science"
             },
             {
                 "ID": "00010",
@@ -24514,7 +24943,8 @@
                         "800",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Science"
             },
             {
                 "ID": "00011",
@@ -24535,7 +24965,8 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Science"
             },
             {
                 "ID": "00012",
@@ -24556,7 +24987,8 @@
                         "1130",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "Science"
             },
             {
                 "ID": "00013",
@@ -24577,7 +25009,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             },
             {
                 "ID": "12001",
@@ -24598,7 +25031,8 @@
                         "1130",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "Enriched Science<br>This is a Learning Communities section. Students registering for this section MUST ALSO TAKE 203-NYA-05 12001."
             },
             {
                 "ID": "12002",
@@ -24619,7 +25053,8 @@
                         "1000",
                         "1200"
                     ]
-                ]
+                ],
+                "note": "Enriched Science<br>This is a Learning Communities section. Students registering for this section MUST ALSO TAKE 203-NYA-05 12002."
             }
         ]
     },
@@ -24645,7 +25080,8 @@
                         "1600",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "Science"
             },
             {
                 "ID": "00002",
@@ -24666,7 +25102,8 @@
                         "1200",
                         "1400"
                     ]
-                ]
+                ],
+                "note": "Science"
             },
             {
                 "ID": "00003",
@@ -24687,7 +25124,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Science"
             },
             {
                 "ID": "00004",
@@ -24707,6 +25145,27 @@
                         "R",
                         "1430",
                         "1600"
+                    ]
+                ]
+            },
+            {
+                "ID": "00005",
+                "teacher": "TBA-201-E",
+                "schedule": [
+                    [
+                        "T",
+                        "1200",
+                        "1400"
+                    ],
+                    [
+                        "W",
+                        "1300",
+                        "1430"
+                    ],
+                    [
+                        "F",
+                        "1300",
+                        "1430"
                     ]
                 ]
             }
@@ -24734,7 +25193,8 @@
                         "1130",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "Enriched Science"
             },
             {
                 "ID": "00002",
@@ -24755,7 +25215,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Science"
             },
             {
                 "ID": "00003",
@@ -24776,7 +25237,8 @@
                         "800",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Science"
             },
             {
                 "ID": "00004",
@@ -24797,11 +25259,12 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Science"
             },
             {
                 "ID": "00005",
-                "teacher": "Noushin Sabetghadam Haghighi",
+                "teacher": "Igor Gorelyshev",
                 "schedule": [
                     [
                         "T",
@@ -24818,7 +25281,8 @@
                         "1130",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "Science"
             },
             {
                 "ID": "00006",
@@ -24839,7 +25303,8 @@
                         "1130",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "Science"
             },
             {
                 "ID": "00007",
@@ -24860,7 +25325,8 @@
                         "1430",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "Science"
             },
             {
                 "ID": "00008",
@@ -24881,19 +25347,15 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Commerce"
             },
             {
                 "ID": "00009",
                 "teacher": "Kheira Ameur",
                 "schedule": [
                     [
-                        "M",
-                        "830",
-                        "1000"
-                    ],
-                    [
-                        "W",
+                        "T",
                         "830",
                         "1000"
                     ],
@@ -24901,8 +25363,14 @@
                         "R",
                         "1200",
                         "1400"
+                    ],
+                    [
+                        "F",
+                        "830",
+                        "1000"
                     ]
-                ]
+                ],
+                "note": "Computer Science"
             },
             {
                 "ID": "00010",
@@ -24923,7 +25391,8 @@
                         "1400",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "Computer Science"
             },
             {
                 "ID": "00011",
@@ -24944,28 +25413,8 @@
                         "1000",
                         "1200"
                     ]
-                ]
-            },
-            {
-                "ID": "00012",
-                "teacher": "TBA-201-A",
-                "schedule": [
-                    [
-                        "T",
-                        "1200",
-                        "1400"
-                    ],
-                    [
-                        "W",
-                        "1300",
-                        "1430"
-                    ],
-                    [
-                        "F",
-                        "1300",
-                        "1430"
-                    ]
-                ]
+                ],
+                "note": "Computer Science"
             }
         ]
     },
@@ -25410,7 +25859,8 @@
                         "1000",
                         "1400"
                     ]
-                ]
+                ],
+                "note": "Interactive Media Arts"
             },
             {
                 "ID": "00002",
@@ -25421,7 +25871,8 @@
                         "1400",
                         "1800"
                     ]
-                ]
+                ],
+                "note": "Interactive Media Arts"
             }
         ]
     },
@@ -25437,7 +25888,8 @@
                         "830",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Interactive Media Arts"
             },
             {
                 "ID": "00002",
@@ -25448,7 +25900,8 @@
                         "1430",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "Interactive Media Arts"
             }
         ]
     },
@@ -25464,7 +25917,8 @@
                         "1000",
                         "1400"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, and Interactive Media Arts"
             },
             {
                 "ID": "00002",
@@ -25475,7 +25929,8 @@
                         "1000",
                         "1400"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, and Interactive Media Arts"
             }
         ]
     },
@@ -25491,7 +25946,8 @@
                         "830",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, Cinema-Communications, Interactive Media Arts, Literature, and Studio Arts"
             },
             {
                 "ID": "00002",
@@ -25502,7 +25958,8 @@
                         "1430",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, Cinema-Communications, Interactive Media Arts, Literature, and Studio Arts"
             }
         ]
     },
@@ -25518,7 +25975,8 @@
                         "1130",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, Cinema-Communications, Languages, Literature, and Studio Arts"
             }
         ]
     },
@@ -25534,7 +25992,8 @@
                         "1400",
                         "1800"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, Cinema-Communications, Interactive Media Arts, Literature, and Studio Arts"
             }
         ]
     },
@@ -25550,7 +26009,8 @@
                         "1130",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, Cinema-Communications, Literature, and Studio Arts"
             }
         ]
     },
@@ -26052,7 +26512,8 @@
                         "1300",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "COMPRESSED: August 21 to October 6 8:00-16:00 HOSPITAL"
             }
         ]
     },
@@ -26113,7 +26574,8 @@
                         "1300",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "COMPRESSED: October 10 to November 29 8:00-16:00 HOSPITAL"
             }
         ]
     },
@@ -26129,7 +26591,8 @@
                         "1430",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture"
             },
             {
                 "ID": "00002",
@@ -26145,7 +26608,8 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture"
             }
         ]
     },
@@ -26166,7 +26630,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, Cinema-Communications, Interactive Media Arts, Languages, Literature, and Studio Arts"
             },
             {
                 "ID": "00002",
@@ -26182,7 +26647,8 @@
                         "1130",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, Cinema-Communications, Interactive Media Arts, Languages, Literature, and Studio Arts"
             }
         ]
     },
@@ -26203,7 +26669,8 @@
                         "1130",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, Cinema-Communications, Interactive Media Arts, Literature, and Studio Arts"
             }
         ]
     },
@@ -26219,7 +26686,8 @@
                         "1430",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, Cinema-Communications, Interactive Media Arts, Literature, and Studio Arts"
             }
         ]
     },
@@ -26240,7 +26708,8 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, Cinema-Communications, Interactive Media Arts, Literature, and Studio Arts"
             }
         ]
     },
@@ -26256,7 +26725,8 @@
                         "1430",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, Cinema-Communications, Interactive Media Arts, Literature, and Studio Arts"
             }
         ]
     },
@@ -26277,7 +26747,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, Cinema-Communications, Interactive Media Arts, Literature, and Studio Arts"
             }
         ]
     },
@@ -26451,7 +26922,8 @@
                         "1400",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "HOSPITAL HOURS INCLUDE DAYS/EVENINGS"
             },
             {
                 "ID": "00002",
@@ -26472,7 +26944,8 @@
                         "1400",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "HOSPITAL HOURS INCLUDE DAYS/EVENINGS"
             },
             {
                 "ID": "00003",
@@ -26493,7 +26966,8 @@
                         "1130",
                         "1330"
                     ]
-                ]
+                ],
+                "note": "HOSPITAL HOURS INCLUDE DAYS/EVENINGS"
             },
             {
                 "ID": "00004",
@@ -26514,7 +26988,8 @@
                         "1130",
                         "1330"
                     ]
-                ]
+                ],
+                "note": "HOSPITAL HOURS INCLUDE DAYS/EVENINGS"
             },
             {
                 "ID": "00005",
@@ -26535,7 +27010,8 @@
                         "1130",
                         "1330"
                     ]
-                ]
+                ],
+                "note": "HOSPITAL HOURS INCLUDE DAYS/EVENINGS"
             },
             {
                 "ID": "00006",
@@ -26556,7 +27032,8 @@
                         "1400",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "HOSPITAL HOURS INCLUDE DAYS/EVENINGS"
             }
         ]
     },
@@ -26587,7 +27064,8 @@
                         "800",
                         "1700"
                     ]
-                ]
+                ],
+                "note": "HOSPITAL HOURS INCLUDE DAYS,EVENINGS, AND WEEKENDS"
             }
         ]
     },
@@ -26596,7 +27074,7 @@
         "sections": [
             {
                 "ID": "00001",
-                "teacher": "Marie-Christine Borruel, Meggie Carpel, Natalie Morin, Sarah Bolivar, Sherry McMillan",
+                "teacher": "Marie-Christine Borruel, Natalie Morin, Sarah Bolivar",
                 "schedule": [
                     [
                         "M",
@@ -26618,7 +27096,8 @@
                         "800",
                         "1700"
                     ]
-                ]
+                ],
+                "note": "HOSPITAL HOURS INCLUDE DAYS,EVENINGS, AND WEEKENDS"
             }
         ]
     },
@@ -26681,7 +27160,8 @@
                         "800",
                         "1700"
                     ]
-                ]
+                ],
+                "note": "HOSPITAL HOURS INCLUDE DAYS/EVENINGS"
             },
             {
                 "ID": "00002",
@@ -26712,7 +27192,8 @@
                         "800",
                         "1700"
                     ]
-                ]
+                ],
+                "note": "HOSPITAL HOURS INCLUDE DAYS/EVENINGS"
             }
         ]
     },
@@ -26785,6 +27266,7 @@
             },
             {
                 "ID": "00005",
+                "title": "How Can I Know Who I Am?",
                 "teacher": "Brian Redekopp",
                 "schedule": [
                     [
@@ -26813,7 +27295,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             }
         ]
     },
@@ -26834,7 +27317,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Psychology"
             },
             {
                 "ID": "00002",
@@ -26850,7 +27334,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Psychology"
             },
             {
                 "ID": "00003",
@@ -26898,7 +27383,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             },
             {
                 "ID": "12001",
@@ -26915,7 +27401,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "This is a Learning Communities section. Students registering for this section MUST ALSO TAKE 350-1N1-DW 12002 and 300-1R1-DW 12001."
             }
         ]
     },
@@ -26936,7 +27423,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture"
             }
         ]
     },
@@ -26957,7 +27445,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Liberal Arts"
             }
         ]
     },
@@ -26979,7 +27468,8 @@
                         "1130",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, Cinema-Communications, Interactive Media Arts, Languages, Literature, and Studio Arts"
             },
             {
                 "ID": "00002",
@@ -26995,7 +27485,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "On Reserve<br>Arts and Culture, Cinema-Communications, Interactive Media Arts, Languages, Literature, and Studio Arts"
             }
         ]
     },
@@ -27079,6 +27570,7 @@
                         "0H.3"
                     ]
                 ],
+                "note": "COMPRESSED COURSE: TRAVEL TIME NOT INCLUDED",
                 "intensive": true
             },
             {
@@ -27167,6 +27659,7 @@
                         "3E.1"
                     ]
                 ],
+                "note": "COMPRESSED COURSE: TRAVEL TIME NOT INCLUDED",
                 "intensive": true
             },
             {
@@ -27265,6 +27758,7 @@
                         "3E.1"
                     ]
                 ],
+                "note": "COMPRESSED COURSE: TRAVEL TIME NOT INCLUDED",
                 "intensive": true
             },
             {
@@ -27353,6 +27847,7 @@
                         "3E.11"
                     ]
                 ],
+                "note": "COMPRESSED COURSE: TRAVEL TIME NOT INCLUDED",
                 "intensive": true
             },
             {
@@ -27441,6 +27936,7 @@
                         "Montreal Area"
                     ]
                 ],
+                "note": "COMPRESSED COURSE: TRAVEL TIME NOT INCLUDED",
                 "intensive": true
             },
             {
@@ -27529,6 +28025,7 @@
                         "4E.20"
                     ]
                 ],
+                "note": "COMPRESSED COURSE: TRAVEL TIME NOT INCLUDED",
                 "intensive": true
             },
             {
@@ -27627,6 +28124,7 @@
                         "Montreal Area"
                     ]
                 ],
+                "note": "COMPRESSED COURSE: TRAVEL TIME NOT INCLUDED",
                 "intensive": true
             },
             {
@@ -27725,6 +28223,7 @@
                         "Montreal Area"
                     ]
                 ],
+                "note": "COMPRESSED COURSE: TRAVEL TIME NOT INCLUDED",
                 "intensive": true
             },
             {
@@ -27773,6 +28272,7 @@
                         "3E.1"
                     ]
                 ],
+                "note": "PRE-SEMESTER",
                 "intensive": true
             },
             {
@@ -28433,7 +28933,8 @@
                         "800",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             },
             {
                 "ID": "00065",
@@ -28445,7 +28946,8 @@
                         "800",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             }
         ]
     },
@@ -28508,6 +29010,7 @@
                         "Club Cote de Liesse Tennis"
                     ]
                 ],
+                "note": "PRE-SEMESTER<br>ON AND OFF CAMPUS",
                 "intensive": true
             },
             {
@@ -28561,6 +29064,7 @@
                         "-2H.1"
                     ]
                 ],
+                "note": "COMPRESSED COURSE: TRAVEL TIME NOT INCLUDED",
                 "intensive": true
             },
             {
@@ -28619,6 +29123,7 @@
                         "4F.1"
                     ]
                 ],
+                "note": "COMPRESSED COURSE: TRAVEL TIME NOT INCLUDED",
                 "intensive": true
             },
             {
@@ -28677,6 +29182,7 @@
                         "Kahnawake"
                     ]
                 ],
+                "note": "OUTDOOR EDUCATION INTENSIVE HELD ON TWO CONSECUTIVE DAYS, INCLUDING ONE OVERNIGHT; TRAVEL TIME IS NOT INCLUDED",
                 "intensive": true
             },
             {
@@ -28750,6 +29256,7 @@
                         "Yamaska Park"
                     ]
                 ],
+                "note": "INTENSIVE HELD ON SEPARATE DAYS; NO OVERNIGHT; TRAVEL TIME IS NOT INCLUDED",
                 "intensive": true
             },
             {
@@ -28933,6 +29440,7 @@
                         "VERDUN"
                     ]
                 ],
+                "note": "INTENSIVE HELD ON SEPARATE DAYS; NO OVERNIGHT; TRAVEL TIME IS NOT INCLUDED",
                 "intensive": true
             },
             {
@@ -29569,7 +30077,8 @@
                         "1600",
                         "1800"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             },
             {
                 "ID": "00060",
@@ -29581,7 +30090,8 @@
                         "1600",
                         "1800"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             }
         ]
     },
@@ -29644,6 +30154,7 @@
                         "-2H.1"
                     ]
                 ],
+                "note": "COMPRESSED COURSE: TRAVEL TIME NOT INCLUDED",
                 "intensive": true
             },
             {
@@ -29702,6 +30213,7 @@
                         "0H.3"
                     ]
                 ],
+                "note": "COMPRESSED COURSE: TRAVEL TIME NOT INCLUDED",
                 "intensive": true
             },
             {
@@ -29760,6 +30272,7 @@
                         "Parc Regional de la Montagne du Diable"
                     ]
                 ],
+                "note": "OUTDOOR EDUCATION INTENSIVE HELD ON THREE CONSECUTIVE DAYS, INCLUDING TWO OVERNIGHTS [CAMPING]; TRAVEL TIME IS NOT INCLUDED",
                 "intensive": true
             },
             {
@@ -29823,6 +30336,7 @@
                         "-1H.2"
                     ]
                 ],
+                "note": "COMPRESSED<br>ON AND OFF CAMPUS<br>OFF CAMPUS<br>OFF CAMPUS",
                 "intensive": true
             },
             {
@@ -29876,6 +30390,7 @@
                         "Camp Kinkora"
                     ]
                 ],
+                "note": "OUTDOOR EDUCATION INTENSIVE HELD ON THREE CONSECUTIVE DAYS, INCLUDING TWO OVERNIGHTS [CAMPING]; TRAVEL TIME IS NOT INCLUDED",
                 "intensive": true
             },
             {
@@ -29939,6 +30454,7 @@
                         "Reserve Faunique La Verendrye"
                     ]
                 ],
+                "note": "OUTDOOR EDUCATION INTENSIVE HELD ON THREE CONSECUTIVE DAYS, INCLUDING TWO OVERNIGHTS [CAMPING]; TRAVEL TIME IS NOT INCLUDED",
                 "intensive": true
             },
             {
@@ -29992,6 +30508,7 @@
                         "Base de Plein Air Mont Tremblant"
                     ]
                 ],
+                "note": "OUTDOOR EDUCATION INTENSIVE HELD ON THREE CONSECUTIVE DAYS, INCLUDING TWO OVERNIGHTS [CAMPING]; TRAVEL TIME IS NOT INCLUDED",
                 "intensive": true
             },
             {
@@ -30055,6 +30572,7 @@
                         "Base de Plein Air Mont Tremblant"
                     ]
                 ],
+                "note": "OUTDOOR EDUCATION INTENSIVE HELD ON THREE CONSECUTIVE DAYS, INCLUDING TWO OVERNIGHTS AT AN OUTDOOR EDUCATION CENTRE; TRAVEL TIME IS NOT INCLUDED",
                 "intensive": true
             },
             {
@@ -30123,6 +30641,7 @@
                         "Parkside Ranch"
                     ]
                 ],
+                "note": "OUTDOOR EDUCATION INTENSIVE HELD ON THREE CONSECUTIVE DAYS, INCLUDING TWO OVERNIGHTS AT AN OUTDOOR EDUCATION CENTRE; TRAVEL TIME IS NOT INCLUDED",
                 "intensive": true
             },
             {
@@ -30186,6 +30705,7 @@
                         "KIO Center"
                     ]
                 ],
+                "note": "OUTDOOR EDUCATION INTENSIVE HELD ON THREE CONSECUTIVE DAYS, INCLUDING TWO OVERNIGHTS; TRAVEL TIME IS NOT INCLUDED",
                 "intensive": true
             },
             {
@@ -30642,7 +31162,8 @@
                         "1400",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             },
             {
                 "ID": "00049",
@@ -30654,7 +31175,8 @@
                         "1000",
                         "1200"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             },
             {
                 "ID": "12001",
@@ -30712,6 +31234,7 @@
                         "Kanawana"
                     ]
                 ],
+                "note": "This is a Learning Communities section. Students registering for this section MUST ALSO TAKE 101-BZP-DW 12001.<br>OUTDOOR EDUCATION INTENSIVE HELD ON THREE CONSECUTIVE DAYS, INCLUDING TWO OVERNIGHTS [CAMPING]; TRAVEL TIME IS NOT INCLUDED",
                 "intensive": true
             }
         ]
@@ -30828,7 +31351,8 @@
                         "800",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "ESP/DSP"
             },
             {
                 "ID": "00002",
@@ -30849,7 +31373,8 @@
                         "1400",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "ESP/DSP"
             }
         ]
     },
@@ -30870,7 +31395,8 @@
                         "1400",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "Medical Ultrasound Tech"
             }
         ]
     },
@@ -30891,7 +31417,8 @@
                         "1200",
                         "1400"
                     ]
-                ]
+                ],
+                "note": "Diagnostic Imaging"
             },
             {
                 "ID": "00002",
@@ -30907,7 +31434,8 @@
                         "1400",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "Diagnostic Imaging"
             }
         ]
     },
@@ -30928,7 +31456,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Civil Tech"
             }
         ]
     },
@@ -30937,14 +31466,15 @@
         "sections": [
             {
                 "ID": "00001",
-                "teacher": "TBA-203-C",
+                "teacher": "Virgil Alexandru Muntean",
                 "schedule": [
                     [
                         "M",
                         "1000",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "Lab Tech"
             }
         ]
     },
@@ -30970,7 +31500,8 @@
                         "1430",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "Physiotherapy Tech"
             },
             {
                 "ID": "00002",
@@ -30991,7 +31522,8 @@
                         "1600",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "Physiotherapy Tech"
             }
         ]
     },
@@ -31212,7 +31744,7 @@
             },
             {
                 "ID": "00008",
-                "teacher": "Joel Trudeau",
+                "teacher": "Manuel Toharia Zapata",
                 "schedule": [
                     [
                         "M",
@@ -31296,7 +31828,7 @@
             },
             {
                 "ID": "00012",
-                "teacher": "TBA-203-A",
+                "teacher": "Virgil Alexandru Muntean",
                 "schedule": [
                     [
                         "M",
@@ -31334,7 +31866,8 @@
                         "1000",
                         "1200"
                     ]
-                ]
+                ],
+                "note": "Enriched Science<br>This is a Learning Communities section. Students registering for this section MUST ALSO TAKE 201-NYA-05 12001."
             },
             {
                 "ID": "12002",
@@ -31355,7 +31888,8 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Enriched Science<br>This is a Learning Communities section. Students registering for this section MUST ALSO TAKE 201-NYA-05 12002."
             }
         ]
     },
@@ -31381,7 +31915,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Enriched Science"
             },
             {
                 "ID": "00002",
@@ -31528,7 +32063,8 @@
                         "1600",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             }
         ]
     },
@@ -31554,7 +32090,8 @@
                         "1000",
                         "1200"
                     ]
-                ]
+                ],
+                "note": "Enriched Science"
             },
             {
                 "ID": "00002",
@@ -31722,11 +32259,12 @@
                         "800",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Environmental Science"
             },
             {
                 "ID": "00010",
-                "teacher": "TBA-203-B",
+                "teacher": "Virgil Alexandru Muntean",
                 "schedule": [
                     [
                         "T",
@@ -32228,7 +32766,8 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "International Business Studies"
             },
             {
                 "ID": "00003",
@@ -32244,7 +32783,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Law, Society and Justice"
             },
             {
                 "ID": "00004",
@@ -32260,7 +32800,8 @@
                         "1130",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "International Business Studies"
             },
             {
                 "ID": "00005",
@@ -32276,7 +32817,8 @@
                         "1600",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             }
         ]
     },
@@ -32297,7 +32839,8 @@
                         "1130",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "Society and Technology"
             },
             {
                 "ID": "00002",
@@ -32361,7 +32904,8 @@
                         "1600",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             }
         ]
     },
@@ -32382,7 +32926,8 @@
                         "1130",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "Law, Society and Justice"
             },
             {
                 "ID": "00002",
@@ -32398,7 +32943,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Law, Society and Justice"
             },
             {
                 "ID": "00003",
@@ -32414,7 +32960,8 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Law, Society and Justice"
             },
             {
                 "ID": "00004",
@@ -32430,7 +32977,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Law, Society and Justice"
             }
         ]
     },
@@ -32945,7 +33493,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             }
         ]
     },
@@ -33353,7 +33902,7 @@
         "sections": [
             {
                 "ID": "00001",
-                "teacher": "TBA-561-A, George Tucci, Stefanie L Buxton",
+                "teacher": "George Tucci, Stefanie L Buxton",
                 "schedule": [
                     [
                         "T",
@@ -33379,7 +33928,7 @@
             },
             {
                 "ID": "00002",
-                "teacher": "TBA-561-A, George Tucci, Jonathan Monro",
+                "teacher": "George Tucci, Jonathan Monro",
                 "schedule": [
                     [
                         "T",
@@ -33681,7 +34230,8 @@
                         "1430",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "North South Studies"
             },
             {
                 "ID": "00007",
@@ -33733,6 +34283,7 @@
             },
             {
                 "ID": "00010",
+                "title": "The Good Life?",
                 "teacher": "Susan Finch",
                 "schedule": [
                     [
@@ -33797,6 +34348,7 @@
             },
             {
                 "ID": "00014",
+                "title": "How Can I Know Who I Am?",
                 "teacher": "Susan Finch",
                 "schedule": [
                     [
@@ -33873,7 +34425,8 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "International Business Studies"
             },
             {
                 "ID": "00019",
@@ -33921,7 +34474,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             }
         ]
     },
@@ -33958,7 +34512,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Education, Family and Childhood"
             },
             {
                 "ID": "00003",
@@ -34006,7 +34561,8 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Society and Technology"
             },
             {
                 "ID": "00006",
@@ -34054,7 +34610,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Psychology"
             },
             {
                 "ID": "00009",
@@ -34070,7 +34627,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Psychology"
             },
             {
                 "ID": "00011",
@@ -34086,7 +34644,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Education, Family and Childhood"
             },
             {
                 "ID": "00012",
@@ -34134,7 +34693,8 @@
                         "1130",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "Psychology"
             },
             {
                 "ID": "00016",
@@ -34150,7 +34710,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Education, Family and Childhood"
             },
             {
                 "ID": "00017",
@@ -34214,7 +34775,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             },
             {
                 "ID": "12001",
@@ -34231,7 +34793,8 @@
                         "1430",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "This is a Learning Communities section. Students registering for this section MUST ALSO TAKE 330-1N1-DW 12001 and 300-1R1-DW 12003."
             },
             {
                 "ID": "12002",
@@ -34248,7 +34811,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "This is a Learning Communities section. Students registering for this section MUST ALSO TAKE 340-1N1-DW 12001 and 300-1R1-DW 12001."
             },
             {
                 "ID": "12003",
@@ -34264,7 +34828,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Psychology<br>This is a Learning Communities section. Students registering for this section MUST ALSO TAKE 101-B11-DW 12001 or 101-B11-DW 12002."
             }
         ]
     },
@@ -34280,7 +34845,8 @@
                         "1430",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "Psychology"
             },
             {
                 "ID": "00002",
@@ -34291,7 +34857,8 @@
                         "1430",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "Child Studies"
             },
             {
                 "ID": "00003",
@@ -34307,7 +34874,8 @@
                         "1130",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "Child Studies"
             },
             {
                 "ID": "00004",
@@ -34323,7 +34891,8 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Child Studies"
             },
             {
                 "ID": "00005",
@@ -34366,7 +34935,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Psychology"
             },
             {
                 "ID": "00003",
@@ -34404,7 +34974,8 @@
                         "830",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             }
         ]
     },
@@ -34420,7 +34991,8 @@
                         "1430",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "Law, Society and Justice"
             },
             {
                 "ID": "00002",
@@ -34431,7 +35003,8 @@
                         "1130",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Law, Society and Justice"
             },
             {
                 "ID": "00003",
@@ -34442,7 +35015,8 @@
                         "1130",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Law, Society and Justice"
             },
             {
                 "ID": "00004",
@@ -34453,7 +35027,8 @@
                         "1130",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Law, Society and Justice"
             },
             {
                 "ID": "00005",
@@ -34464,7 +35039,8 @@
                         "1130",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Law, Society and Justice"
             }
         ]
     },
@@ -34496,7 +35072,8 @@
                         "1130",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Psychology"
             },
             {
                 "ID": "00002",
@@ -34507,7 +35084,8 @@
                         "1130",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Psychology"
             },
             {
                 "ID": "00003",
@@ -34529,7 +35107,8 @@
                         "830",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             }
         ]
     },
@@ -34545,7 +35124,8 @@
                         "1130",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "This section is compatible and available for International Business Studies."
             },
             {
                 "ID": "00002",
@@ -34556,7 +35136,8 @@
                         "830",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "This section is compatible and available for International Business Studies."
             }
         ]
     },
@@ -34578,7 +35159,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Psychology"
             },
             {
                 "ID": "00002",
@@ -34595,7 +35177,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Psychology"
             }
         ]
     },
@@ -34612,7 +35195,8 @@
                         "830",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Psychology"
             },
             {
                 "ID": "00002",
@@ -34624,7 +35208,8 @@
                         "1130",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Psychology"
             },
             {
                 "ID": "00003",
@@ -34636,7 +35221,8 @@
                         "830",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Child Studies"
             },
             {
                 "ID": "00004",
@@ -34648,7 +35234,8 @@
                         "1430",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             }
         ]
     },
@@ -34664,7 +35251,8 @@
                         "1300",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "C.R.L.T."
             }
         ]
     },
@@ -34680,7 +35268,8 @@
                         "1130",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Social Service"
             },
             {
                 "ID": "00002",
@@ -34691,7 +35280,8 @@
                         "1430",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "Social Service"
             }
         ]
     },
@@ -34819,7 +35409,8 @@
                         "1000",
                         "1200"
                     ]
-                ]
+                ],
+                "note": "Liberal Arts"
             }
         ]
     },
@@ -34828,23 +35419,23 @@
         "sections": [
             {
                 "ID": "00001",
-                "teacher": "Lazar Konforti",
+                "teacher": "Jeffrey Barnes",
                 "schedule": [
                     [
                         "T",
-                        "1600",
-                        "1800"
+                        "1400",
+                        "1600"
                     ],
                     [
                         "R",
-                        "1600",
-                        "1800"
+                        "1400",
+                        "1600"
                     ]
                 ]
             },
             {
                 "ID": "00002",
-                "teacher": "Geoffrey Pearce",
+                "teacher": "Jeffrey Barnes",
                 "schedule": [
                     [
                         "M",
@@ -34856,7 +35447,8 @@
                         "800",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "North South Studies"
             },
             {
                 "ID": "00003",
@@ -34888,7 +35480,8 @@
                         "1200",
                         "1400"
                     ]
-                ]
+                ],
+                "note": "Law, Society and Justice"
             },
             {
                 "ID": "00005",
@@ -34904,7 +35497,8 @@
                         "1400",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "Law, Society and Justice"
             },
             {
                 "ID": "00006",
@@ -34920,7 +35514,8 @@
                         "1000",
                         "1200"
                     ]
-                ]
+                ],
+                "note": "Psychology"
             },
             {
                 "ID": "00007",
@@ -34936,7 +35531,8 @@
                         "1000",
                         "1200"
                     ]
-                ]
+                ],
+                "note": "Psychology"
             },
             {
                 "ID": "00008",
@@ -34952,7 +35548,8 @@
                         "1600",
                         "1800"
                     ]
-                ]
+                ],
+                "note": "Psychology"
             },
             {
                 "ID": "00009",
@@ -34968,7 +35565,8 @@
                         "1000",
                         "1200"
                     ]
-                ]
+                ],
+                "note": "Psychology"
             },
             {
                 "ID": "00010",
@@ -35000,7 +35598,8 @@
                         "1600",
                         "1800"
                     ]
-                ]
+                ],
+                "note": "Law, Society and Justice"
             },
             {
                 "ID": "00012",
@@ -35032,7 +35631,8 @@
                         "800",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Child Studies"
             },
             {
                 "ID": "00014",
@@ -35048,7 +35648,8 @@
                         "800",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Psychology"
             },
             {
                 "ID": "00015",
@@ -35080,7 +35681,8 @@
                         "1000",
                         "1200"
                     ]
-                ]
+                ],
+                "note": "Environmental Studies"
             },
             {
                 "ID": "00017",
@@ -35096,7 +35698,8 @@
                         "1200",
                         "1400"
                     ]
-                ]
+                ],
+                "note": "Travel and Tourism"
             },
             {
                 "ID": "00018",
@@ -35128,7 +35731,8 @@
                         "1200",
                         "1400"
                     ]
-                ]
+                ],
+                "note": "Child Studies"
             },
             {
                 "ID": "00020",
@@ -35144,7 +35748,8 @@
                         "1600",
                         "1800"
                     ]
-                ]
+                ],
+                "note": "Child Studies"
             },
             {
                 "ID": "00021",
@@ -35160,7 +35765,8 @@
                         "1000",
                         "1200"
                     ]
-                ]
+                ],
+                "note": "International Business Studies"
             },
             {
                 "ID": "00022",
@@ -35176,7 +35782,8 @@
                         "1400",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "International Business Studies"
             },
             {
                 "ID": "00023",
@@ -35208,7 +35815,8 @@
                         "1000",
                         "1200"
                     ]
-                ]
+                ],
+                "note": "Psychology"
             },
             {
                 "ID": "00025",
@@ -35224,7 +35832,8 @@
                         "1200",
                         "1400"
                     ]
-                ]
+                ],
+                "note": "Commerce"
             },
             {
                 "ID": "00026",
@@ -35240,7 +35849,8 @@
                         "1000",
                         "1200"
                     ]
-                ]
+                ],
+                "note": "Commerce"
             },
             {
                 "ID": "00027",
@@ -35256,7 +35866,8 @@
                         "1200",
                         "1400"
                     ]
-                ]
+                ],
+                "note": "Commerce"
             },
             {
                 "ID": "00028",
@@ -35272,7 +35883,8 @@
                         "1600",
                         "1800"
                     ]
-                ]
+                ],
+                "note": "Commerce"
             },
             {
                 "ID": "00029",
@@ -35288,7 +35900,8 @@
                         "1600",
                         "1800"
                     ]
-                ]
+                ],
+                "note": "Commerce"
             },
             {
                 "ID": "00030",
@@ -35304,7 +35917,8 @@
                         "1400",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "International Business Studies"
             },
             {
                 "ID": "00031",
@@ -35320,7 +35934,8 @@
                         "1600",
                         "1800"
                     ]
-                ]
+                ],
+                "note": "Commerce"
             },
             {
                 "ID": "00032",
@@ -35336,7 +35951,8 @@
                         "800",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Law, Society and Justice"
             },
             {
                 "ID": "00033",
@@ -35352,7 +35968,8 @@
                         "800",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Law, Society and Justice"
             },
             {
                 "ID": "00034",
@@ -35368,7 +35985,8 @@
                         "800",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Law, Society and Justice"
             },
             {
                 "ID": "00035",
@@ -35384,7 +36002,8 @@
                         "800",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Law, Society and Justice"
             },
             {
                 "ID": "00036",
@@ -35404,7 +36023,7 @@
             },
             {
                 "ID": "00037",
-                "teacher": "Lazar Konforti",
+                "teacher": "Jeffrey Barnes",
                 "schedule": [
                     [
                         "M",
@@ -35416,7 +36035,8 @@
                         "1000",
                         "1200"
                     ]
-                ]
+                ],
+                "note": "Psychology"
             },
             {
                 "ID": "00038",
@@ -35480,7 +36100,8 @@
                         "800",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             },
             {
                 "ID": "12001",
@@ -35497,7 +36118,8 @@
                         "1200",
                         "1400"
                     ]
-                ]
+                ],
+                "note": "This is a Learning Communities section. Students registering for this section MUST ALSO TAKE 330-201-DW 12001."
             }
         ]
     },
@@ -35518,7 +36140,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "North South Studies"
             }
         ]
     },
@@ -35953,7 +36576,8 @@
                         "1330",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             }
         ]
     },
@@ -36097,7 +36721,8 @@
                         "1300",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "COMPRESSED: August 21 to October 6 8:00-15:30 HOSPITAL"
             }
         ]
     },
@@ -36158,7 +36783,8 @@
                         "1300",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "COMPRESSED: October 10 to November 29 8:00-15:30 HOSPITAL"
             }
         ]
     },
@@ -36259,7 +36885,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             }
         ]
     },
@@ -36315,7 +36942,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Psychology"
             },
             {
                 "ID": "00004",
@@ -36332,7 +36960,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Psychology"
             },
             {
                 "ID": "00005",
@@ -36349,7 +36978,8 @@
                         "1430",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "Psychology"
             },
             {
                 "ID": "00006",
@@ -36366,7 +36996,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             }
         ]
     },
@@ -36409,7 +37040,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, Cinema-Communications, Interactive Media Arts, Languages, Literature, and Studio Arts"
             }
         ]
     },
@@ -36426,7 +37058,8 @@
                         "1130",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Reflections"
             }
         ]
     },
@@ -36447,7 +37080,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Liberal Arts"
             }
         ]
     },
@@ -36468,11 +37102,12 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Commerce"
             },
             {
                 "ID": "00002",
-                "teacher": "Tesfa Aeisha Peterson",
+                "teacher": "Jeffrey Barnes",
                 "schedule": [
                     [
                         "T",
@@ -36484,7 +37119,8 @@
                         "1600",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "Commerce"
             },
             {
                 "ID": "00003",
@@ -36500,7 +37136,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Law, Society and Justice"
             },
             {
                 "ID": "00004",
@@ -36516,7 +37153,8 @@
                         "1430",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "Law, Society and Justice"
             },
             {
                 "ID": "00005",
@@ -36532,7 +37170,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Law, Society and Justice"
             },
             {
                 "ID": "00006",
@@ -36548,7 +37187,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Psychology"
             },
             {
                 "ID": "00007",
@@ -36564,7 +37204,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Psychology"
             },
             {
                 "ID": "00008",
@@ -36580,7 +37221,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Education, Family and Childhood"
             },
             {
                 "ID": "00009",
@@ -36596,7 +37238,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Commerce"
             },
             {
                 "ID": "00010",
@@ -36612,7 +37255,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Commerce"
             },
             {
                 "ID": "00011",
@@ -36628,7 +37272,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Commerce"
             },
             {
                 "ID": "00012",
@@ -36644,7 +37289,8 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Education, Family and Childhood"
             },
             {
                 "ID": "00013",
@@ -36660,7 +37306,8 @@
                         "1130",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "Education, Family and Childhood"
             },
             {
                 "ID": "00014",
@@ -36676,7 +37323,8 @@
                         "1600",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "Psychology"
             },
             {
                 "ID": "00015",
@@ -36692,7 +37340,8 @@
                         "1130",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "Psychology"
             },
             {
                 "ID": "00016",
@@ -36708,7 +37357,8 @@
                         "1130",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "International Business Studies"
             },
             {
                 "ID": "00017",
@@ -36724,7 +37374,8 @@
                         "1430",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "International Business Studies"
             },
             {
                 "ID": "00018",
@@ -36740,7 +37391,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Society and Technology"
             },
             {
                 "ID": "00019",
@@ -36756,7 +37408,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Commerce"
             },
             {
                 "ID": "00020",
@@ -36772,7 +37425,8 @@
                         "1430",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "Law, Society and Justice"
             },
             {
                 "ID": "00021",
@@ -36788,7 +37442,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Law, Society and Justice"
             },
             {
                 "ID": "00022",
@@ -36804,7 +37459,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Psychology"
             },
             {
                 "ID": "00023",
@@ -36820,7 +37476,8 @@
                         "1600",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             },
             {
                 "ID": "00024",
@@ -36836,7 +37493,8 @@
                         "1600",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             },
             {
                 "ID": "00025",
@@ -36852,7 +37510,8 @@
                         "1430",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             },
             {
                 "ID": "12001",
@@ -36869,11 +37528,12 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "This is a Learning Communities section. Students registering for this section MUST ALSO TAKE 350-1N1-DW 12002 and 340-1N1-DW 12001."
             },
             {
                 "ID": "12002",
-                "title": "Race, Ethnicity, and Migration",
+                "title": "Race, Ethnicity and Migration",
                 "teacher": "Marie-Pierre Gosselin",
                 "schedule": [
                     [
@@ -36886,7 +37546,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "This is a Learning Communities section. Students registering for this section MUST ALSO TAKE 381-1N1-DW 12001 and 330-1N1-DW 12004."
             },
             {
                 "ID": "12003",
@@ -36903,7 +37564,8 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "This is a Learning Communities section. Students registering for this section MUST ALSO TAKE 330-1N1-DW 12001 and 350-1N1-DW 12001."
             },
             {
                 "ID": "12004",
@@ -36920,10 +37582,12 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Social Change and Solidarity<br>This is a Learning Communities section. Students registering for this section MUST ALSO TAKE 387-1N1-DW 12001 and 320-1N1-DW 12001."
             },
             {
                 "ID": "12005",
+                "title": "Power and Resistance",
                 "teacher": "Tesfa Aeisha Peterson",
                 "schedule": [
                     [
@@ -36936,10 +37600,12 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "This is a Learning Communities section. Students registering for this section MUST ALSO TAKE 320-1N1-DW 12002 and 330-1N1-DW 12003."
             },
             {
                 "ID": "12006",
+                "title": "Gender and Society",
                 "teacher": "Laura Shea",
                 "schedule": [
                     [
@@ -36952,7 +37618,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "This is a Learning Communities section. Students registering for this section MUST ALSO TAKE 387-1N1-DW 12002 and 330-1N1-DW 12002"
             }
         ]
     },
@@ -36973,7 +37640,8 @@
                         "1200",
                         "1400"
                     ]
-                ]
+                ],
+                "note": "Psychology"
             },
             {
                 "ID": "00002",
@@ -36989,7 +37657,8 @@
                         "1000",
                         "1200"
                     ]
-                ]
+                ],
+                "note": "Psychology"
             },
             {
                 "ID": "00003",
@@ -37009,7 +37678,7 @@
             },
             {
                 "ID": "00004",
-                "teacher": "Jennifer E. Smith",
+                "teacher": "Verity Whalen",
                 "schedule": [
                     [
                         "M",
@@ -37053,7 +37722,8 @@
                         "1400",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "Child Studies<br>Psychology"
             },
             {
                 "ID": "00007",
@@ -37069,7 +37739,8 @@
                         "1600",
                         "1800"
                     ]
-                ]
+                ],
+                "note": "Law, Society and Justice"
             },
             {
                 "ID": "00008",
@@ -37085,7 +37756,8 @@
                         "1000",
                         "1200"
                     ]
-                ]
+                ],
+                "note": "Child Studies"
             },
             {
                 "ID": "00009",
@@ -37101,7 +37773,8 @@
                         "800",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Commerce"
             },
             {
                 "ID": "00010",
@@ -37117,7 +37790,8 @@
                         "800",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Commerce<br>International Business Studies"
             },
             {
                 "ID": "00011",
@@ -37133,7 +37807,8 @@
                         "800",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "International Business Studies"
             },
             {
                 "ID": "00012",
@@ -37149,7 +37824,8 @@
                         "800",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Law, Society and Justice"
             },
             {
                 "ID": "00013",
@@ -37197,7 +37873,8 @@
                         "800",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             }
         ]
     },
@@ -37214,7 +37891,8 @@
                         "1130",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Commerce<br>This section is compatible and available for International Business Studies."
             },
             {
                 "ID": "00002",
@@ -37226,7 +37904,8 @@
                         "1130",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Commerce<br>This section is compatible and available for International Business Studies."
             },
             {
                 "ID": "00003",
@@ -37237,7 +37916,8 @@
                         "830",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             }
         ]
     },
@@ -37310,7 +37990,8 @@
                         "800",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Child Studies"
             },
             {
                 "ID": "00025",
@@ -37327,7 +38008,8 @@
                         "800",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Psychology"
             },
             {
                 "ID": "00026",
@@ -37343,7 +38025,8 @@
                         "1400",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "Psychology"
             },
             {
                 "ID": "00027",
@@ -37360,7 +38043,8 @@
                         "1200",
                         "1400"
                     ]
-                ]
+                ],
+                "note": "International Business Studies"
             },
             {
                 "ID": "00028",
@@ -37377,7 +38061,8 @@
                         "1600",
                         "1800"
                     ]
-                ]
+                ],
+                "note": "Law, Society and Justice"
             },
             {
                 "ID": "00029",
@@ -37394,7 +38079,8 @@
                         "1600",
                         "1800"
                     ]
-                ]
+                ],
+                "note": "Law, Society and Justice"
             },
             {
                 "ID": "00030",
@@ -37411,7 +38097,8 @@
                         "1400",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "Child Studies"
             },
             {
                 "ID": "00031",
@@ -37428,7 +38115,8 @@
                         "800",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Psychology"
             },
             {
                 "ID": "00032",
@@ -37444,7 +38132,8 @@
                         "1200",
                         "1400"
                     ]
-                ]
+                ],
+                "note": "Psychology"
             },
             {
                 "ID": "00033",
@@ -37460,7 +38149,8 @@
                         "800",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             }
         ]
     },
@@ -37469,7 +38159,7 @@
         "sections": [
             {
                 "ID": "00001",
-                "teacher": "Alyssa Kuzmarov, Vittoria Fusco",
+                "teacher": "Rosemary Barrett, Vittoria Fusco",
                 "schedule": [
                     [
                         "R",
@@ -37485,7 +38175,7 @@
             },
             {
                 "ID": "00002",
-                "teacher": "Alyssa Kuzmarov, Vittoria Fusco",
+                "teacher": "Rosemary Barrett, Vittoria Fusco",
                 "schedule": [
                     [
                         "R",
@@ -37533,7 +38223,7 @@
         "sections": [
             {
                 "ID": "00001",
-                "teacher": "Yaffa Elling",
+                "teacher": "Alyssa Kuzmarov",
                 "schedule": [
                     [
                         "W",
@@ -37544,12 +38234,12 @@
             },
             {
                 "ID": "00002",
-                "teacher": "Yaffa Elling",
+                "teacher": "Alyssa Kuzmarov",
                 "schedule": [
                     [
-                        "M",
-                        "830",
-                        "1130"
+                        "W",
+                        "1430",
+                        "1730"
                     ]
                 ]
             }
@@ -37616,7 +38306,7 @@
             },
             {
                 "ID": "00002",
-                "teacher": "Vanessa Eve Robillard",
+                "teacher": "Marti Miller",
                 "schedule": [
                     [
                         "W",
@@ -37715,7 +38405,7 @@
             },
             {
                 "ID": "00002",
-                "teacher": "Kimberly Lee-Louis",
+                "teacher": "Marti Miller",
                 "schedule": [
                     [
                         "F",
@@ -38220,7 +38910,8 @@
                         "1600",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "Psychology"
             },
             {
                 "ID": "00010",
@@ -38240,6 +38931,7 @@
             },
             {
                 "ID": "00011",
+                "title": "Gender and Society",
                 "teacher": "Sarah Beer",
                 "schedule": [
                     [
@@ -38268,7 +38960,8 @@
                         "1600",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "Psychology"
             },
             {
                 "ID": "00013",
@@ -38300,7 +38993,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             }
         ]
     },
@@ -38321,7 +39015,8 @@
                         "1130",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "Education, Family and Childhood"
             },
             {
                 "ID": "00002",
@@ -38337,7 +39032,8 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Education, Family and Childhood"
             },
             {
                 "ID": "00003",
@@ -38353,7 +39049,8 @@
                         "1430",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "Education, Family and Childhood"
             },
             {
                 "ID": "00004",
@@ -38369,7 +39066,8 @@
                         "1430",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "Law, Society and Justice"
             },
             {
                 "ID": "00005",
@@ -38385,7 +39083,8 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Law, Society and Justice"
             },
             {
                 "ID": "00006",
@@ -38401,7 +39100,8 @@
                         "1430",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "Law, Society and Justice"
             },
             {
                 "ID": "00007",
@@ -38417,7 +39117,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Law, Society and Justice"
             },
             {
                 "ID": "00008",
@@ -38433,7 +39134,8 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Law, Society and Justice"
             },
             {
                 "ID": "00009",
@@ -38497,10 +39199,12 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "On Reserve"
             },
             {
                 "ID": "12001",
+                "title": "Power and Place",
                 "teacher": "Kelly Phipps",
                 "schedule": [
                     [
@@ -38513,10 +39217,12 @@
                         "1130",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "Social Change and Solidarity<br>This is a Learning Communities section. Students registering for this section MUST ALSO TAKE 320-1N1-DW 12001 and 300-1R1-DW 12004."
             },
             {
                 "ID": "12002",
+                "title": "Gender and Society",
                 "teacher": "Sarah Beer",
                 "schedule": [
                     [
@@ -38529,7 +39235,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "This is a Learning Communities section. Students registering for this section MUST ALSO TAKE 330-1N1-DW 12002 and 300-1R1-DW 12006."
             }
         ]
     },
@@ -38592,7 +39299,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Child Studies"
             },
             {
                 "ID": "00002",
@@ -38608,7 +39316,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Child Studies"
             },
             {
                 "ID": "00003",
@@ -38645,7 +39354,8 @@
                         "1130",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "Law, Society and Justice"
             },
             {
                 "ID": "00002",
@@ -38725,7 +39435,8 @@
                         "800",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "Nursing"
             },
             {
                 "ID": "00002",
@@ -38741,7 +39452,8 @@
                         "1000",
                         "1200"
                     ]
-                ]
+                ],
+                "note": "Nursing"
             }
         ]
     },
@@ -38762,7 +39474,8 @@
                         "1430",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "C.R.L.T."
             }
         ]
     },
@@ -38778,7 +39491,8 @@
                         "1400",
                         "1700"
                     ]
-                ]
+                ],
+                "note": "C.R.L.T."
             }
         ]
     },
@@ -38838,7 +39552,8 @@
                         "1130",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "All Arts, Literature, and Communication profiles"
             },
             {
                 "ID": "00002",
@@ -38854,7 +39569,8 @@
                         "1600",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "All Arts, Literature, and Communication profiles"
             },
             {
                 "ID": "00003",
@@ -38870,7 +39586,8 @@
                         "1430",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "All Arts, Literature, and Communication profiles"
             },
             {
                 "ID": "00004",
@@ -38886,7 +39603,8 @@
                         "1600",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "All Arts, Literature, and Communication profiles"
             },
             {
                 "ID": "00005",
@@ -38902,7 +39620,8 @@
                         "1430",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "All Arts, Literature, and Communication profiles"
             },
             {
                 "ID": "00006",
@@ -38918,7 +39637,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "All Arts, Literature, and Communication profiles"
             },
             {
                 "ID": "00007",
@@ -38934,7 +39654,8 @@
                         "1130",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "All Arts, Literature, and Communication profiles"
             },
             {
                 "ID": "00008",
@@ -38950,7 +39671,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "All Arts, Literature, and Communication profiles"
             },
             {
                 "ID": "00009",
@@ -38966,7 +39688,8 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "All Arts, Literature, and Communication profiles"
             }
         ]
     },
@@ -38987,7 +39710,8 @@
                         "1000",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "All Arts, Literature, and Communication profiles"
             },
             {
                 "ID": "00002",
@@ -39003,7 +39727,8 @@
                         "1130",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "All Arts, Literature, and Communication profiles"
             },
             {
                 "ID": "00003",
@@ -39019,7 +39744,8 @@
                         "830",
                         "1000"
                     ]
-                ]
+                ],
+                "note": "All Arts, Literature, and Communication profiles"
             }
         ]
     },
@@ -39040,7 +39766,8 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "All Arts, Literature, and Communication profiles"
             }
         ]
     },
@@ -39061,7 +39788,8 @@
                         "1300",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "All Arts, Literature, and Communication profiles"
             }
         ]
     },
@@ -39326,7 +40054,8 @@
                         "1130",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "This section is compatible and available for North South Studies."
             },
             {
                 "ID": "00003",
@@ -39489,7 +40218,8 @@
                         "830",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Interior Design"
             },
             {
                 "ID": "00002",
@@ -39500,7 +40230,8 @@
                         "830",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Interior Design"
             }
         ]
     },
@@ -39516,7 +40247,8 @@
                         "1430",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "Interior Design"
             },
             {
                 "ID": "00002",
@@ -39527,7 +40259,8 @@
                         "1430",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "Interior Design"
             }
         ]
     },
@@ -39543,7 +40276,8 @@
                         "1400",
                         "1800"
                     ]
-                ]
+                ],
+                "note": "3D Animation"
             },
             {
                 "ID": "00002",
@@ -39554,7 +40288,8 @@
                         "900",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "3D Animation"
             }
         ]
     },
@@ -39570,7 +40305,8 @@
                         "1230",
                         "1630"
                     ]
-                ]
+                ],
+                "note": "3D Animation"
             },
             {
                 "ID": "00002",
@@ -39581,7 +40317,8 @@
                         "900",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "3D Animation"
             }
         ]
     },
@@ -39597,7 +40334,8 @@
                         "830",
                         "1230"
                     ]
-                ]
+                ],
+                "note": "Professional Photography"
             },
             {
                 "ID": "00002",
@@ -39608,7 +40346,8 @@
                         "1200",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "Professional Photography"
             }
         ]
     },
@@ -39759,7 +40498,8 @@
                         "1430",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "Interior Design"
             },
             {
                 "ID": "00002",
@@ -39770,7 +40510,8 @@
                         "830",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Interior Design"
             }
         ]
     },
@@ -39786,7 +40527,8 @@
                         "1500",
                         "1800"
                     ]
-                ]
+                ],
+                "note": "Graphic Design"
             },
             {
                 "ID": "00002",
@@ -39797,7 +40539,8 @@
                         "1300",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "Graphic Design"
             }
         ]
     },
@@ -39813,7 +40556,8 @@
                         "830",
                         "1230"
                     ]
-                ]
+                ],
+                "note": "Studio Arts"
             },
             {
                 "ID": "00002",
@@ -39824,7 +40568,8 @@
                         "1300",
                         "1700"
                     ]
-                ]
+                ],
+                "note": "On Reserve<br>Studio Arts"
             }
         ]
     },
@@ -39840,7 +40585,8 @@
                         "1130",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Studio Arts"
             }
         ]
     },
@@ -39856,7 +40602,8 @@
                         "1400",
                         "1800"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, and Studio Arts"
             }
         ]
     },
@@ -39872,7 +40619,8 @@
                         "1230",
                         "1630"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, and Studio Arts"
             }
         ]
     },
@@ -39888,7 +40636,8 @@
                         "1400",
                         "1800"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, and Studio Arts"
             }
         ]
     },
@@ -39904,7 +40653,8 @@
                         "1400",
                         "1800"
                     ]
-                ]
+                ],
+                "note": "Studio Arts"
             }
         ]
     },
@@ -39920,7 +40670,8 @@
                         "1500",
                         "1800"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, Cinema-Communications, Interactive Media Arts, Literature, and Studio Arts"
             },
             {
                 "ID": "00002",
@@ -39931,7 +40682,8 @@
                         "1130",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, Cinema-Communications, Interactive Media Arts, Literature, and Studio Arts"
             },
             {
                 "ID": "00003",
@@ -39942,7 +40694,8 @@
                         "1430",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, Cinema-Communications, Interactive Media Arts, Literature, and Studio Arts"
             }
         ]
     },
@@ -39958,7 +40711,8 @@
                         "1130",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, Cinema-Communications, Interactive Media Arts, Languages, and Literature"
             },
             {
                 "ID": "00002",
@@ -39969,7 +40723,8 @@
                         "830",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, Cinema-Communications, Interactive Media Arts, Languages, and Literature"
             },
             {
                 "ID": "00003",
@@ -39980,7 +40735,8 @@
                         "830",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, Cinema-Communications, Interactive Media Arts, Languages, and Literature"
             }
         ]
     },
@@ -39996,7 +40752,8 @@
                         "830",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, Cinema-Communications, Interactive Media Arts, Languages, Literature, and Studio Arts"
             },
             {
                 "ID": "00002",
@@ -40007,7 +40764,8 @@
                         "830",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "On Reserve<br>Arts and Culture, Cinema-Communications, Interactive Media Arts, Languages, Literature, and Studio Arts"
             }
         ]
     },
@@ -40023,7 +40781,8 @@
                         "830",
                         "1230"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, Cinema-Communications, Interactive Media Arts, Literature, and Studio Arts"
             }
         ]
     },
@@ -40039,7 +40798,8 @@
                         "830",
                         "1130"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, Cinema-Communications, Interactive Media Arts, Literature, and Studio Arts"
             }
         ]
     },
@@ -40055,7 +40815,8 @@
                         "1430",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, Cinema-Communications, Interactive Media Arts, and Literature"
             }
         ]
     },
@@ -40163,7 +40924,8 @@
                         "1500",
                         "1800"
                     ]
-                ]
+                ],
+                "note": "3D Animation"
             },
             {
                 "ID": "00002",
@@ -40174,7 +40936,8 @@
                         "1000",
                         "1300"
                     ]
-                ]
+                ],
+                "note": "3D Animation"
             }
         ]
     },
@@ -40190,7 +40953,8 @@
                         "1130",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, and Studio Arts"
             }
         ]
     },
@@ -40206,7 +40970,8 @@
                         "1430",
                         "1730"
                     ]
-                ]
+                ],
+                "note": "Illustration"
             }
         ]
     },
@@ -40222,7 +40987,8 @@
                         "1130",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, Cinema-Communications, Interactive Media Arts, Languages, Literature, and Studio Arts"
             }
         ]
     },
@@ -40238,7 +41004,8 @@
                         "1200",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, Cinema-Communications, Interactive Media Arts, Literature, and Studio Arts"
             }
         ]
     },
@@ -40254,7 +41021,8 @@
                         "1300",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "Graphic Design"
             },
             {
                 "ID": "00002",
@@ -40265,7 +41033,8 @@
                         "1300",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "On Reserve<br>Graphic Design"
             }
         ]
     },
@@ -40281,7 +41050,8 @@
                         "1130",
                         "1430"
                     ]
-                ]
+                ],
+                "note": "Arts and Culture, Cinema-Communications, Interactive Media Arts, Literature, and Studio Arts"
             }
         ]
     },
@@ -40297,7 +41067,8 @@
                         "1200",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "Industrial Design"
             }
         ]
     }
