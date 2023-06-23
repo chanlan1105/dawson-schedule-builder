@@ -232,14 +232,21 @@ main.export #course-options-sidebar {
         min-width: 30rem;
     }
     #course-options .card .card-body {
-        display: flex;
-        flex-flow: column;
-        justify-content: center;
+        flex: unset;
     }
 }
 #course-options > div.card p {
     margin-bottom: .3rem;
     font-size: .9rem;
+}
+#course-options div.card-body {
+    display: grid;
+    grid-template-columns: min-content auto;
+}
+#course-options div.card-body icon {
+    font-size: 1rem;
+    padding-right: .4rem;
+    line-height: 1.35rem;
 }
 #course-options div.card-body p:not(:last-child) {
     font-weight: bold;

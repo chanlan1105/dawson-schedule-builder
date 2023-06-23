@@ -229,13 +229,15 @@ function createCourseOptionTiles(courseCode, options, complementary = false) {
 
     // Create one tile per course option
     for (let i in options) {
-        const $info = $("<p></p>");
+        const $teacher = $("<p></p>");
+        const $section = $("<p></p>");
         const $times = $("<p></p>");
         const $title = $("<p></p>");
 
         // Populate tile with appropriate information
         $title.text(options[i].title ?? courses[courseCode].courseName);
-        $info.html(`Teacher: ${options[i].teacher}<br>${complementary ? `${courseCode} sect. ${options[i].ID}` : `Section: ${options[i].ID}`}`);
+        $teacher.text(`Teacher: ${options[i].teacher}`);
+        $section.html(complementary ? `${courseCode} sect. ${options[i].ID}` : `Section: ${options[i].ID}`);
 
         if (options[i].intensive) {
             $times.text("This is an intensive, pre-semester, or compressed course. You can find the details of this course as well as Dawson's Intensive and Compressed Course Policy in the Timetable and Registration Guide.");
@@ -248,8 +250,8 @@ function createCourseOptionTiles(courseCode, options, complementary = false) {
         
         // Onclick handler: Allow the user to add the course to their schedule, if applicable
         const _$cardBody = $cardBody.clone();
-        (options[i].title || complementary) && _$cardBody.append($title);
-        _$cardBody.append($info, $times);
+        (options[i].title || complementary) && _$cardBody.append("<icon>article</icon>", $title);
+        _$cardBody.append("<icon>person_outline</icon>", $teacher, "<icon>tag</icon>", $section, "<icon>schedule</icon>", $times);
 
         const _$card = $card.clone();
         _$card.append(_$cardBody);
