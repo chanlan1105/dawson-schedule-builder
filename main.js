@@ -831,11 +831,11 @@ function exportSchedule(type) {
                 if (res) $("#schedule-intensives, #schedule-intensives-header").hide();
 
                 // Prep elements for export to image
-                $("#schedule").addClass("export");
-                saveAsImg($("#schedule")[0]);
+                $("main").addClass("export");
+                saveAsImg($("main")[0]);
 
                 // Return elements to their original state
-                $("#schedule").removeClass("export");
+                $("main").removeClass("export");
                 $("#schedule-intensives, #schedule-intensives-header").show();
             });
             
@@ -854,11 +854,13 @@ function exportSchedule(type) {
 
         case "print" :
             // Prep elements for export
-            $("#schedule").addClass("export");
-            print($("#schedule")[0]);
+            $("main").addClass("export");
+            $("#course-options-sidebar, .course-delete").hide();
+            print($("main")[0]);
 
             // Return elements to their original state
-            $("#schedule").removeClass("export");
+            $("main").removeClass("export");
+            $("#course-options-sidebar, .course-delete").show();
             break;
     }
 }

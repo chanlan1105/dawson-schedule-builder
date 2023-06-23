@@ -96,10 +96,11 @@ button.dropdown-item:disabled {
 	margin-right: .3rem;
 }
 
-#main-content > div:first-child {
+#course-options-sidebar {
     padding: 0;
+    margin-bottom: 1rem;
 }
-#main-content > div:first-child > div {
+#course-options-container {
     padding-left: 15px;
     padding-right: 15px;
 }
@@ -153,11 +154,27 @@ button.dropdown-item:disabled {
     display: none;
 }
 
+main.export {
+    position: absolute;
+    width: 65rem;
+    max-width: unset;
+}
+main.export #schedule {
+    width: 100%;
+    max-width: unset;
+    flex-grow: 1;
+}
+main.export #course-options-sidebar {
+    display: none;
+}
+
+/*
 #schedule.export {
     position: absolute;
     width: 65rem;
     max-width: unset;
 }
+*/
 #schedule.export .course-bubble {
     box-shadow: none;
 }
@@ -221,13 +238,14 @@ button.dropdown-item:disabled {
     }
 }
 #course-options > div.card p {
-    margin-bottom: .5rem;
+    margin-bottom: .3rem;
+    font-size: .9rem;
 }
 #course-options div.card-body p:not(:last-child) {
     font-weight: bold;
 }
 #course-options div.card-body p:last-child {
-    font-size: .9em;
+    font-size: .78rem;
     margin-bottom: 0;
 }
 #course-options > div.card {
@@ -355,7 +373,7 @@ button.dropdown-item:disabled {
 
     font-size: 1rem;
 }
-.course-bubble:hover .course-delete {
+main:not(.export) .course-bubble:hover .course-delete {
     top: .2rem;
     opacity: .8;
 }
@@ -381,6 +399,6 @@ button.dropdown-item:disabled {
 .intensive-section .course-title {
     cursor: pointer;
 }
-.intensive-section .course-title:hover {
+main:not(.export) .intensive-section .course-title:hover {
     text-decoration: line-through;
 }
