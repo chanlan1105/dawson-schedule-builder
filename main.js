@@ -756,7 +756,7 @@ function addCourse(courseCode, section) {
     $("#course-options").html("");
     $(".course-search-options button.active").removeClass("active");
     $("#course-search-accordion .collapse.show").collapse("hide");
-    $("#course-complementary").hide();
+    $("#course-complementary-warning").hide();
     $("#course").val("").focus();
 }
 function removeCourse(courseCode) {
