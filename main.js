@@ -571,7 +571,7 @@ $("#course-search-best-btn").on("click", function() {
             .map(code => searchBest(code, { before, after, startTime, endTime }, true)) :
         searchBest(courseCode, { before, after, startTime, endTime });
 
-    if (!complementary && !res || complementary && !res.filter(l => l).length) $("#course-search-day-empty").show();
+    if (!complementary && !res || complementary && !res.filter(l => l).length) $("#course-search-best-empty").show();
 
     $(this).prop("disabled", false).text("Search");
 });
