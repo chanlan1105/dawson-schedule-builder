@@ -297,6 +297,9 @@ function searchDay(courseCode, days, strict, complementary = false) {
         if (strict && matchedSchedule.length == s.schedule.length || !strict && matchedSchedule.length) return true;
         else return false;
     });
+
+    complementary && $("#course-options").html("");
+
     createCourseOptionTiles(courseCode, intensive.concat(options), complementary);
 
     return options.length;
@@ -407,6 +410,8 @@ function searchBest(courseCode, params, complementary = false) {
         if (timesFit.length == s.redSched.length) return true;
         else return false;
     });
+
+    complementary && $("#course-options").html("");
 
     const options = courses[courseCode].sections.filter(s => s.intensive).concat(fit);
     createCourseOptionTiles(courseCode, options, complementary);
