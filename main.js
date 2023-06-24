@@ -11,6 +11,12 @@ var tutorialRunning = false, tutorialStep = 0;
 String.prototype.safe = function() {
     return $("<div>").text(this).html();
 }
+Object.defineProperty(Object.prototype, "deepCopy", {
+    value: function() {
+        return JSON.parse(JSON.stringify(this));
+    },
+    enumerable: false
+});
 
 $("#intro-modal").on("hide.bs.modal", () => {
     localStorage.setItem("lucas/schedule/seenIntro", "true");
@@ -19,27 +25,6 @@ $("#intro-modal").on("hide.bs.modal", () => {
 
 function startUp() {
     // Run on startup
-
-    // Originally used to create the schedule grid, not needed anymore as the grid is directly in the static HTML
-    /*
-    const $col = [$("<div></div>"), $("<div></div>"), $("<div></div>"), $("<div></div>"), $("<div></div>"), $("<div></div>")];
-
-    for (let i = 8; i <= 18; i += 0.5) {
-        const $time = $("<div></div>");
-        const $day = $("<div></div>");
-
-        $time.text(`${Math.floor(i)}:${i % 1 == 0 ? "00" : "30"}`);
-        $col[0].append($time);
-
-        $col[1].append($day.clone().attr("id", `m${Math.floor(i)}${i % 1 == 0 ? "00" : "30"}`));
-        $col[2].append($day.clone().attr("id", `t${Math.floor(i)}${i % 1 == 0 ? "00" : "30"}`));
-        $col[3].append($day.clone().attr("id", `w${Math.floor(i)}${i % 1 == 0 ? "00" : "30"}`));
-        $col[4].append($day.clone().attr("id", `r${Math.floor(i)}${i % 1 == 0 ? "00" : "30"}`));
-        $col[5].append($day.clone().attr("id", `f${Math.floor(i)}${i % 1 == 0 ? "00" : "30"}`));
-    }
-
-    $("#schedule-main").append(...$col);
-    */
 
     // Add the "fake" Enriched Science course
     courses["ENR-SCI-XX"] = {
@@ -321,30 +306,50 @@ function searchBest(courseCode, params, complementary = false) {
     const { before, after, startTime, endTime } = params;
 
     // Start by eliminating all courses that conflict, without intensives
-    let fit = courses[courseCode].sections.filter(s => !s.intensive).filter(s => !checkConflict(s.schedule));
+    let fit = courses[courseCode].sections.filter(s => !s.intensive).filter(s => !checkConflict(s.schedule)).map(s => {
+        // For sections with more than one scheduled class on the same day,
+        // combine all the scheduled classes for this algorithm ONLY
+        // into one entry per day.
+        const _s = s.deepCopy();
+        _s.redSched = Object.values(_s.schedule.reduce((g, t) => {
+            if (g[t[0]]) {
+                // If an entry with current day exists:
+                g[t[0]].s.push(t[1]);
+                g[t[0]].e.push(t[2]);
+            }
+            else {
+                // Otherwise:
+                g[t[0]] = { d: t[0], s: [ t[1] ], e: [ t[2] ]};
+            }
+
+            return g;
+        }, {})).map(t => [t.d, Math.min(...t.s), Math.max(...t.e)]);
+        return _s;
+    });
 
     // Filter courses that start at or after allowed start time
     fit = fit.filter(s => {
         // Find times in schedule that match condition. If they all match, that section is valid
-        const timesFit = s.schedule.filter(t => Number(t[1]) >= Number(startTime));
+        const timesFit = s.redSched.filter(t => Number(t[1]) >= Number(startTime));
 
-        if (timesFit.length == s.schedule.length) return true;
+        if (timesFit.length == s.redSched.length) return true;
         else return false;
     });
 
     // Filter courses that end at or before allowed end time
     fit = fit.filter(s => {
         // Find times in schedule that match condition. If they all match, that section is valid
-        const timesFit = s.schedule.filter(t => Number(t[2]) <= Number(endTime));
+        const timesFit = s.redSched.filter(t => Number(t[2]) <= Number(endTime));
 
-        if (timesFit.length == s.schedule.length) return true;
+        if (timesFit.length == s.redSched.length) return true;
         else return false;
     });
 
     // Find courses that match break before condition
     fit = fit.filter(s => {
         // Find times in schedule that match condition. If they all match, that section is valid.
-        const timesFit = s.schedule.filter(t => {
+
+        const timesFit = s.redSched.filter(t => {
             // If this is the first class of the day, keep.
             if (t[1] == "800") return true;
 
@@ -368,14 +373,14 @@ function searchBest(courseCode, params, complementary = false) {
         });
 
         // Check to see if all times in the section's schedule match the conditions
-        if (timesFit.length == s.schedule.length) return true;
+        if (timesFit.length == s.redSched.length) return true;
         else return false;
     });
 
     // Now find courses that match break after condition
     fit = fit.filter(s => {
         // Find times in schedule that match condition. If they all match, that section is valid.
-        const timesFit = s.schedule.filter(t => {
+        const timesFit = s.redSched.filter(t => {
             // If this is the last class of the day, keep.
             if (t[2] == "1800") return true;
 
@@ -399,7 +404,7 @@ function searchBest(courseCode, params, complementary = false) {
         });
 
         // Check to see if all times in the section's schedule match the conditions
-        if (timesFit.length == s.schedule.length) return true;
+        if (timesFit.length == s.redSched.length) return true;
         else return false;
     });
 
