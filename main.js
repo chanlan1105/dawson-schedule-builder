@@ -298,8 +298,6 @@ function searchDay(courseCode, days, strict, complementary = false) {
         else return false;
     });
 
-    complementary && $("#course-options").html("");
-
     createCourseOptionTiles(courseCode, intensive.concat(options), complementary);
 
     return options.length;
@@ -410,8 +408,6 @@ function searchBest(courseCode, params, complementary = false) {
         if (timesFit.length == s.redSched.length) return true;
         else return false;
     });
-
-    complementary && $("#course-options").html("");
 
     const options = courses[courseCode].sections.filter(s => s.intensive).concat(fit);
     createCourseOptionTiles(courseCode, options, complementary);
@@ -533,6 +529,8 @@ $("#course-search-day-btn").on("click", function() {
 
     $("#course-error, #course-duplicate").hide();
 
+    complementary && $("#course-options").html("");
+
     const res = complementary ?
         Object.keys(courses)
             .filter(code => complementaryRegex.test(code))
@@ -574,6 +572,8 @@ $("#course-search-best-btn").on("click", function() {
     else if (courseCode in courseSchedule) return $("#course-duplicate").show();
 
     $("#course-error, #course-duplicate").hide();
+
+    complementary && $("#course-options").html("");
 
     const res = complementary ?
         Object.keys(courses)
