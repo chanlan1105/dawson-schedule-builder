@@ -353,9 +353,9 @@ main.export #course-options-sidebar {
     color: white;
 }
 .course-bubble-yellow {
-    border: .0625rem solid hsl(60, 72%, 44%);
-    background-color: hsl(60, 72%, 54%);
-    color: black;
+    border: .0625rem solid hsl(39, 40%, 24%);
+    background-color: hsl(30, 40%, 34%);
+    color: white;
 }
 .course-bubble-cyan {
     border: .0625rem solid hsl(220, 51%, 41%);
