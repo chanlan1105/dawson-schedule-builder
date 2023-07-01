@@ -1,5 +1,5 @@
 ﻿const parsedCourseNames = Object.entries(courses).map(c => c[0] + " " + c[1].courseName).concat(["Complementary Courses", "ENR-SCI-XX Enriched Science"]);
-const colours = ["red", "blue", "green", "orange", "purple", "teal", "yellow", "cyan", "lime"];
+const colours = ["red", "blue", "green", "orange", "purple", "teal", "brown", "cyan", "crimson"];
 var currentColour = 0;
 const complementaryRegex = /[A-Z0-9]{3}-B[XW][ACLMPSTX]-(?:03|DW)/;
 
@@ -21,6 +21,7 @@ Object.defineProperty(Object.prototype, "deepCopy", {
 $("#intro-modal").on("hide.bs.modal", () => {
     localStorage.setItem("lucas/schedule/seenIntro", "true");
     localStorage.setItem("lucas/schedule/seenExport", "true");
+    localStorage.setItem("lucas/schedule/seenColour", "true");
 });
 
 function startUp() {
@@ -84,6 +85,20 @@ function startUp() {
     // Load schedule from localStorage
     try {
         courseSchedule = JSON.parse(localStorage.getItem(courseSchedule_key) ?? `{}`);
+
+        // Fix courseSchedule to new format if needed
+        if (typeof Object.values(courseSchedule)[0] == 'number') {
+            let counter = 0;
+            for (let i in courseSchedule) {
+                courseSchedule[i] = {
+                    s: courseSchedule[i],
+                    i: courses[i].sections.filter(s => s.ID == courseSchedule[i])[0].intensive,
+                    c: colours[counter % colours.length]
+                };
+                counter ++;
+            }
+            localStorage.setItem(courseSchedule_key, JSON.stringify(courseSchedule));
+        }
     }
     catch (err) {
         console.error(err);
@@ -94,7 +109,7 @@ function startUp() {
         // There are one or more courses already loaded
         
         for (let i in courseSchedule) {
-            createCourseBubbles(i, courseSchedule[i]);
+            createCourseBubbles(i, courseSchedule[i].s, null, courseSchedule[i].c);
         }
     }
 
@@ -122,9 +137,19 @@ function startUp() {
         offset: "3",
         boundary: "viewport"
     });
+    $("#schedule-courses-header").popover({
+        title: "Tutorial",
+        content: "Scroll down: Customize the colour of the course bubble here.<br><button class='btn btn-link' onclick='tutorial(5)'>Next</button>",
+        html: true,
+        sanitize: false,
+        trigger: "manual",
+        offset: "3",
+        boundary: "viewport",
+        placement: "top"
+    });
     $("#navbar-menu").popover({
         title: "Tutorial",
-        content: "If your browser cookies are enabled, your schedule will be saved on this device. You can clear it from this menu.<br>You can also export or print your schedule.<br><button class='btn btn-link' onclick='tutorial(5)'>Finish</button>",
+        content: "If your browser cookies are enabled, your schedule will be saved on this device. You can clear it from this menu.<br>You can also export or print your schedule.<br><button class='btn btn-link' onclick='tutorial(6)'>Finish</button>",
         html: true,
         sanitize: false,
         trigger: "manual",
@@ -138,6 +163,36 @@ function startUp() {
     }
 
     // Check for "new" message
+    if (localStorage.getItem("lucas/schedule/seenColour") != "true" &&
+        localStorage.getItem("lucas/schedule/seenIntro") == "true") {
+        $("#schedule-courses-header").popover("dispose");
+        $("#schedule-courses-header").popover({
+            title: "New! Customize the colours",
+            content: "You can now customize the colour of each of your courses from this menu",
+            boundary: "viewport",
+            trigger: "manual",
+            placement: "top"
+        });
+
+        $("#schedule-courses-header").popover("show");
+
+        setTimeout(() => {
+            $("#schedule-courses-header").popover("dispose");
+            $("#schedule-courses-header").popover({
+                title: "Tutorial",
+                content: "Scroll down: Customize the colour of the course bubble here.<br><button class='btn btn-link' onclick='tutorial(5)'>Next</button>",
+                html: true,
+                sanitize: false,
+                trigger: "manual",
+                offset: "3",
+                boundary: "viewport",
+                placement: "top"
+            });
+
+            localStorage.setItem("lucas/schedule/seenColour", "true");
+        }, 12000);
+    }
+    /*
     if (localStorage.getItem("lucas/schedule/seenExport") != "true" &&
         localStorage.getItem("lucas/schedule/seenIntro") == "true") {
         $("#navbar-menu").popover("dispose");
@@ -164,6 +219,7 @@ function startUp() {
             localStorage.setItem("lucas/schedule/seenExport", "true");
         }, 10000);
     }
+    */
 }
 
 startUp();
@@ -174,6 +230,7 @@ function tutorial(step = 0) {
 
     switch (step) {
         case 0 :
+            $("#course").focus();
             $("#course").popover("show");
             break;
         
@@ -190,10 +247,14 @@ function tutorial(step = 0) {
             break;
 
         case 4 :
-            $("#navbar-menu").popover("show");
+            $("#schedule-courses-header").popover("show");
             break;
 
         case 5 :
+            $("#navbar-menu").popover("show");
+            break;
+
+        case 6 :
             tutorialRunning = false;
             tutorialStep = 0;
             break;
@@ -641,7 +702,7 @@ function previewCourseBubbles(courseCode, section) {
 }
 */
 
-function createCourseBubbles(courseCode, section, preview) {
+function createCourseBubbles(courseCode, section, preview, colour) {
     // Find course from dataset and prep jQuery elements
     const course = courses[courseCode].sections.filter(s => s.ID == section)[0];
 
@@ -652,10 +713,11 @@ function createCourseBubbles(courseCode, section, preview) {
 
     const $div = $("<div></div>"), $delete = $("<icon></icon>").addClass("course-delete").text("clear");
     const $bubble = $div.clone(), $title = $div.clone(), $code = $div.clone(), $teacher = $div.clone();
+    if (!colour || !colour in colours) colour = colours[Object.values(courseSchedule).filter(c => !c.i).length % colours.length];
 
     $delete.attr("onclick", `removeCourse("${courseCode}")`);
 
-    $bubble.addClass(`course-bubble course-bubble-${colours[currentColour % colours.length]} ${courseCode}`);
+    $bubble.addClass(`course-bubble course-bubble-${colour} ${courseCode}`);
     $title.addClass("course-title");
     $code.addClass("course-code");
     $teacher.addClass("course-teacher");
@@ -690,10 +752,31 @@ function createCourseBubbles(courseCode, section, preview) {
         $(`#${course.schedule[i][0].toLowerCase()}${course.schedule[i][1]}`).append($bubble.clone());
     }
 
-    if (!preview) {
-        // Increment colour counter
-        currentColour ++;
+    // Add course to course list
+    const $section = $("<div></div>").addClass(`course-section ${courseCode}`);
+    const $details = $("<div></div>").addClass("course-details");
+    const $controls = $("<div></div>").addClass("course-controls");
+    const $colour_btn = $("<button><icon>format_color_fill</icon></button>").addClass("course-colour");
+    $colour_btn.css("background-color", `var(--bubble-${colour})`);
+    $colour_btn.popover({
+        content:
+        `<div class="course-colour-options ${courseCode}">
+            ${colours.map(c => `<div class="course-colour-option-${c}" onclick="changeBubbleColour('${courseCode}', '${c}')" style="background-color: var(--bubble-${c})">
+                ${c == colour ? `<icon>check</icon>` : ``}
+            </div>`).join("")}
+        </div>`,
+        html: true,
+        sanitize: false,
+        trigger: "focus",
+        boundary: "viewport"
+    });
+    $details.append($title.clone().attr("onclick", `removeCourse('${courseCode}')`), $code, $teacher);
+    $controls.append($colour_btn);
+    $section.append($details, $controls);
 
+    $("#schedule-courses").append($section);
+
+    if (!preview) {
         // Check for tutorial
         if (tutorialRunning && tutorialStep == 2) {
             $(".course-bubble").first().addClass("tutorial").popover({
@@ -710,7 +793,37 @@ function createCourseBubbles(courseCode, section, preview) {
         }
     }
 
-    return true;
+    return colour;
+}
+function changeBubbleColour(courseCode, colour) {
+    if (!courseCode in courseSchedule) return alert("That course doesn't seem to be in your schedule.");
+    if (!colour in colours) return alert("Sorry, that colour isn't available.");
+
+    // Remove existing colour from bubbles
+    $(`.course-bubble.${courseCode}`).removeClass((i, className) => (className.match(/course-bubble-\S+/g) || []).join(" "));
+
+    // Add new colour to bubbles
+    $(`.course-bubble.${courseCode}`).addClass(`course-bubble-${colour}`);
+    $(`.course-section.${courseCode} .course-colour`).css("background-color", `var(--bubble-${colour})`);
+    $(`.course-section.${courseCode} .course-colour`).popover("dispose");
+    $(`.course-section.${courseCode} .course-colour`).popover({
+        content:
+        `<div class="course-colour-options ${courseCode}">
+            ${colours.map(c => `<div class="course-colour-option-${c}" onclick="changeBubbleColour('${courseCode}', '${c}')" style="background-color: var(--bubble-${c})">
+                ${c == colour ? `<icon>check</icon>` : ``}
+            </div>`).join("")}
+        </div>`,
+        html: true,
+        sanitize: false,
+        trigger: "focus",
+        boundary: "viewport"
+    });
+    $(`.course-colour-options.${courseCode} > div`).html("");
+    $(`.course-colour-options.${courseCode} .course-colour-option-${colour}`).html("<icon>check</icon>");
+
+    // Save to schedule
+    courseSchedule[courseCode].c = colour;
+    localStorage.setItem(courseSchedule_key, JSON.stringify(courseSchedule));
 }
 function addIntensive(courseCode, section) {
     // Retrieve course from database
@@ -719,8 +832,8 @@ function addIntensive(courseCode, section) {
     // Prep jQuery elements
     const [$intensive, $details, $title, $code, $teacher] = Array(5).fill(null).map(() => $("<div></div>"));
     
-    $intensive.addClass(`intensive-section ${courseCode}`);
-    $details.addClass("intensive-details");
+    $intensive.addClass(`intensive-section course-section ${courseCode}`);
+    $details.addClass("course-details");
     $title.addClass("course-title");
     $code.addClass("course-code");
     $teacher.addClass("course-teacher");
@@ -765,8 +878,14 @@ function addCourse(courseCode, section) {
 
     if (!res) return;
 
+    const intensive = courses[courseCode].sections.filter(s => s.ID == section)[0].intensive ?? false;
+
     // Add course to schedule and localStorage
-    courseSchedule[courseCode] = Number(section);
+    courseSchedule[courseCode] = {
+        s: Number(section),
+        i: intensive,
+        c: intensive ? undefined : res
+    };
     localStorage.setItem(courseSchedule_key, JSON.stringify(courseSchedule));
 
     // Allow user to select another course
@@ -783,7 +902,7 @@ function removeCourse(courseCode) {
         if (res) {
             // Remove bubbles from schedule
             $(`.course-bubble.${courseCode}`).parent().css("grid-row", "");
-            $(`.course-bubble.${courseCode}, .intensive-section.${courseCode}`).remove();
+            $(`.course-bubble.${courseCode}, .course-section.${courseCode}, .intensive-section.${courseCode}`).remove();
             $(`.blocked.${courseCode}`).removeClass("hidden blocked");
 
             // Remove course from courseSchedule

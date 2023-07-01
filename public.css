@@ -1,5 +1,15 @@
 html {
     --lightgray: rgb(200, 200, 200);
+
+    --bubble-red: hsl(0, 81%, 46%);
+    --bubble-blue: hsl(246, 64%, 50%);
+    --bubble-green: hsl(117, 81%, 30%);
+    --bubble-orange: hsl(28, 73%, 40%);
+    --bubble-purple: hsl(303, 81%, 38%);
+    --bubble-teal: hsl(184, 63%, 38%);
+    --bubble-brown: hsl(30, 40%, 34%);
+    --bubble-cyan: hsl(220, 51%, 51%);
+    --bubble-crimson: hsl(0, 46%, 39%);
 }
 
 icon {
@@ -352,7 +362,7 @@ main.export #course-options-sidebar {
     background-color: hsl(184, 63%, 38%);
     color: white;
 }
-.course-bubble-yellow {
+.course-bubble-brown {
     border: .0625rem solid hsl(39, 40%, 24%);
     background-color: hsl(30, 40%, 34%);
     color: white;
@@ -362,10 +372,10 @@ main.export #course-options-sidebar {
     background-color: hsl(220, 51%, 51%);
     color: white;
 }
-.course-bubble-lime {
-    border: .0625rem solid hsl(79, 88%, 40%);
-    background-color: hsl(79, 88%, 50%);
-    color: black;
+.course-bubble-crimson {
+    border: .0625rem solid hsl(0, 46%, 33%);
+    background-color: hsl(0, 46%, 39%);
+    color: white;
 }
 .course-bubble .course-title {
     font-weight: bold;
@@ -395,19 +405,66 @@ main:not(.export) .course-bubble:hover .course-delete {
     margin-bottom: 1rem;
     grid-template-columns: 1fr minmax(max-content, 2fr);
 }
-.intensive-section .course-title {
+.course-section:not(.intensive-section) {
+    display: grid;
+    margin-bottom: 1rem;
+    grid-template-columns: auto 5rem;
+}
+.course-section .course-controls {
+    text-align: right;
+}
+.course-section .course-colour {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    color: white;
+    border: none;
+
+    cursor: pointer;
+}
+.course-section icon {
+    font-size: 1rem;
+}
+.course-colour-options {
+    display: grid;
+    grid-template-columns: repeat(4, 1.5rem);
+    gap: .3rem;
+}
+.course-colour-options > div {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
+
+    border-radius: 50%;
+    cursor: pointer;
+    transition: opacity .15s ease-in-out;
+}
+.course-colour-options > div icon {
+    color: white;
+    font-size: 1rem;
+}
+.course-colour-options > div:hover {
+    opacity: .7;
+}
+.course-section .course-title {
     font-weight: bold;
     margin-bottom: .2rem;
 }
-.intensive-section .course-code, .intensive-section .course-teacher {
+.course-section .course-code, .course-section .course-teacher {
     font-size: .85rem;
 }
 .intensive-times {
     font-size: .85rem;
 }
-.intensive-section .course-title {
+.course-section .course-title {
     cursor: pointer;
 }
-main:not(.export) .intensive-section .course-title:hover {
+main:not(.export) .course-section .course-title:hover {
     text-decoration: line-through;
 }
