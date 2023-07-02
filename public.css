@@ -10,6 +10,8 @@ html {
     --bubble-brown: hsl(30, 40%, 34%);
     --bubble-cyan: hsl(220, 51%, 51%);
     --bubble-crimson: hsl(0, 46%, 39%);
+    --bubble-stone: hsl(163, 29%, 35%);
+    --bubble-indigo: hsl(284, 79%, 22%);
 }
 
 icon {
@@ -375,6 +377,16 @@ main.export #course-options-sidebar {
 .course-bubble-crimson {
     border: .0625rem solid hsl(0, 46%, 33%);
     background-color: hsl(0, 46%, 39%);
+    color: white;
+}
+.course-bubble-stone {
+    border: .0625rem solid hsl(163, 29%, 25%);
+    background-color: hsl(163, 29%, 35%);
+    color: white;
+}
+.course-bubble-indigo {
+    border: .0625rem solid hsl(284, 79%, 15%);
+    background-color: hsl(284, 79%, 22%);
     color: white;
 }
 .course-bubble .course-title {
