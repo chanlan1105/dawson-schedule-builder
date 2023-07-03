@@ -991,12 +991,12 @@ function exportSchedule(type) {
         case "print" :
             // Prep elements for export
             $("main").addClass("export");
-            $("#course-options-sidebar, .course-delete").hide();
+            $("#course-options-sidebar, .course-delete, #schedule-course-list").hide();
             print($("main")[0]);
 
             // Return elements to their original state
             $("main").removeClass("export");
-            $("#course-options-sidebar, .course-delete").show();
+            $("#course-options-sidebar, .course-delete, #schedule-course-list").show();
             break;
     }
 }

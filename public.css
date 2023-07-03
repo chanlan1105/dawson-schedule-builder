@@ -171,12 +171,12 @@ main.export {
     width: 65rem;
     max-width: unset;
 }
-main.export #schedule {
+main.export #schedule, main.export #schedule-intensives-list {
     width: 100%;
     max-width: unset;
     flex-grow: 1;
 }
-main.export #course-options-sidebar {
+main.export #course-options-sidebar, main.export #schedule-course-list {
     display: none;
 }
 
