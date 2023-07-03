@@ -1017,6 +1017,11 @@ async function saveSchedule() {
     const name = await prompt("What would you like to name this schedule?", "Schedule #1");
     if (!name) return;
 
+    if (schedules.filter(s => s.n == name).length && await confirm(`You already have a schedule called ${name}. Would you like to overwrite it?`)) {
+        schedules = schedules.filter(s => s.n != name);
+    }
+    else if (schedules.filter(s => s.n == name).length) return;
+
     schedules.push({
         n: name,
         s: courseSchedule
