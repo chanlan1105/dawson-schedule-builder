@@ -73,7 +73,7 @@ window.confirm = async function(msg, buttons = "yes no") {
 	if (words.length != 2) throw new Error("buttons in window.confirm must be two words separated by a space");
 	
 	if (msg == "--save--") {
-		$("#confirm-modal-content").html("<p>Your schedule has been successfully saved. You can load it again from the overflow menu.</p><p style='margin-bottom: 0'>Would you like to create a new schedule?</p>");
+		$("#confirm-modal-content").html("<p>Your schedule has been successfully saved. You can load it again from the overflow menu.</p><p style='margin-bottom: 0'>Would you like to restart and create a new schedule?</p>");
 	}
 	else {
 		$("#confirm-modal-content").text(msg);
