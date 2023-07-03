@@ -54,16 +54,23 @@
                     </div>
                     <div class="dropdown-menu dropdown-menu-right mr-3">
                         <div class="dropdown-header">Schedule Tools</div>
-                        <button class="dropdown-item" onclick="clearSchedule()"><icon class="dropdown-icon">delete</icon> Clear Schedule</button>
-                        <button class="dropdown-item" onclick="exportSchedule('img')"><icon class="dropdown-icon">image</icon> Export Schedule as PNG</button>
-                        <button class="dropdown-item" onclick="exportSchedule('pdf')" disabled><icon class="dropdown-icon">picture_as_pdf</icon> Export Schedule as PDF</button>
-                        <button class="dropdown-item" onclick="exportSchedule('print')"><icon class="dropdown-icon">print</icon> Print Schedule</button>
+                        <button class="dropdown-item" onclick="clearSchedule()"><icon class="dropdown-icon">delete</icon> Clear schedule</button>
+                        <button class="dropdown-item" onclick="exportSchedule('img')"><icon class="dropdown-icon">image</icon> Export schedule as PNG</button>
+                        <button class="dropdown-item" onclick="exportSchedule('pdf')" disabled><icon class="dropdown-icon">picture_as_pdf</icon> Export schedule as PDF</button>
+                        <button class="dropdown-item" onclick="exportSchedule('print')"><icon class="dropdown-icon">print</icon> Print schedule</button>
                         
+                        <div class="dropdown-divider"></div>
+
+                        <div class="dropdown-header">Multiple Schedules</div>
+                        <button class="dropdown-item" onclick="saveSchedule()"><icon class="dropdown-icon">save</icon> Save schedule for later</button>
+                        <button class="dropdown-item" onclick="loadScheduleModal()"><icon class="dropdown-icon">file_upload</icon> Load saved schedule</button>
+                        <button class="dropdown-item" disabled><icon class="dropdown-icon">backup_table</icon> Compare saved schedules</button>
+
                         <div class="dropdown-divider"></div>
 
                         <div class="dropdown-header">Help</div>
                         <button class="dropdown-item" onclick="$('#intro-modal').modal('show')"><icon class="dropdown-icon">info</icon> About</button>
-                        <button class="dropdown-item" onclick="startTutorial()"><icon class="dropdown-icon">help</icon> Launch Tutorial</button>
+                        <button class="dropdown-item" onclick="startTutorial()"><icon class="dropdown-icon">help</icon> Launch tutorial</button>
                     </div>
                 </li>
             </ul>
@@ -249,9 +256,9 @@
                 <!-- Main schedule display -->
                 <div class="col-lg-9" id="schedule">
 
-                    <div id="schedule-container">
+                    <div class="schedule-container">
 
-                        <div id="schedule-header">
+                        <div class="schedule-header">
                             <div>Time</div>
                             <div>Monday</div>
                             <div>Tuesday</div>
@@ -260,7 +267,7 @@
                             <div>Friday</div>
                         </div>
 
-                        <div id="schedule-main">
+                        <div id="schedule-main" class="schedule-main">
                             <div><div>8:00</div><div>8:30</div><div>9:00</div><div>9:30</div><div>10:00</div><div>10:30</div><div>11:00</div><div>11:30</div><div>12:00</div><div>12:30</div><div>13:00</div><div>13:30</div><div>14:00</div><div>14:30</div><div>15:00</div><div>15:30</div><div>16:00</div><div>16:30</div><div>17:00</div><div>17:30</div><div>18:00</div></div><div><div id="m800"></div><div id="m830"></div><div id="m900"></div><div id="m930"></div><div id="m1000"></div><div id="m1030"></div><div id="m1100"></div><div id="m1130"></div><div id="m1200"></div><div id="m1230"></div><div id="m1300"></div><div id="m1330"></div><div id="m1400"></div><div id="m1430"></div><div id="m1500"></div><div id="m1530"></div><div id="m1600"></div><div id="m1630"></div><div id="m1700"></div><div id="m1730"></div><div id="m1800"></div></div><div><div id="t800"></div><div id="t830"></div><div id="t900"></div><div id="t930"></div>
                             <div id="t1000"></div><div id="t1030"></div><div id="t1100"></div><div id="t1130"></div><div id="t1200"></div><div id="t1230"></div><div id="t1300"></div><div id="t1330"></div><div id="t1400"></div><div id="t1430"></div><div id="t1500"></div><div id="t1530"></div><div id="t1600"></div><div id="t1630"></div><div id="t1700"></div><div id="t1730"></div><div id="t1800"></div></div><div><div id="w800"></div><div id="w830"></div><div id="w900"></div><div id="w930"></div><div id="w1000"></div><div id="w1030"></div><div id="w1100"></div><div id="w1130"></div><div id="w1200"></div><div id="w1230"></div><div id="w1300"></div><div id="w1330"></div><div id="w1400"></div><div id="w1430"></div><div id="w1500"></div><div id="w1530"></div><div id="w1600"></div><div id="w1630"></div><div id="w1700"></div><div id="w1730"></div><div id="w1800"></div></div><div><div id="r800"></div><div id="r830"></div><div id="r900"></div><div id="r930"></div><div id="r1000"></div><div id="r1030"></div><div id="r1100"></div><div id="r1130"></div><div id="r1200"></div><div id="r1230"></div><div id="r1300"></div><div id="r1330"></div><div id="r1400"></div><div id="r1430"></div><div id="r1500"></div><div id="r1530"></div><div id="r1600"></div><div id="r1630"></div><div id="r1700"></div><div id="r1730"></div><div id="r1800"></div></div><div><div id="f800"></div><div id="f830"></div><div id="f900"></div><div id="f930"></div><div id="f1000"></div><div id="f1030"></div><div id="f1100"></div><div id="f1130"></div><div id="f1200"></div><div id="f1230"></div><div id="f1300"></div><div id="f1330"></div><div id="f1400"></div><div id="f1430"></div><div id="f1500"></div><div id="f1530"></div><div id="f1600"></div><div id="f1630"></div><div id="f1700"></div><div id="f1730"></div><div id="f1800"></div></div>
                         </div>
@@ -297,6 +304,7 @@
 
         </main>
 
+        <!-- Intro modal -->
         <div class="modal fade" id="intro-modal" data-backdrop="static" data-keyboard="false">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
@@ -328,6 +336,47 @@
             </div>
         </div>
 
+        <div class="modal fade" id="load-schedule-modal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h3 class="modal-title">Select a schedule to load:</h3>
+                    </div>
+
+                    <div class="modal-body">
+                        <select class="form-control" id="load-schedule-select">
+                            <option disabled selected>Select</option>
+                            <option>Schedule #1</option>
+                            <option>Schedule #2</option>
+                        </select>
+
+                        <div id="load-schedule-container" class="schedule-container">
+                            <div id="load-schedule-header" class="schedule-header">
+                                <div>Time</div>
+                                <div>Monday</div>
+                                <div>Tuesday</div>
+                                <div>Wednesday</div>
+                                <div>Thursday</div>
+                                <div>Friday</div>
+                            </div>
+
+                            <div id="load-schedule-main" class="schedule-main">
+                                <div><div>8:00</div><div>9:00</div><div>10:00</div><div>11:00</div><div>12:00</div><div>13:00</div><div>14:00</div><div>15:00</div><div>16:00</div><div>17:00</div><div>18:00</div></div><div><div id="l-m800"></div><div id="l-m830"></div><div id="l-m900"></div><div id="l-m930"></div><div id="l-m1000"></div><div id="l-m1030"></div><div id="l-m1100"></div><div id="l-m1130"></div><div id="l-m1200"></div><div id="l-m1230"></div><div id="l-m1300"></div><div id="l-m1330"></div><div id="l-m1400"></div><div id="l-m1430"></div><div id="l-m1500"></div><div id="l-m1530"></div><div id="l-m1600"></div><div id="l-m1630"></div><div id="l-m1700"></div><div id="l-m1730"></div><div id="l-m1800"></div></div><div><div id="l-t800"></div><div id="l-t830"></div><div id="l-t900"></div><div id="l-t930"></div><div id="l-t1000"></div><div id="l-t1030"></div><div id="l-t1100"></div><div id="l-t1130"></div><div id="l-t1200"></div><div id="l-t1230"></div><div id="l-t1300"></div><div id="l-t1330"></div><div id="l-t1400"></div><div id="l-t1430"></div><div id="l-t1500"></div><div id="l-t1530"></div><div id="l-t1600"></div><div id="l-t1630"></div><div id="l-t1700"></div><div id="l-t1730"></div><div id="l-t1800"></div></div><div><div id="l-w800"></div><div id="l-w830"></div><div id="l-w900"></div><div id="l-w930"></div><div id="l-w1000"></div><div id="l-w1030"></div><div id="l-w1100"></div><div id="l-w1130"></div><div id="l-w1200"></div><div id="l-w1230"></div><div id="l-w1300"></div><div id="l-w1330"></div><div id="l-w1400"></div><div id="l-w1430"></div><div id="l-w1500"></div><div id="l-w1530"></div><div id="l-w1600"></div><div id="l-w1630"></div><div id="l-w1700"></div><div id="l-w1730"></div><div id="l-w1800"></div></div><div><div id="l-r800"></div><div id="l-r830"></div><div id="l-r900"></div><div id="l-r930"></div><div id="l-r1000"></div><div id="l-r1030"></div><div id="l-r1100"></div><div id="l-r1130"></div><div id="l-r1200"></div><div id="l-r1230"></div><div id="l-r1300"></div><div id="l-r1330"></div><div id="l-r1400"></div><div id="l-r1430"></div><div id="l-r1500"></div><div id="l-r1530"></div><div id="l-r1600"></div><div id="l-r1630"></div><div id="l-r1700"></div><div id="l-r1730"></div><div id="l-r1800"></div></div><div><div id="l-f800"></div><div id="l-f830"></div><div id="l-f900"></div><div id="l-f930"></div><div id="l-f1000"></div><div id="l-f1030"></div><div id="l-f1100"></div><div id="l-f1130"></div><div id="l-f1200"></div><div id="l-f1230"></div><div id="l-f1300"></div><div id="l-f1330"></div><div id="l-f1400"></div><div id="l-f1430"></div><div id="l-f1500"></div><div id="l-f1530"></div><div id="l-f1600"></div><div id="l-f1630"></div><div id="l-f1700"></div><div id="l-f1730"></div><div id="l-f1800"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button class="btn btn-outline-danger" data-dismiss="modal">Cancel</button>
+                        <button class="btn btn-primary" onclick="loadSchedule()">Load schedule</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Alert modals -->
         <div class="modal fade alert-modal" id="alert-modal" data-backdrop="false">
             <div class="modal-dialog">
                 <div class="modal-content">

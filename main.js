@@ -5,6 +5,7 @@ const complementaryRegex = /[A-Z0-9]{3}-B[XW][ACLMPSTX]-(?:03|DW)/;
 
 var courseSchedule;
 const courseSchedule_key = "lucas/courseSchedule";
+const schedules_key = "lucas/schedule/list";
 
 var tutorialRunning = false, tutorialStep = 0;
 
@@ -795,6 +796,39 @@ function createCourseBubbles(courseCode, section, preview, colour) {
 
     return colour;
 }
+function loadCourseBubbles(courseCode, section, colour) {
+    // Find course from dataset and prep jQuery elements
+    const course = courses[courseCode].sections.filter(s => s.ID == section)[0];
+
+    if (course.intensive) return;
+
+    const $div = $("<div></div>");
+    const $bubble = $div.clone(), $title = $div.clone();
+    if (!colour || !colour in colours) colour = colours[Object.values(courseSchedule).filter(c => !c.i).length % colours.length];
+
+    $bubble.addClass(`course-bubble course-bubble-${colour} ${courseCode}`);
+    $title.addClass("course-title");
+
+    $title.text(course.title || courses[courseCode].courseName);
+
+    $bubble.append($title);
+
+    // If no conflict, create course bubble.
+    for (let i in course.schedule) {
+        const hrs = course.schedule[i][2].slice(0, -2) - course.schedule[i][1].slice(0, -2);
+        const mins = course.schedule[i][2].slice(-2) - course.schedule[i][1].slice(-2);
+        const blocks = hrs * 2 + mins / 30;
+
+        // Hide appropriate schedule boxes
+        $(`#l-${course.schedule[i][0].toLowerCase()}${course.schedule[i][1]}`).nextUntil(`#l-${course.schedule[i][0].toLowerCase()}${course.schedule[i][2]}`).addClass(`hidden blocked ${courseCode}`);
+
+        // Extend the first schedule box and add the course bubble
+        $(`#l-${course.schedule[i][0].toLowerCase()}${course.schedule[i][1]}`).css("grid-row", `auto / span ${blocks}`).addClass(`blocked ${courseCode} ${courseCode}`);
+        $(`#l-${course.schedule[i][0].toLowerCase()}${course.schedule[i][1]}`).append($bubble.clone());
+    }
+
+    return colour;
+}
 function changeBubbleColour(courseCode, colour) {
     if (!courseCode in courseSchedule) return alert("That course doesn't seem to be in your schedule.");
     if (!colour in colours) return alert("Sorry, that colour isn't available.");
@@ -903,7 +937,7 @@ function removeCourse(courseCode) {
             // Remove bubbles from schedule
             $(`.course-bubble.${courseCode}`).parent().css("grid-row", "");
             $(`.course-bubble.${courseCode}, .course-section.${courseCode}, .intensive-section.${courseCode}`).remove();
-            $(`.blocked.${courseCode}`).removeClass("hidden blocked");
+            $(`.blocked.${courseCode}`).removeClass();
 
             // Remove course from courseSchedule
             delete courseSchedule[courseCode];
@@ -911,19 +945,35 @@ function removeCourse(courseCode) {
         }
     });
 }
-function clearSchedule() {
-    confirm("Are you sure you want to remove all courses from your schedule and start again from scratch?").then(res => {
-        if (res) {
-            // Remove all bubbles from schedule
-            $(`.course-bubble`).parent().css("grid-row", "");
-            $(`.course-bubble`).remove();
-            $(`.blocked`).removeClass("hidden blocked");
+function clearSchedule(force) {
+    function doIt() {
+        // Remove all bubbles from schedule
+        $(`.course-bubble`).parent().css("grid-row", "");
+        $(`.course-bubble`).remove();
+        $(`.blocked`).removeClass();
 
-            // Remove all courses from courseSchedule
-            courseSchedule = {};
-            localStorage.setItem(courseSchedule_key, JSON.stringify(courseSchedule));
-        }
-    });
+        // Remove intensives
+        $("#schedule-intensives").html("");
+
+        // Clear course list 
+        $("#schedule-courses").html("");
+
+        // Remove all courses from courseSchedule
+        courseSchedule = {};
+        localStorage.setItem(courseSchedule_key, JSON.stringify(courseSchedule));
+    }
+
+    if (!force) {
+        confirm("Are you sure you want to remove all courses from your schedule and start again from scratch?").then(res => {
+            res && doIt();
+        });
+    }
+    else doIt();
+}
+function clearLoadBubbles() {
+    $("#load-schedule-main .course-bubble").parent().css("grid-row", "");
+    $("#load-schedule-main .course-bubble").remove();
+    $("#load-schedule-main .blocked").removeClass();
 }
 function confirmAdd($el, courseCode, section) {
     // cancelPreview();
@@ -959,6 +1009,66 @@ function confirmAdd($el, courseCode, section) {
 
     // createCourseBubbles(courseCode, section, true);
 }
+
+async function saveSchedule() {
+    // Pull list of schedules from localStorage, or create an empty array if it does not exist
+    let schedules = JSON.parse(localStorage.getItem(schedules_key) ?? "[]");
+
+    const name = await prompt("What would you like to name this schedule?", "Schedule #1");
+    if (!name) return;
+
+    schedules.push({
+        n: name,
+        s: courseSchedule
+    });
+
+    // Save to localStorage
+    localStorage.setItem(schedules_key, JSON.stringify(schedules));
+
+    // Check if user wants to clear schedule to start from scratch
+    await confirm("--save--") && clearSchedule(true);   
+}
+function loadScheduleModal() {
+    const schedules = JSON.parse(localStorage.getItem(schedules_key) ?? "[]");
+
+    if (schedules.length == 0) return alert("You have no saved schedules.");
+
+    clearLoadBubbles();
+
+    // Add options to schedule select
+    $("#load-schedule-select").html("<option selected disabled>Select</option>");
+    schedules.forEach(s => {
+        const $option = $("<option></option>").text(s.n).val(s.n);
+        $("#load-schedule-select").append($option);
+    });
+
+    $("#load-schedule-modal").modal("show");
+}
+function loadSchedule() {
+    const schedule = JSON.parse(localStorage.getItem(schedules_key)).filter(s => s.n == $("#load-schedule-select").val())[0].s;
+
+    clearSchedule(true);
+
+    for (let i in schedule) {
+        createCourseBubbles(i, schedule[i].s, null, schedule[i].c);
+    }
+
+    // Write to localStorage
+    courseSchedule = schedule;
+    localStorage.setItem(courseSchedule_key, JSON.stringify(courseSchedule));
+
+    $("#load-schedule-modal").modal("hide");
+    clearLoadBubbles();
+}
+$("#load-schedule-select").on("change", function() {
+    clearLoadBubbles();
+
+    const schedule = JSON.parse(localStorage.getItem(schedules_key)).filter(s => s.n == $(this).val())[0].s;
+    
+    for (let i in schedule) {
+        loadCourseBubbles(i, schedule[i].s, schedule[i].c);
+    }
+});
 
 function exportSchedule(type) {
     switch (type) {

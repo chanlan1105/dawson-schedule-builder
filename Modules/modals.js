@@ -56,7 +56,7 @@ window.confirm = async function(msg, buttons = "yes no") {
 	else {
 		alertQueue.busy = true;
 	}
-	
+
     $("#special-confirm-buttons").hide();
     $("#confirm-buttons").show();
 	
@@ -72,7 +72,12 @@ window.confirm = async function(msg, buttons = "yes no") {
 	let words = buttons.split(" ").map(word => word.capitalize());
 	if (words.length != 2) throw new Error("buttons in window.confirm must be two words separated by a space");
 	
-	$("#confirm-modal-content").text(msg);
+	if (msg == "--save--") {
+		$("#confirm-modal-content").html("<p>Your schedule has been successfully saved. You can load it again from the overflow menu.</p><p style='margin-bottom: 0'>Would you like to create a new schedule?</p>");
+	}
+	else {
+		$("#confirm-modal-content").text(msg);
+	}
 	$("#confirm-modal").modal("show");
 	
 	$("#confirm-modal .modal-body .yes").text(words[0]);
@@ -98,12 +103,12 @@ window.prompt = async function(msg, placeholder = "", defaultMsg = "", dataset =
 	$("#prompt-modal").modal("show");
 	$("#prompt-input").attr("placeholder", placeholder).val(defaultMsg).select();
 	
-   $("#prompt-input").off("keydown.autocomplete input.autocomplete");
+  	$("#prompt-input").off("keydown.autocomplete input.autocomplete");
 	dataset && autocomplete($("#prompt-input"), dataset);
 	
 	let promise = new Promise(resolve => {
 		$("#prompt-modal .yes").off("click.prompt").on("click.prompt", () => {
-			resolve($("#prompt-input").val().remove(" ") == "" ? null : $("#prompt-input").val());
+			resolve($("#prompt-input").val().replace(" ", "") == "" ? null : $("#prompt-input").val());
 		});
 		$("#prompt-modal .no").off("click.prompt").on("click.prompt", () => {
 			resolve(false);

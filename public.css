@@ -117,11 +117,11 @@ button.dropdown-item:disabled {
     padding-right: 15px;
 }
 
-#schedule-container {
+.schedule-container {
     display: flex;
     flex-flow: column;
 }
-#schedule-header {
+.schedule-header {
     display: grid;
     flex-grow: 1;
     align-content: center;
@@ -129,25 +129,25 @@ button.dropdown-item:disabled {
 
     height: 2rem;
 }
-#schedule-header > div {
+.schedule-header > div {
     flex-grow: 1;
     text-align: center;
 }
-#schedule-header > div:first-child {
+.schedule-header > div:first-child {
     flex-grow: .5;
     max-width: 4rem;
     min-width: 4rem;
 }
-#schedule-main {
+.schedule-main {
     display: grid;
     margin-top: 1rem;
     grid-template-columns: 4rem repeat(5, minmax(0, 1fr));
 }
-#schedule-main > div {
+.schedule-main > div {
     display: grid;
     grid-auto-rows: 2rem;
 }
-#schedule-main > div:first-child {
+.schedule-main > div:first-child {
     text-align: center;
     flex-grow: .5;
     max-width: 5rem;
@@ -155,15 +155,28 @@ button.dropdown-item:disabled {
     position: relative;
     top: -.8rem;
 }
-#schedule-main > div:not(:first-child) {
+.schedule-main > div:not(:first-child) {
     flex-grow: 1;
 }
-#schedule-main > div:not(:first-child) > div {
+.schedule-main > div:not(:first-child) > div {
     border-top: .0625rem solid var(--lightgray);
     padding: .25rem;
 }
-#schedule-main .hidden {
+.schedule-main .hidden {
     display: none;
+}
+
+#load-schedule-main > div {
+    grid-auto-rows: calc((100vh - 18.125rem - 1.5em - 5px) / 20);
+} 
+#load-schedule-main > div:first-child > div:not(:last-child) {
+    grid-row: auto / span 2;
+}
+
+@media (max-width: 991px) {
+    #load-schedule-modal .modal-dialog {
+        max-width: 700px;
+    }
 }
 
 main.export {
