@@ -90,6 +90,16 @@ button.dropdown-item:disabled {
 .nav-link {
 	cursor: pointer;
 }
+@media (max-width: 929px) {
+    .navbar-brand-930 {
+        display: none;
+    }
+}
+@media (max-width: 799px) {
+    .navbar-brand-800 {
+        display: none;
+    }
+}
 
 .popover {
     box-shadow: .125rem .125rem .3rem rgba(108, 117, 125, 0.8);
@@ -171,6 +181,11 @@ button.dropdown-item:disabled {
 } 
 #load-schedule-main > div:first-child > div:not(:last-child) {
     grid-row: auto / span 2;
+}
+#load-schedule-modal button.btn icon {
+    font-size: 1rem;
+    position: relative;
+    top: -.1rem;
 }
 
 @media (max-width: 991px) {

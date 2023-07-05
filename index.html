@@ -44,8 +44,8 @@
     <body>
 
         <nav id="navbar" class="navbar navbar-expand-sm bg-dark navbar-dark">
-            <span class="navbar-brand">Dawson Mock Schedule Builder &bull; Updated for F2023</span>
-            <span class="navbar-brand text-right" style="font-size: 1em">Made by Lucas &bull; &#x2764; Enriched Science</span>
+            <span class="navbar-brand">Dawson Mock Schedule Builder<span class="navbar-brand-800"> &bull; Updated for F2023</span></span>
+            <span class="navbar-brand text-right" style="font-size: 1em">Made by Lucas<span class="navbar-brand-930"> &bull; &#x2764; Enriched Science</span></span>
 
             <ul class="navbar-nav">
                 <li class="nav-item" id="navbar-menu">
@@ -369,7 +369,8 @@
 
                     <div class="modal-footer">
                         <button class="btn btn-outline-danger" data-dismiss="modal">Cancel</button>
-                        <button class="btn btn-primary" onclick="loadSchedule()">Load schedule</button>
+                        <button class="btn btn-danger" onclick="deleteSavedSchedule()"><icon>delete</icon> Delete saved schedule</button>
+                        <button class="btn btn-primary" onclick="loadSchedule()"><icon>file_upload</icon> Load schedule</button>
                     </div>
 
                 </div>

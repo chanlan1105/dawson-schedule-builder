@@ -3,7 +3,7 @@ const colours = ["red", "blue", "green", "orange", "purple", "teal", "brown", "c
 var currentColour = 0;
 const complementaryRegex = /[A-Z0-9]{3}-B[XW][ACLMPSTX]-(?:03|DW)/;
 
-var courseSchedule;
+var courseSchedule, savedSchedules;
 const courseSchedule_key = "lucas/courseSchedule";
 const schedules_key = "lucas/schedule/list";
 
@@ -100,10 +100,13 @@ function startUp() {
             }
             localStorage.setItem(courseSchedule_key, JSON.stringify(courseSchedule));
         }
+
+        savedSchedules = JSON.parse(localStorage.getItem(schedules_key) ?? "[]");
     }
     catch (err) {
         console.error(err);
         courseSchedule = {};
+        savedSchedules = [];
     }
 
     if (Object.keys(courseSchedule)) {
@@ -1011,46 +1014,58 @@ function confirmAdd($el, courseCode, section) {
 }
 
 async function saveSchedule() {
-    // Pull list of schedules from localStorage, or create an empty array if it does not exist
-    let schedules = JSON.parse(localStorage.getItem(schedules_key) ?? "[]");
-
     const name = await prompt("What would you like to name this schedule?", "Schedule #1");
     if (!name) return;
 
-    if (schedules.filter(s => s.n == name).length && await confirm(`You already have a schedule called ${name}. Would you like to overwrite it?`)) {
-        schedules = schedules.filter(s => s.n != name);
+    // Check for duplicate saved schedule name
+    if (savedSchedules.filter(s => s.n == name).length &&
+        await confirm(`You already have a schedule called ${name}. Would you like to overwrite it?`)) {
+        savedSchedules = savedSchedules.filter(s => s.n != name);
     }
-    else if (schedules.filter(s => s.n == name).length) return;
+    else if (savedSchedules.filter(s => s.n == name).length) return;
 
-    schedules.push({
+    savedSchedules.push({
         n: name,
         s: courseSchedule
     });
 
     // Save to localStorage
-    localStorage.setItem(schedules_key, JSON.stringify(schedules));
+    localStorage.setItem(schedules_key, JSON.stringify(savedSchedules));
 
     // Check if user wants to clear schedule to start from scratch
     await confirm("--save--") && clearSchedule(true);   
 }
 function loadScheduleModal() {
-    const schedules = JSON.parse(localStorage.getItem(schedules_key) ?? "[]");
-
-    if (schedules.length == 0) return alert("You have no saved schedules.");
+    if (savedSchedules.length == 0) return alert("You have no saved schedules.");
 
     clearLoadBubbles();
 
     // Add options to schedule select
     $("#load-schedule-select").html("<option selected disabled>Select</option>");
-    schedules.forEach(s => {
+    savedSchedules.forEach(s => {
         const $option = $("<option></option>").text(s.n).val(s.n);
         $("#load-schedule-select").append($option);
     });
 
     $("#load-schedule-modal").modal("show");
 }
+async function deleteSavedSchedule() {
+    if (!await confirm("Are you sure you want to delete this saved schedule?")) return false;
+
+    savedSchedules = savedSchedules.filter(s => s.n != $("#load-schedule-select").val());
+    localStorage.setItem(schedules_key, JSON.stringify(savedSchedules));
+
+    clearLoadBubbles();
+
+    // Add options to schedule select
+    $("#load-schedule-select").html("<option selected disabled>Select</option>");
+    savedSchedules.forEach(s => {
+        const $option = $("<option></option>").text(s.n).val(s.n);
+        $("#load-schedule-select").append($option);
+    });
+}
 function loadSchedule() {
-    const schedule = JSON.parse(localStorage.getItem(schedules_key)).filter(s => s.n == $("#load-schedule-select").val())[0].s;
+    const schedule = savedSchedules.filter(s => s.n == $("#load-schedule-select").val())[0].s;
 
     clearSchedule(true);
 
@@ -1068,7 +1083,7 @@ function loadSchedule() {
 $("#load-schedule-select").on("change", function() {
     clearLoadBubbles();
 
-    const schedule = JSON.parse(localStorage.getItem(schedules_key)).filter(s => s.n == $(this).val())[0].s;
+    const schedule = savedSchedules.filter(s => s.n == $(this).val())[0].s;
     
     for (let i in schedule) {
         loadCourseBubbles(i, schedule[i].s, schedule[i].c);
