@@ -56,7 +56,6 @@
                         <div class="dropdown-header">Schedule Tools</div>
                         <button class="dropdown-item" onclick="clearSchedule()"><icon class="dropdown-icon">delete</icon> Clear schedule</button>
                         <button class="dropdown-item" onclick="exportSchedule('img')"><icon class="dropdown-icon">image</icon> Export schedule as PNG</button>
-                        <button class="dropdown-item" onclick="exportSchedule('pdf')" disabled><icon class="dropdown-icon">picture_as_pdf</icon> Export schedule as PDF</button>
                         <button class="dropdown-item" onclick="exportSchedule('print')"><icon class="dropdown-icon">print</icon> Print schedule</button>
                         
                         <div class="dropdown-divider"></div>
@@ -246,9 +245,12 @@
                             </div>
                         </div>
 
-                        <div id="course-options" class="mt-4">
-    
-                        </div>
+                        <div id="course-options" class="mt-4"></div>
+
+                        <big>Or enter your course manually:</big>
+                        <small style="display: block">You can also use this option to add a custom course!</small>
+
+                        <button class="btn btn-sm btn-block btn-outline-secondary my-2" type="button" id="course-manual">Add course manually <icon>add_circle_outline</icon></button>
                     </div>
 
                 </aside>
@@ -336,6 +338,7 @@
             </div>
         </div>
 
+        <!-- Load schedule modal -->
         <div class="modal fade" id="load-schedule-modal">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
@@ -371,6 +374,74 @@
                         <button class="btn btn-outline-danger" data-dismiss="modal">Cancel</button>
                         <button class="btn btn-danger" onclick="deleteSavedSchedule()"><icon>delete</icon> Delete saved schedule</button>
                         <button class="btn btn-primary" onclick="loadSchedule()"><icon>file_upload</icon> Load schedule</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Custom course modal -->
+        <div class="modal fade" id="custom-course-modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h3 class="modal-title">Add a custom course</h3>
+                    </div>
+
+                    <div class="modal-body">
+
+                        <h4>Course details</h4>
+
+                        <small style="display: block" class="mb-2">Only course title is required; other fields can be skipped.</small>
+
+                        <div class="form-group">
+                            <label for="custom-course-title">Course title:</label>
+                            <input class="form-control form-control-sm" type="text" id="custom-course-title" required />
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-7">
+                                <label for="custom-course-code">Course code:</label>
+                                <input class="form-control form-control-sm" type="text" id="custom-course-code" />
+                            </div>
+
+                            <div class="form-group col-5">
+                                <label for="custom-course-section">Course section:</label>
+                                <input class="form-control form-control-sm" type="number" id="custom-course-section" min="1" step="1" />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="custom-course-teacher">Teacher:</label>
+                            <input class="form-control form-control-sm" type="text" id="custom-course-teacher" />
+                        </div>
+
+                        <h4 class="mt-3">Course schedule</h4>
+
+                        <small style="display: block" class="mb-2">Ensure that the timeslots you add do not conflict with your existing schedule!</small>
+
+                        <button class="btn btn-sm btn-block btn-outline-secondary" id="custom-course-time-btn">Add time <icon>add_circle_outline</icon></button>
+
+                        <table class="table table-sm text-center mt-3" id="custom-course-time-table">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Day</th>
+                                    <th>Start Time</th>
+                                    <th>End Time</th>
+                                </tr>
+                            </thead>
+
+                            <tbody></tbody>
+                        </table>
+
+                    </div>
+
+                    <div class="modal-footer">
+
+                        <button class="btn btn-success btn-block" onclick="createCustomCourse()">Create custom course</button>
+
                     </div>
 
                 </div>

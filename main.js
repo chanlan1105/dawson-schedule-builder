@@ -4,6 +4,7 @@ var currentColour = 0;
 const complementaryRegex = /[A-Z0-9]{3}-B[XW][ACLMPSTX]-(?:03|DW)/;
 
 var courseSchedule, savedSchedules;
+var customCourseCount = 0;
 const courseSchedule_key = "lucas/courseSchedule";
 const schedules_key = "lucas/schedule/list";
 
@@ -101,6 +102,8 @@ function startUp() {
             localStorage.setItem(courseSchedule_key, JSON.stringify(courseSchedule));
         }
 
+        customCourseCount = Object.values(courseSchedule).filter(c => "custom" in c).length;
+
         savedSchedules = JSON.parse(localStorage.getItem(schedules_key) ?? "[]");
     }
     catch (err) {
@@ -113,7 +116,8 @@ function startUp() {
         // There are one or more courses already loaded
         
         for (let i in courseSchedule) {
-            createCourseBubbles(i, courseSchedule[i].s, null, courseSchedule[i].c);
+            const course = courseSchedule[i].custom ?? {code: i, ...courses[i].sections.filter(s => s.ID == courseSchedule[i].s)[0]};
+            createCourseBubbles(i, course, courseSchedule[i].c);
         }
     }
 
@@ -706,41 +710,39 @@ function previewCourseBubbles(courseCode, section) {
 }
 */
 
-function createCourseBubbles(courseCode, section, preview, colour) {
-    // Find course from dataset and prep jQuery elements
-    const course = courses[courseCode].sections.filter(s => s.ID == section)[0];
-
+function createCourseBubbles(courseId, course, colour) {
     if (course.intensive) {
         // If intensive course, go to intensive function
-        return addIntensive(courseCode, section);
+        return addIntensive(course.code, course.ID);
     }
 
+    // Prep jQuery elements
     const $div = $("<div></div>"), $delete = $("<icon></icon>").addClass("course-delete").text("clear");
     const $bubble = $div.clone(), $title = $div.clone(), $code = $div.clone(), $teacher = $div.clone();
     if (!colour || !colour in colours) colour = colours[Object.values(courseSchedule).filter(c => !c.i).length % colours.length];
 
-    $delete.attr("onclick", `removeCourse("${courseCode}")`);
+    $delete.attr("onclick", `removeCourse("${courseId}")`);
 
-    $bubble.addClass(`course-bubble course-bubble-${colour} ${courseCode}`);
+    $bubble.addClass(`course-bubble course-bubble-${colour} ${courseId}`);
     $title.addClass("course-title");
     $code.addClass("course-code");
     $teacher.addClass("course-teacher");
 
-    $title.text(course.title || courses[courseCode].courseName);
-    $code.text(courseCode + " sect. " + Number(section));
+    $title.text(course.title || courses[course.code].courseName);
+    if (course.code && course.ID) $code.text(`${course.code} sect. ${Number(course.ID)}`);
+    else if (course.code) $code.text(`${course.code}`);
+    else if (course.ID) $code.text(`Section ${Number(course.ID)}`);
     $teacher.text(course.teacher);
 
     $bubble.append($delete, $title, $code, $teacher);
 
-    if (preview) $bubble.addClass("preview");
-
     // Check for conflicts
     const conflict = checkConflict(course.schedule);
-    if (conflict && !preview) {
+    if (conflict) {
         alert("This course conflicts with one or more courses already in your schedule");
         return false;
     }
-    else if (conflict && preview) return false;
+    else if (conflict) return false;
 
     // If no conflict, create course bubble.
     for (let i in course.schedule) {
@@ -749,23 +751,23 @@ function createCourseBubbles(courseCode, section, preview, colour) {
         const blocks = hrs * 2 + mins / 30;
 
         // Hide appropriate schedule boxes
-        $(`#${course.schedule[i][0].toLowerCase()}${course.schedule[i][1]}`).nextUntil(`#${course.schedule[i][0].toLowerCase()}${course.schedule[i][2]}`).addClass(`hidden blocked ${courseCode} ${preview ? "preview" : ""}`);
+        $(`#${course.schedule[i][0].toLowerCase()}${course.schedule[i][1]}`).nextUntil(`#${course.schedule[i][0].toLowerCase()}${course.schedule[i][2]}`).addClass(`hidden blocked ${courseId}`);
 
         // Extend the first schedule box and add the course bubble
-        $(`#${course.schedule[i][0].toLowerCase()}${course.schedule[i][1]}`).css("grid-row", `auto / span ${blocks}`).addClass(`blocked ${courseCode} ${courseCode} ${preview ? "preview" : ""}`);
+        $(`#${course.schedule[i][0].toLowerCase()}${course.schedule[i][1]}`).css("grid-row", `auto / span ${blocks}`).addClass(`blocked ${courseId}`);
         $(`#${course.schedule[i][0].toLowerCase()}${course.schedule[i][1]}`).append($bubble.clone());
     }
 
     // Add course to course list
-    const $section = $("<div></div>").addClass(`course-section ${courseCode}`);
+    const $section = $("<div></div>").addClass(`course-section ${courseId}`);
     const $details = $("<div></div>").addClass("course-details");
     const $controls = $("<div></div>").addClass("course-controls");
     const $colour_btn = $("<button><icon>format_color_fill</icon></button>").addClass("course-colour");
     $colour_btn.css("background-color", `var(--bubble-${colour})`);
     $colour_btn.popover({
         content:
-        `<div class="course-colour-options ${courseCode}">
-            ${colours.map(c => `<div class="course-colour-option-${c}" onclick="changeBubbleColour('${courseCode}', '${c}')" style="background-color: var(--bubble-${c})">
+        `<div class="course-colour-options ${courseId}">
+            ${colours.map(c => `<div class="course-colour-option-${c}" onclick="changeBubbleColour('${courseId}', '${c}')" style="background-color: var(--bubble-${c})">
                 ${c == colour ? `<icon>check</icon>` : ``}
             </div>`).join("")}
         </div>`,
@@ -774,45 +776,41 @@ function createCourseBubbles(courseCode, section, preview, colour) {
         trigger: "focus",
         boundary: "viewport"
     });
-    $details.append($title.clone().attr("onclick", `removeCourse('${courseCode}')`), $code, $teacher);
+    $details.append($title.clone().attr("onclick", `removeCourse('${courseId}')`), $code, $teacher);
     $controls.append($colour_btn);
     $section.append($details, $controls);
 
     $("#schedule-courses").append($section);
 
-    if (!preview) {
-        // Check for tutorial
-        if (tutorialRunning && tutorialStep == 2) {
-            $(".course-bubble").first().addClass("tutorial").popover({
-                title: "Tutorial",
-                content: "You can remove this course by hovering or tapping and clicking on the X in the top right corner.<br><button class='btn btn-link' onclick='tutorial(4)'>Next</button>",
-                html: true,
-                sanitize: false,
-                trigger: "manual",
-                offset: "3",
-                boundary: "viewport"
-            });
+    // Check for tutorial
+    if (tutorialRunning && tutorialStep == 2) {
+        $(".course-bubble").first().addClass("tutorial").popover({
+            title: "Tutorial",
+            content: "You can remove this course by hovering or tapping and clicking on the X in the top right corner.<br><button class='btn btn-link' onclick='tutorial(4)'>Next</button>",
+            html: true,
+            sanitize: false,
+            trigger: "manual",
+            offset: "3",
+            boundary: "viewport"
+        });
 
-            tutorial(3);
-        }
+        tutorial(3);
     }
 
     return colour;
 }
-function loadCourseBubbles(courseCode, section, colour) {
-    // Find course from dataset and prep jQuery elements
-    const course = courses[courseCode].sections.filter(s => s.ID == section)[0];
-
+function loadCourseBubbles(courseId, course, colour) {
+    // Prep jQuery elements
     if (course.intensive) return;
 
     const $div = $("<div></div>");
     const $bubble = $div.clone(), $title = $div.clone();
     if (!colour || !colour in colours) colour = colours[Object.values(courseSchedule).filter(c => !c.i).length % colours.length];
 
-    $bubble.addClass(`course-bubble course-bubble-${colour} ${courseCode}`);
+    $bubble.addClass(`course-bubble course-bubble-${colour} ${courseId}`);
     $title.addClass("course-title");
 
-    $title.text(course.title || courses[courseCode].courseName);
+    $title.text(course.title || courses[course.code].courseName);
 
     $bubble.append($title);
 
@@ -823,10 +821,10 @@ function loadCourseBubbles(courseCode, section, colour) {
         const blocks = hrs * 2 + mins / 30;
 
         // Hide appropriate schedule boxes
-        $(`#l-${course.schedule[i][0].toLowerCase()}${course.schedule[i][1]}`).nextUntil(`#l-${course.schedule[i][0].toLowerCase()}${course.schedule[i][2]}`).addClass(`hidden blocked ${courseCode}`);
+        $(`#l-${course.schedule[i][0].toLowerCase()}${course.schedule[i][1]}`).nextUntil(`#l-${course.schedule[i][0].toLowerCase()}${course.schedule[i][2]}`).addClass(`hidden blocked ${courseId}`);
 
         // Extend the first schedule box and add the course bubble
-        $(`#l-${course.schedule[i][0].toLowerCase()}${course.schedule[i][1]}`).css("grid-row", `auto / span ${blocks}`).addClass(`blocked ${courseCode} ${courseCode}`);
+        $(`#l-${course.schedule[i][0].toLowerCase()}${course.schedule[i][1]}`).css("grid-row", `auto / span ${blocks}`).addClass(`blocked ${courseId} ${courseId}`);
         $(`#l-${course.schedule[i][0].toLowerCase()}${course.schedule[i][1]}`).append($bubble.clone());
     }
 
@@ -911,7 +909,11 @@ function cancelPreview() {
 function addCourse(courseCode, section) {
     if (courseCode in courseSchedule) return alert("You already have that course in your schedule.");
 
-    const res = createCourseBubbles(courseCode, section);
+    const course = courses[courseCode].sections.filter(s => s.ID == section)[0];
+    const res = createCourseBubbles(courseCode, {
+        code: courseCode,
+        ...course
+    });
 
     if (!res) return;
 
@@ -1009,8 +1011,6 @@ function confirmAdd($el, courseCode, section) {
     $confirm.append($text, $buttons);
 
     $el.append($confirm).addClass("active");
-
-    // createCourseBubbles(courseCode, section, true);
 }
 
 async function saveSchedule() {
@@ -1051,7 +1051,7 @@ function loadScheduleModal() {
 }
 async function deleteSavedSchedule() {
     if (!await confirm("Are you sure you want to delete this saved schedule?")) return false;
-
+    
     savedSchedules = savedSchedules.filter(s => s.n != $("#load-schedule-select").val());
     localStorage.setItem(schedules_key, JSON.stringify(savedSchedules));
 
@@ -1070,7 +1070,8 @@ function loadSchedule() {
     clearSchedule(true);
 
     for (let i in schedule) {
-        createCourseBubbles(i, schedule[i].s, null, schedule[i].c);
+        const course = schedule[i].custom ?? {code: i, ...courses[i].sections.filter(s => s.ID == schedule[i].s)[0]};
+        createCourseBubbles(i, course, schedule[i].c);
     }
 
     // Write to localStorage
@@ -1086,9 +1087,131 @@ $("#load-schedule-select").on("change", function() {
     const schedule = savedSchedules.filter(s => s.n == $(this).val())[0].s;
     
     for (let i in schedule) {
-        loadCourseBubbles(i, schedule[i].s, schedule[i].c);
+        const course = schedule[i].custom ?? {code: i, ...courses[i].sections.filter(s => s.ID == schedule[i].s)[0]};
+        loadCourseBubbles(i, course, schedule[i].c);
     }
 });
+
+$("#course-manual").on("click", function() {
+    $("#custom-course-modal").modal("show");
+});
+$("#custom-course-time-btn").on("click", function() {
+    const $remove = $("<icon>delete</icon>");
+    $remove.on("click", function() {
+        $(this).closest("tr").remove();
+    });
+
+    const $daySelect = $("<select required></select>").addClass("form-control form-control-sm").append("<option value='' disabled selected>Select</option>");
+
+    for (let i of [["M", "Monday"], ["T", "Tuesday"], ["W", "Wednesday"], ["R", "Thursday"], ["F", "Friday"]]) {
+        const $option = $("<option></option").val(i[0]).text(i[1]);
+        $daySelect.append($option);
+    }
+
+    const $startTime = $("<input type='text' required readonly>").addClass("datetimepicker-input form-control form-control-sm custom-course-start-time");
+    const $endTime = $("<input type='text' required readonly>").addClass("datetimepicker-input form-control form-control-sm custom-course-end-time");
+
+    // Initiate datetimepickers
+    $startTime.datetimepicker({
+        format: "H:mm",
+        stepping: 30,
+        minDate: moment({ hour: 8 }),
+        maxDate: moment({ hour: 18, second: 59 }),
+        useCurrent: false,
+        ignoreReadonly: true
+    });
+    $startTime.on("focus", function() {
+        $(this).datetimepicker("show");
+    });
+    $startTime.on("focusout", function() {
+        $(this).datetimepicker("hide");
+    });
+    $endTime.datetimepicker({
+        format: "H:mm",
+        stepping: 30,
+        minDate: moment({ hour: 8 }),
+        maxDate: moment({ hour: 18, second: 59 }),
+        useCurrent: false,
+        ignoreReadonly: true
+    });
+    $endTime.on("focus", function() {
+        $(this).datetimepicker("date", $startTime.datetimepicker("date"));
+        $(this).datetimepicker("show");
+    });
+    $endTime.on("focusout", function() {
+        $(this).datetimepicker("hide");
+    });
+
+    // Link datetimepickers
+    $startTime.on("change.datetimepicker", function(e) {
+        $endTime.datetimepicker("minDate", e.date);
+    });
+    $endTime.on("change.datetimepicker", function(e) {
+        $startTime.datetimepicker("maxDate", e.date);
+    });
+
+    const $row = $("<tr></tr>");
+    $row.append($("<td></td>").append($remove), $("<td></td>").append($daySelect), $("<td></td>").append($startTime), $("<td></td>").append($endTime));
+
+    $("#custom-course-time-table tbody").append($row);
+});
+function createCustomCourse() {
+    // Add invalid class to empty timepicker textboxes
+    // and remove it from textboxes which have been filled
+    $("#custom-course-time-table input.invalid").filter(function() {
+        return $(this).val();
+    }).removeClass("invalid");
+    $("#custom-course-time-table input").filter(function() {
+        return !$(this).val();
+    }).addClass("invalid");
+
+    // Add validated class to modal
+    $("#custom-course-modal").addClass("validated");
+
+    // Check for invalid fields
+    if ($("#custom-course-modal").has(":invalid").length) return;
+
+    // If there are no invalid fields, create the custom course
+    let course = {
+        title: $("#custom-course-title").val(),
+        schedule: []
+    };
+
+    $("#custom-course-code").val() && (course.courseCode = $("#custom-course-code").val());
+    $("#custom-course-section").val() && (course.ID = $("#custom-course-section").val());
+    $("#custom-course-teacher").val() && (course.teacher = $("#custom-course-teacher").val());
+
+    // Loop through schedule and check for conflicts
+    $("#custom-course-time-table tbody tr").each(function() {
+        const timeslot = [
+            $(this).find("select").val().toUpperCase(),
+            $(this).find("input.custom-course-start-time").datetimepicker("date").format("Hmm"),
+            $(this).find("input.custom-course-end-time").datetimepicker("date").format("Hmm")
+        ];
+        checkConflict([timeslot]) && $(this).find("input").addClass("invalid");
+        course.schedule.push(timeslot);
+    });
+
+    // Check for invalid again
+    if ($("#custom-course-modal").has(":invalid, .invalid").length) return $("#custom-course-modal .modal-body small").eq(1).addClass("font-weight-bold text-danger");
+
+    // Otherwise save the course!
+    const colour = colours[Object.values(courseSchedule).filter(c => !c.i).length % colours.length];
+    courseSchedule[`CUSTOM-${customCourseCount}`] = {
+        custom: {...course},
+        c: colour
+    };
+
+    localStorage.setItem(courseSchedule_key, JSON.stringify(courseSchedule));
+
+    // Create course bubbles
+    createCourseBubbles(`CUSTOM-${customCourseCount}`, {...course}, colour);
+
+    // Clear fields and reset modal
+    $("#custom-course-modal input").val("");
+    $("#custom-course-time-table > tbody tr").remove();
+    $("#custom-course-modal").modal("hide");
+}
 
 function exportSchedule(type) {
     switch (type) {
