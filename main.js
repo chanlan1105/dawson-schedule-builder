@@ -1177,7 +1177,7 @@ function createCustomCourse() {
         schedule: []
     };
 
-    $("#custom-course-code").val() && (course.courseCode = $("#custom-course-code").val());
+    $("#custom-course-code").val() && (course.code = $("#custom-course-code").val());
     $("#custom-course-section").val() && (course.ID = $("#custom-course-section").val());
     $("#custom-course-teacher").val() && (course.teacher = $("#custom-course-teacher").val());
 
@@ -1210,7 +1210,7 @@ function createCustomCourse() {
     // Clear fields and reset modal
     $("#custom-course-modal input").val("");
     $("#custom-course-time-table > tbody tr").remove();
-    $("#custom-course-modal").modal("hide");
+    $("#custom-course-modal").removeClass("validated").modal("hide");
 }
 
 function exportSchedule(type) {
