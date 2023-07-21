@@ -1,0 +1,18 @@
+main.export {
+    position: absolute;
+    width: 65rem;
+    max-width: unset;
+
+    #schedule, #schedule-intensives-list {
+        width: 100%;
+        max-width: unset;
+        flex-grow: 1;
+    }
+
+    #course-options-sidebar, #schedule-course-list {
+        display: none;
+    }
+}
+#schedule.export .course-bubble {
+    box-shadow: none;
+}

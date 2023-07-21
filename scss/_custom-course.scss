@@ -1,0 +1,43 @@
+#course-manual icon {
+    font-size: 1.2em;
+}
+#custom-course-modal .modal-body .form-group {
+    margin-bottom: .5rem;
+
+    label {
+        margin-bottom: .15rem;
+    }
+}
+#custom-course-code {
+    text-transform: uppercase;
+}
+#custom-course-time-table tbody {
+    td {
+        position: relative;
+    }
+
+    icon {
+        font-size: 1.2rem;
+        line-height: 1.5;
+        opacity: 0.5;
+        color: rgb(212, 68, 68);
+        user-select: none;
+        cursor: pointer;
+        
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    input[readonly] {
+        background-color: #fff;
+    }
+}
+#custom-course-modal.validated {
+    input:invalid, input.invalid {
+        @include form-invalid-input;
+    }
+    select:invalid {
+        @include form-invalid-select;
+    }
+}

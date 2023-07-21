@@ -1,0 +1,68 @@
+.schedule-container {
+    display: flex;
+    flex-flow: column;
+}
+.schedule-header {
+    display: grid;
+    flex-grow: 1;
+    align-content: center;
+    grid-template-columns: 4rem repeat(5, minmax(0, 1fr));
+
+    height: 2rem;
+
+    > div {
+        flex-grow: 1;
+        text-align: center;
+
+        &:first-child {
+            flex-grow: .5;
+            max-width: 4rem;
+            min-width: 4rem;
+        }
+    }
+}
+.schedule-main {
+    display: grid;
+    margin-top: 1rem;
+    grid-template-columns: 4rem repeat(5, minmax(0, 1fr));
+
+    > div {
+        display: grid;
+        grid-auto-rows: 2rem;
+
+        &:first-child {
+            text-align: center;
+            flex-grow: .5;
+            max-width: 5rem;
+        
+            position: relative;
+            top: -.8rem;
+        }
+
+        &:not(:first-child) {
+            flex-grow: 1;
+
+            > div {
+                border-top: .0625rem solid var(--lightgray);
+                padding: .25rem;
+            }
+        }
+    }
+
+    .hidden {
+        display: none;
+    }
+}
+
+#load-schedule-main > div {
+    grid-auto-rows: calc((100vh - 18.125rem - 1.5em - 5px) / 20);
+} 
+#load-schedule-main > div:first-child > div:not(:last-child) {
+    grid-row: auto / span 2;
+}
+
+@media (max-width: 991px) {
+    #load-schedule-modal .modal-dialog {
+        max-width: 700px;
+    }
+}

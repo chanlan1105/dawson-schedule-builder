@@ -1,0 +1,43 @@
+icon {
+	font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+
+	vertical-align: sub;
+
+    &.small, &[small] {
+        font-size: .9375rem;
+	    margin-bottom: -0.125rem;
+    }
+    &.large, &[large] {
+        font-size: 1.6875rem;
+    }
+    &.xlarge, &[xlarge] {
+        font-size: 2.0625rem;
+    }
+
+    &.bold, &[bold] {
+        font-weight: bold;
+    }
+    &.outline, &[outline], &.outlined, &[outlined] {
+        font-family: "Material Icons Outlined";
+    }
+}
+button.btn icon {
+    font-size: 1rem;
+    position: relative;
+    top: -.1rem;
+}
+button.btn.btn-sm icon {
+    top: 0;
+}

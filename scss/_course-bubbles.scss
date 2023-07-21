@@ -1,0 +1,93 @@
+@keyframes flash {
+    0% {
+        opacity: 0.3;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    60% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 0.3;
+    }
+}
+
+@mixin bubble($bkg) {
+    background-color: $bkg;
+    border: .0625rem solid darken($bkg, lightness($bkg) * 0.2);
+    color: white;
+}
+
+.course-bubble {
+    border-radius: .3rem;
+    box-shadow: .1rem .1rem .3rem #0000004a;
+    font-size: .8rem;
+    overflow: hidden;
+    height: 100%;
+    padding: .1rem .4rem;
+}
+.course-bubble.preview {
+    animation: flash 1.5s linear 0s infinite;
+}
+.course-bubble-conflict {
+    border: .125rem dashed rgb(194, 63, 63);
+    background-color: rgb(255, 182, 182);
+    color: rgb(153, 26, 26);
+    font-weight: bold;
+}
+.course-bubble-red {
+    @include bubble(hsl(0, 81%, 46%));
+}
+.course-bubble-blue {
+    @include bubble(hsl(246, 64%, 50%));
+}
+.course-bubble-green {
+    @include bubble(hsl(117, 81%, 30%));
+}
+.course-bubble-orange {
+    @include bubble(hsl(28, 73%, 40%));
+}
+.course-bubble-purple {
+    @include bubble(hsl(303, 81%, 38%));
+}
+.course-bubble-teal {
+    @include bubble(hsl(184, 63%, 38%));
+}
+.course-bubble-brown {
+    @include bubble(hsl(30, 40%, 34%));
+}
+.course-bubble-cyan {
+    @include bubble(hsl(220, 51%, 51%));
+}
+.course-bubble-crimson {
+    @include bubble(hsl(0, 46%, 39%));
+}
+.course-bubble-stone {
+    @include bubble(hsl(163, 29%, 35%));
+}
+.course-bubble-indigo {
+    @include bubble(hsl(284, 79%, 22%));
+}
+.course-bubble .course-title {
+    font-weight: bold;
+}
+.course-bubble .course-delete {
+    cursor: pointer;
+    float: right;
+
+    position: relative;
+    top: -.2rem;
+    opacity: 0;
+
+    transition: top .25s ease-in-out, opacity .25s ease-in-out;
+
+    font-size: 1rem;
+}
+main:not(.export) .course-bubble:hover .course-delete {
+    top: .2rem;
+    opacity: .8;
+}
+.course-bubble .course-delete:hover {
+    font-weight: bold;
+}

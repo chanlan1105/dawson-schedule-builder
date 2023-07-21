@@ -1,0 +1,68 @@
+.intensive-section {
+    display: grid;
+    margin-bottom: 1rem;
+    grid-template-columns: 1fr minmax(max-content, 2fr);
+}
+.course-section:not(.intensive-section) {
+    display: grid;
+    margin-bottom: 1rem;
+    grid-template-columns: auto 5rem;
+}
+.course-section .course-controls {
+    text-align: right;
+}
+.course-section .course-colour {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    color: white;
+    border: none;
+
+    cursor: pointer;
+}
+.course-section icon {
+    font-size: 1rem;
+}
+.course-colour-options {
+    display: grid;
+    grid-template-columns: repeat(4, 1.5rem);
+    gap: .3rem;
+}
+.course-colour-options > div {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
+
+    border-radius: 50%;
+    cursor: pointer;
+    transition: opacity .15s ease-in-out;
+}
+.course-colour-options > div icon {
+    color: white;
+    font-size: 1rem;
+}
+.course-colour-options > div:hover {
+    opacity: .7;
+}
+.course-section .course-title {
+    font-weight: bold;
+    margin-bottom: .2rem;
+}
+.course-section .course-code, .course-section .course-teacher {
+    font-size: .85rem;
+}
+.intensive-times {
+    font-size: .85rem;
+}
+.course-section .course-title {
+    cursor: pointer;
+}
+main:not(.export) .course-section .course-title:hover {
+    text-decoration: line-through;
+}

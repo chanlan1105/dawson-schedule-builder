@@ -1,0 +1,124 @@
+#course-options-sidebar {
+    padding: 0;
+    margin-bottom: 1rem;
+}
+#course-options-container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#course-teacher {
+    min-height: 6rem;
+    max-height: 10rem;
+    resize: vertical;
+}
+#course-search-best-accordion {
+    label {
+        font-size: .9rem;
+    }
+    p {
+        font-size: .9rem;
+        margin-bottom: .3rem;
+    }
+}
+#course-search-best-accordion.validated input:invalid {
+    @include form-invalid-input;
+}
+#course-start-min, #course-end-max {
+    cursor: text;
+}
+#course-search-accordion .form-group {
+    margin-bottom: 0;
+}
+#course-search-accordion {
+    margin-bottom: .5rem;
+}
+
+@media (min-width: 992px) {
+    #course-search-best-accordion .row {
+        flex-flow: column;
+    }
+
+    #course-options-container {
+        position: absolute;
+    }
+    
+    #course-options > .card {
+        margin-bottom: .2rem;
+    }
+}
+@media (max-width: 991px) {
+    #course-options-container {
+        margin-bottom: 1rem;
+    }
+    #course-options {
+        display: flex;
+        flex-flow: row;
+        overflow: auto;
+    }
+    #course-options .card {
+        min-width: 15rem;
+        margin-right: .2rem;
+
+        &.intensive {
+            min-width: 30rem;
+        }
+        .card-body {
+            flex: unset;
+        }
+    }
+}
+#course-options:not(:empty) {
+    margin-bottom: 1rem;
+}
+#course-options > div.card p {
+    margin-bottom: .3rem;
+    font-size: .9rem;
+}
+#course-options div.card-body {
+    display: grid;
+    grid-template-columns: min-content auto;
+}
+#course-options div.card-body icon {
+    font-size: 1rem;
+    padding-right: .4rem;
+    line-height: 1.35rem;
+}
+.course-option-title, .course-option-teacher, .course-option-section {
+    font-weight: bold;
+}
+.course-option-note, .course-option-schedule {
+    font-size: .78rem !important;
+}
+#course-options div.card-body p:last-child {
+    margin-bottom: 0;
+}
+#course-options > div.card {
+    transition: background-color .25s ease-in-out;
+    cursor: pointer;
+}
+#course-options > div.card:not(.active):hover {
+    background-color: rgb(240, 240, 240);
+}
+#course-options .card.active {
+    background-color: rgb(62, 62, 62);
+    cursor: default;
+}
+#course-options .course-confirm-btns {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 75%;
+
+    font-size: .8rem;
+    color: white;
+}
+#course-options .course-confirm-btns .btn-group {
+    width: 100%;
+}
+#course-complementary-warning {
+    display: none;
+    font-size: .8rem;
+}
