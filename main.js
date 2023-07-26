@@ -1075,7 +1075,7 @@ function loadSchedule() {
     }
 
     // Write to localStorage
-    courseSchedule = schedule;
+    courseSchedule = {...schedule};
     localStorage.setItem(courseSchedule_key, JSON.stringify(courseSchedule));
 
     $("#load-schedule-modal").modal("hide");
