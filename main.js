@@ -965,6 +965,7 @@ function clearSchedule(force) {
 
         // Remove all courses from courseSchedule
         courseSchedule = {};
+        customCourseCount = 0;
         localStorage.setItem(courseSchedule_key, JSON.stringify(courseSchedule));
     }
 
@@ -1073,6 +1074,8 @@ function loadSchedule() {
         const course = schedule[i].custom ?? {code: i, ...courses[i].sections.filter(s => s.ID == schedule[i].s)[0]};
         createCourseBubbles(i, course, schedule[i].c);
     }
+
+    customCourseCount = Object.values(schedule).filter(c => "custom" in c).length;
 
     // Write to localStorage
     courseSchedule = {...schedule};
