@@ -695,7 +695,7 @@
         "sections": [
             {
                 "ID": "00001",
-                "teacher": "TBA-381-A",
+                "teacher": "Sabrina Smofsky",
                 "schedule": [
                     [
                         "T",
@@ -2765,7 +2765,7 @@
             },
             {
                 "ID": "00002",
-                "teacher": "Vincent Maggiore",
+                "teacher": "Christos Theodorakakos",
                 "schedule": [
                     [
                         "W",
@@ -2781,7 +2781,7 @@
             },
             {
                 "ID": "00003",
-                "teacher": "Vincent Maggiore",
+                "teacher": "Christos Theodorakakos",
                 "schedule": [
                     [
                         "T",
@@ -2983,7 +2983,7 @@
             },
             {
                 "ID": "00002",
-                "teacher": "Vincent Maggiore",
+                "teacher": "Christos Theodorakakos",
                 "schedule": [
                     [
                         "W",
@@ -3000,7 +3000,7 @@
             },
             {
                 "ID": "00003",
-                "teacher": "Vincent Maggiore",
+                "teacher": "Christos Theodorakakos",
                 "schedule": [
                     [
                         "T",
@@ -4032,7 +4032,7 @@
         "sections": [
             {
                 "ID": "00001",
-                "teacher": "Vincent Maggiore",
+                "teacher": "Christos Theodorakakos",
                 "schedule": [
                     [
                         "M",
@@ -4048,7 +4048,7 @@
             },
             {
                 "ID": "00002",
-                "teacher": "Vincent Maggiore",
+                "teacher": "Christos Theodorakakos",
                 "schedule": [
                     [
                         "M",
@@ -9515,7 +9515,7 @@
                         "1430"
                     ]
                 ],
-                "note": "On Reserve<br>Arts and Culture, Cinema-Communications, Interactive Media Arts, Languages, Literature, and Studio Arts"
+                "note": "Arts and Culture, Cinema-Communications, Interactive Media Arts, Languages, Literature, and Studio Arts"
             }
         ]
     },
@@ -9557,7 +9557,7 @@
             },
             {
                 "ID": "00002",
-                "teacher": "Fayçal Régis Sinaceur",
+                "teacher": "Ahmad Banki",
                 "schedule": [
                     [
                         "M",
@@ -9637,7 +9637,7 @@
             },
             {
                 "ID": "00007",
-                "teacher": "Fayçal Régis Sinaceur",
+                "teacher": "Ahmad Banki",
                 "schedule": [
                     [
                         "T",
@@ -9949,7 +9949,7 @@
             },
             {
                 "ID": "00002",
-                "teacher": "Fayçal Régis Sinaceur",
+                "teacher": "Ahmad Banki",
                 "schedule": [
                     [
                         "M",
@@ -10030,7 +10030,7 @@
             },
             {
                 "ID": "00007",
-                "teacher": "Fayçal Régis Sinaceur",
+                "teacher": "Ahmad Banki",
                 "schedule": [
                     [
                         "T",
@@ -12625,7 +12625,7 @@
         "sections": [
             {
                 "ID": "00001",
-                "title": "The Stories of Alice Munroe",
+                "title": "Literary Genres",
                 "teacher": "Irene Ogrizek",
                 "schedule": [
                     [
@@ -12846,7 +12846,7 @@
             },
             {
                 "ID": "00014",
-                "title": "Lyrical Ballads",
+                "title": "Literary Genres",
                 "teacher": "Shalon Nicole Noble",
                 "schedule": [
                     [
@@ -13310,7 +13310,7 @@
             },
             {
                 "ID": "00016",
-                "title": "21st Century Novels and Contexts",
+                "title": "Literary Themes",
                 "teacher": "Louise Slater",
                 "schedule": [
                     [
@@ -13327,7 +13327,7 @@
             },
             {
                 "ID": "00017",
-                "title": "21st Century Novels and Contexts",
+                "title": "Literary Themes",
                 "teacher": "Louise Slater",
                 "schedule": [
                     [
@@ -16196,8 +16196,7 @@
                         "830",
                         "1000"
                     ]
-                ],
-                "note": "On Reserve"
+                ]
             }
         ]
     },
@@ -16416,8 +16415,7 @@
                         "830",
                         "1000"
                     ]
-                ],
-                "note": "On Reserve"
+                ]
             }
         ]
     },
@@ -16702,8 +16700,7 @@
                         "830",
                         "1000"
                     ]
-                ],
-                "note": "On Reserve"
+                ]
             }
         ]
     },
@@ -18035,7 +18032,7 @@
             },
             {
                 "ID": "00002",
-                "teacher": "Marie-France Lemay",
+                "teacher": "Nathalie Lachance",
                 "schedule": [
                     [
                         "M",
@@ -18153,7 +18150,7 @@
             {
                 "ID": "00002",
                 "title": "German 1",
-                "teacher": "Marie-France Lemay",
+                "teacher": "Nathalie Lachance",
                 "schedule": [
                     [
                         "M",
@@ -19704,7 +19701,7 @@
         "sections": [
             {
                 "ID": "00001",
-                "title": "Media Knowledge: Focus on Care",
+                "title": "Care and Liberation: Identify Yourself!",
                 "teacher": "Mari Heywood",
                 "schedule": [
                     [
@@ -20523,6 +20520,23 @@
                 "note": "On Reserve"
             },
             {
+                "ID": "00051",
+                "title": "Care and Liberation: Identify Yourself!",
+                "teacher": "Johanne Rabbat, Mari Heywood",
+                "schedule": [
+                    [
+                        "T",
+                        "1200",
+                        "1400"
+                    ],
+                    [
+                        "R",
+                        "1200",
+                        "1400"
+                    ]
+                ]
+            },
+            {
                 "ID": "14001",
                 "title": "Knowledge with New School",
                 "teacher": "Mari Heywood",
@@ -20570,19 +20584,6 @@
                         "M",
                         "1430",
                         "1830"
-                    ]
-                ],
-                "note": "Reflections"
-            },
-            {
-                "ID": "18003",
-                "title": "Media Knowledge: Identify Yourself",
-                "teacher": "Johanne Rabbat, Mari Heywood",
-                "schedule": [
-                    [
-                        "F",
-                        "1000",
-                        "1400"
                     ]
                 ],
                 "note": "Reflections"
@@ -26368,27 +26369,6 @@
                         "1400"
                     ]
                 ]
-            },
-            {
-                "ID": "00003",
-                "teacher": "Kieran David Bradshaw",
-                "schedule": [
-                    [
-                        "M",
-                        "1400",
-                        "1600"
-                    ],
-                    [
-                        "T",
-                        "1000",
-                        "1300"
-                    ],
-                    [
-                        "W",
-                        "1100",
-                        "1400"
-                    ]
-                ]
             }
         ]
     },
@@ -27351,7 +27331,8 @@
                         "1430",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "Psychology"
             },
             {
                 "ID": "00004",
@@ -34251,7 +34232,7 @@
             },
             {
                 "ID": "00008",
-                "teacher": "Robin Joseph Gagnon",
+                "teacher": "Kelly Walsh",
                 "schedule": [
                     [
                         "M",
@@ -34365,7 +34346,7 @@
             },
             {
                 "ID": "00015",
-                "teacher": "Robin Joseph Gagnon",
+                "teacher": "Kelly Walsh",
                 "schedule": [
                     [
                         "W",
@@ -34413,17 +34394,17 @@
             },
             {
                 "ID": "00018",
-                "teacher": "Robin Joseph Gagnon",
+                "teacher": "Kelly Walsh",
                 "schedule": [
                     [
                         "T",
-                        "1300",
-                        "1430"
+                        "1000",
+                        "1130"
                     ],
                     [
-                        "R",
-                        "1300",
-                        "1430"
+                        "F",
+                        "1000",
+                        "1130"
                     ]
                 ],
                 "note": "International Business Studies"
@@ -34594,11 +34575,12 @@
                         "1430",
                         "1600"
                     ]
-                ]
+                ],
+                "note": "Psychology"
             },
             {
                 "ID": "00008",
-                "teacher": "Robin Joseph Gagnon",
+                "teacher": "Kelly Walsh",
                 "schedule": [
                     [
                         "M",
@@ -34681,7 +34663,7 @@
             },
             {
                 "ID": "00015",
-                "teacher": "Robin Joseph Gagnon",
+                "teacher": "Kelly Walsh",
                 "schedule": [
                     [
                         "W",
@@ -34731,17 +34713,17 @@
             },
             {
                 "ID": "00018",
-                "teacher": "Robin Joseph Gagnon",
+                "teacher": "Kelly Walsh",
                 "schedule": [
                     [
                         "T",
-                        "1300",
-                        "1430"
+                        "1000",
+                        "1130"
                     ],
                     [
-                        "R",
-                        "1300",
-                        "1430"
+                        "F",
+                        "1000",
+                        "1130"
                     ]
                 ]
             },
@@ -35854,7 +35836,7 @@
             },
             {
                 "ID": "00027",
-                "teacher": "Fayçal Régis Sinaceur",
+                "teacher": "Ahmad Banki",
                 "schedule": [
                     [
                         "W",
@@ -35871,7 +35853,7 @@
             },
             {
                 "ID": "00028",
-                "teacher": "Fayçal Régis Sinaceur",
+                "teacher": "Ahmad Banki",
                 "schedule": [
                     [
                         "M",
@@ -36056,7 +36038,7 @@
             },
             {
                 "ID": "00039",
-                "teacher": "Ahmad Banki",
+                "teacher": "Marc-André Girouard",
                 "schedule": [
                     [
                         "T",
@@ -37049,17 +37031,21 @@
         "courseName": "Social science: applications in religion studies",
         "sections": [
             {
-                "ID": "18001",
-                "title": "Identify Yourself",
-                "teacher": "Johanne Rabbat, Mari Heywood",
+                "ID": "00001",
+                "title": "Spirituality and Religious Expression",
+                "teacher": "Johanne Rabbat",
                 "schedule": [
                     [
-                        "W",
-                        "1130",
+                        "M",
+                        "1300",
                         "1430"
+                    ],
+                    [
+                        "R",
+                        "1000",
+                        "1130"
                     ]
-                ],
-                "note": "Reflections"
+                ]
             }
         ]
     },
@@ -37662,7 +37648,7 @@
             },
             {
                 "ID": "00003",
-                "teacher": "Jennifer E. Smith",
+                "teacher": "Sabrina Smofsky",
                 "schedule": [
                     [
                         "T",
@@ -37694,7 +37680,7 @@
             },
             {
                 "ID": "00005",
-                "teacher": "Jennifer E. Smith",
+                "teacher": "Sabrina Smofsky",
                 "schedule": [
                     [
                         "T",
@@ -37778,7 +37764,7 @@
             },
             {
                 "ID": "00010",
-                "teacher": "Ahmad Banki",
+                "teacher": "Marc-André Girouard",
                 "schedule": [
                     [
                         "T",
@@ -37795,7 +37781,7 @@
             },
             {
                 "ID": "00011",
-                "teacher": "Ahmad Banki",
+                "teacher": "Marc-André Girouard",
                 "schedule": [
                     [
                         "M",
@@ -37812,7 +37798,7 @@
             },
             {
                 "ID": "00012",
-                "teacher": "Ahmad Banki",
+                "teacher": "Marc-André Girouard",
                 "schedule": [
                     [
                         "M",
@@ -37996,7 +37982,7 @@
             {
                 "ID": "00025",
                 "title": "Vaccine Hesitancy, \"Science Denialism\", and Conspiracy Theories",
-                "teacher": "Robin Joseph Gagnon",
+                "teacher": "Pavel Piterkin",
                 "schedule": [
                     [
                         "M",
@@ -38250,7 +38236,7 @@
         "sections": [
             {
                 "ID": "00001",
-                "teacher": "Felicia D'Orve",
+                "teacher": "Kimberly Lee-Louis",
                 "schedule": [
                     [
                         "W",
@@ -38600,7 +38586,7 @@
         "sections": [
             {
                 "ID": "00001",
-                "teacher": "Alyssa Kuzmarov",
+                "teacher": "Vanessa Eve Robillard",
                 "schedule": [
                     [
                         "F",
@@ -39591,7 +39577,7 @@
             },
             {
                 "ID": "00004",
-                "teacher": "Maria Fernanda Benavides",
+                "teacher": "Francisco Goire",
                 "schedule": [
                     [
                         "T",
@@ -39608,7 +39594,7 @@
             },
             {
                 "ID": "00005",
-                "teacher": "Nelly Muresan",
+                "teacher": "TBA-607-A",
                 "schedule": [
                     [
                         "M",
@@ -39625,7 +39611,7 @@
             },
             {
                 "ID": "00006",
-                "teacher": "Nelly Muresan",
+                "teacher": "Francisco Goire",
                 "schedule": [
                     [
                         "T",
@@ -39642,7 +39628,7 @@
             },
             {
                 "ID": "00007",
-                "teacher": "Nelly Muresan",
+                "teacher": "Francisco Goire",
                 "schedule": [
                     [
                         "W",
@@ -39698,7 +39684,7 @@
         "sections": [
             {
                 "ID": "00001",
-                "teacher": "Nelly Muresan",
+                "teacher": "Maria Fernanda Benavides",
                 "schedule": [
                     [
                         "M",
@@ -39850,7 +39836,7 @@
             {
                 "ID": "00004",
                 "title": "Spanish 1",
-                "teacher": "Maria Fernanda Benavides",
+                "teacher": "Francisco Goire",
                 "schedule": [
                     [
                         "T",
@@ -39867,7 +39853,7 @@
             {
                 "ID": "00005",
                 "title": "Spanish 1",
-                "teacher": "Nelly Muresan",
+                "teacher": "TBA-607-A",
                 "schedule": [
                     [
                         "M",
@@ -39884,7 +39870,7 @@
             {
                 "ID": "00006",
                 "title": "Spanish 1",
-                "teacher": "Nelly Muresan",
+                "teacher": "Francisco Goire",
                 "schedule": [
                     [
                         "T",
@@ -39901,7 +39887,7 @@
             {
                 "ID": "00007",
                 "title": "Spanish 1",
-                "teacher": "Nelly Muresan",
+                "teacher": "Francisco Goire",
                 "schedule": [
                     [
                         "W",
@@ -39969,7 +39955,7 @@
             {
                 "ID": "00011",
                 "title": "Spanish 1",
-                "teacher": "Nelly Muresan",
+                "teacher": "TBA-607-A",
                 "schedule": [
                     [
                         "M",
@@ -40025,7 +40011,7 @@
             {
                 "ID": "00001",
                 "title": "Spanish 2",
-                "teacher": "Nelly Muresan",
+                "teacher": "Maria Fernanda Benavides",
                 "schedule": [
                     [
                         "M",
@@ -40561,7 +40547,7 @@
             },
             {
                 "ID": "00002",
-                "teacher": "TBA-511-A",
+                "teacher": "Maria Chronopoulos",
                 "schedule": [
                     [
                         "F",
@@ -40569,7 +40555,7 @@
                         "1700"
                     ]
                 ],
-                "note": "On Reserve<br>Studio Arts"
+                "note": "Studio Arts"
             }
         ]
     },
@@ -40601,23 +40587,6 @@
                         "R",
                         "1400",
                         "1800"
-                    ]
-                ],
-                "note": "Arts and Culture, and Studio Arts"
-            }
-        ]
-    },
-    "511-315-DW": {
-        "courseName": "Introduction to Internet Art and Culture",
-        "sections": [
-            {
-                "ID": "00001",
-                "teacher": "Maria Chronopoulos",
-                "schedule": [
-                    [
-                        "F",
-                        "1230",
-                        "1630"
                     ]
                 ],
                 "note": "Arts and Culture, and Studio Arts"
@@ -40946,7 +40915,7 @@
         "sections": [
             {
                 "ID": "00001",
-                "teacher": "Emma Doubt",
+                "teacher": "Felipe Perez Aranguren",
                 "schedule": [
                     [
                         "R",
@@ -41014,7 +40983,7 @@
         "sections": [
             {
                 "ID": "00001",
-                "teacher": "Emma Doubt",
+                "teacher": "Bettina Perez Martinez",
                 "schedule": [
                     [
                         "T",
@@ -41072,4 +41041,4 @@
             }
         ]
     }
-}
+};
