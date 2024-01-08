@@ -11,7 +11,7 @@ const semester_key = "lucas/schedule/sem";
 
 /* -------------- UPDATE FOR NEW SEMESTERS -------------- */
 
-const current_semester = "W2024"; // <-- UPDATE HERE FOR NEW SEMESTERS
+const current_semester = "W2024-B"; // <-- UPDATE HERE FOR NEW SEMESTERS
 const last_semester = "F2023"; // <-- AND HERE
 
 /* -------------- UPDATE FOR NEW SEMESTERS -------------- */
@@ -98,7 +98,7 @@ function startUp() {
 
         alert(`Welcome to the new semester. Your old schedules ${last_semester} will be erased so you can start fresh for ${current_semester}.`);
 
-        localStorage.setItem(schedules_key, "{}");
+        localStorage.setItem(schedules_key, "[]");
         localStorage.setItem(courseSchedule_key, "{}");
 
         localStorage.setItem(semester_key, current_semester);
