@@ -15,7 +15,7 @@ function parse() {
         $course.find(".section-details").each(function() {
             const $section = $(this);
 
-            const _text = $section.html().replace(/[\t|\n|\r]+/g, "");
+            const _text = $section.html().replace(/^ +/gm, "").replace(/[\t|\n|\r]+/g, "");
             const ID = _text.match(/(?<=<label class="col-md-2">Section<\/label><div class="col-md-10"><strong>)[0-9]{5}(?=<\/strong><\/div>)/)?.[0];
             const title = _text.match(/(?<=<label class="col-md-2">Section Title<\/label><div class="col-md-10">).+?(?=<\/div>)/)?.[0];
             const teacher = _text.match(/(?<=<label class="col-md-2">Teachers?<\/label><div class="col-md-10">).+?(?=<\/div>)/)?.[0];
@@ -66,5 +66,7 @@ function parse() {
     });
 
     console.log(courses);
+
+    $("#junk").html("");
 
 }

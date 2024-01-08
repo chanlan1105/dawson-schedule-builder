@@ -1,0 +1,19 @@
+Steps to copy timetable data:
+
+1. Navigate to timetable thru Omnivox
+2. Open Chrome Devtools
+3. Network tab 
+4. Enter "-" as the search query in Course Title/Number
+5. Click on the result "search.php" in Chrome Devtools 
+6. Copy response payload and paste into parser
+
+Steps to update webpage:
+
+1. Create new file with semester + year (eg. w2024.js) in the Data folder.
+2. Copy object returned from parser.html (get it from Chrome Devtools) and paste into javascript file. Make sure to add "const courses = " at the start. 
+3. Optional: Minify the js.
+4. Optional: Create a new file in Devtools folder and paste timetable HTML response.
+5. Update the "external scripts" URL to point to the correct courses file in index.html.
+6. Update the navbar heading in index.html.
+7. Update current/last semester at the top of main.js.
+7. git commit

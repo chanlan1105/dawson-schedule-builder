@@ -7,6 +7,14 @@ var courseSchedule, savedSchedules;
 var customCourseCount = 0;
 const courseSchedule_key = "lucas/courseSchedule";
 const schedules_key = "lucas/schedule/list";
+const semester_key = "lucas/schedule/sem";
+
+/* -------------- UPDATE FOR NEW SEMESTERS -------------- */
+
+const current_semester = "W2024"; // <-- UPDATE HERE FOR NEW SEMESTERS
+const last_semester = "F2023"; // <-- AND HERE
+
+/* -------------- UPDATE FOR NEW SEMESTERS -------------- */
 
 var tutorialRunning = false, tutorialStep = 0;
 
@@ -83,6 +91,18 @@ function startUp() {
     $("#course-end-max").on("change.datetimepicker", e => {
         $("#course-start-min").datetimepicker("maxDate", e.date);
     });
+
+    if (localStorage.getItem(semester_key) != current_semester) {
+        // User is still on previous semester.
+        // Reset the localstorage data.
+
+        alert(`Welcome to the new semester. Your old schedules ${last_semester} will be erased so you can start fresh for ${current_semester}.`);
+
+        localStorage.setItem(schedules_key, "{}");
+        localStorage.setItem(courseSchedule_key, "{}");
+
+        localStorage.setItem(semester_key, current_semester);
+    }
 
     // Load schedule from localStorage
     try {
