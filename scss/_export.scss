@@ -12,6 +12,10 @@ main.export {
     #course-options-sidebar, #schedule-course-list {
         display: none;
     }
+
+    #schedule-preview {
+        display: none;
+    }
 }
 #schedule.export .course-bubble {
     box-shadow: none;

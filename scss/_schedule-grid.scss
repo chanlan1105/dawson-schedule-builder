@@ -21,7 +21,7 @@
         }
     }
 }
-.schedule-main {
+.schedule-grid {
     display: grid;
     margin-top: 1rem;
     grid-template-columns: 4rem repeat(5, minmax(0, 1fr));
@@ -51,6 +51,15 @@
 
     .hidden {
         display: none;
+    }
+}
+
+#schedule-overlay-parent {
+    display: grid;
+    grid-template-areas: "overlay";
+
+    > div {
+        grid-area: overlay;
     }
 }
 

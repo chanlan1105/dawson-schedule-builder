@@ -63,31 +63,39 @@ button.btn.btn-sm icon {
   min-width: 4rem;
 }
 
-.schedule-main {
+.schedule-grid {
   display: grid;
   margin-top: 1rem;
   grid-template-columns: 4rem repeat(5, minmax(0, 1fr));
 }
-.schedule-main > div {
+.schedule-grid > div {
   display: grid;
   grid-auto-rows: 2rem;
 }
-.schedule-main > div:first-child {
+.schedule-grid > div:first-child {
   text-align: center;
   flex-grow: 0.5;
   max-width: 5rem;
   position: relative;
   top: -0.8rem;
 }
-.schedule-main > div:not(:first-child) {
+.schedule-grid > div:not(:first-child) {
   flex-grow: 1;
 }
-.schedule-main > div:not(:first-child) > div {
+.schedule-grid > div:not(:first-child) > div {
   border-top: 0.0625rem solid var(--lightgray);
   padding: 0.25rem;
 }
-.schedule-main .hidden {
+.schedule-grid .hidden {
   display: none;
+}
+
+#schedule-overlay-parent {
+  display: grid;
+  grid-template-areas: "overlay";
+}
+#schedule-overlay-parent > div {
+  grid-area: overlay;
 }
 
 #load-schedule-main > div {
@@ -114,6 +122,9 @@ main.export #schedule, main.export #schedule-intensives-list {
   flex-grow: 1;
 }
 main.export #course-options-sidebar, main.export #schedule-course-list {
+  display: none;
+}
+main.export #schedule-preview {
   display: none;
 }
 
@@ -345,7 +356,7 @@ main.export #course-options-sidebar, main.export #schedule-course-list {
 }
 
 .course-bubble.preview {
-  animation: flash 1.5s linear 0s infinite;
+  animation: flash 2s linear 0s infinite;
 }
 
 .course-bubble-conflict {
