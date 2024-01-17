@@ -2,6 +2,8 @@ function parse() {
 
     $("#junk").html($("#response").val());
 
+    $("#response").val("");
+
     var courses = {};
 
     $(".course-wrap").each(function() {
@@ -21,7 +23,7 @@ function parse() {
             const teacher = _text.match(/(?<=<label class="col-md-2">Teachers?<\/label><div class="col-md-10">).+?(?=<\/div>)/)?.[0];
             const note = _text.match(/(?<=<label class="col-md-2">Comment<\/label><div class="col-md-10">).+?(?=<\/div>)/)?.[0];
 
-            const intensive = /(?<=<label class="col-md-2">Section Title<\/label><div class="col-md-10">).+\((intensive|pre-semester|compressed)\).+(?=<\/div>)/i.test(_text) ? true : undefined;
+            const intensive = /<td data-label="Type">intensive<\/td>/i.test(_text) ? true : undefined;
 
             let schedule = [];
             $section.find(".schedule-details tr").each(function() {
