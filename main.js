@@ -11,8 +11,8 @@ const semester_key = "lucas/schedule/sem";
 
 /* -------------- UPDATE FOR NEW SEMESTERS -------------- */
 
-const current_semester = "W2024-B"; // <-- UPDATE HERE FOR NEW SEMESTERS
-const last_semester = "F2023"; // <-- AND HERE
+const current_semester = "W2025"; // <-- UPDATE HERE FOR NEW SEMESTERS
+const last_semester = "W2024-B"; // <-- AND HERE
 
 /* -------------- UPDATE FOR NEW SEMESTERS -------------- */
 
@@ -34,9 +34,10 @@ $("#intro-modal").on("hide.bs.modal", () => {
     localStorage.setItem("lucas/schedule/seenColour", "true");
 });
 
+/**
+ * Run on startup
+ */
 function startUp() {
-    // Run on startup
-
     const $col = [$("<div></div>"), $("<div></div>"), $("<div></div>"), $("<div></div>"), $("<div></div>"), $("<div></div>")];
 
     for (let i = 8; i <= 18; i += 0.5) {
