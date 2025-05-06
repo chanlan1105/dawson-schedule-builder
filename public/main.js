@@ -1,6 +1,6 @@
 ﻿import { colours, complementaryRegex, courseSchedule_key, schedules_key, semester_key, current_semester } from "./js/config.js";
 
-import { courses } from "../Data/w2025.js";
+import { courses } from "/Data/w2025.js";
 
 import { tutorial, startTutorial } from "./js/tutorial.js";
 window.tutorial = tutorial;
