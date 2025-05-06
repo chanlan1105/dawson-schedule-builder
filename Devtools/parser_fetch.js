@@ -26,11 +26,11 @@ const fs = require("fs");
             "sec-fetch-mode": "cors",
             "sec-fetch-site": "same-origin",
             "x-requested-with": "XMLHttpRequest",
-            "cookie": "wordpress_sec_64850283c7b20f24c222d31d9820bac3=2238762%7C1745686808%7CTJSJuiIIt0Wmuqrx8btNjDMq9D16Wtyp9A6k4SsBtUp%7Cb7db55229e0532cb591a4987a0abad2661265515bf5d5b63c7a86f856dddb349; _ga=GA1.3.469098945.1745511425; _gid=GA1.3.232082268.1745511425; _ga_9CR35XX79D=GS1.3.1745511425.1.0.1745511425.0.0.0; wordpress_test_cookie=WP%20Cookie%20check; dawson_tta={}; wordpress_sec_64850283c7b20f24c222d31d9820bac3=2238762%7C1745686808%7CTJSJuiIIt0Wmuqrx8btNjDMq9D16Wtyp9A6k4SsBtUp%7Cb7db55229e0532cb591a4987a0abad2661265515bf5d5b63c7a86f856dddb349; wordpress_logged_in_64850283c7b20f24c222d31d9820bac3=2238762%7C1745686808%7CTJSJuiIIt0Wmuqrx8btNjDMq9D16Wtyp9A6k4SsBtUp%7Cec9563b9b121f9ce20a57be9ad78757987525120b779995f1f97de70c081d070",
+            "cookie": "wordpress_sec_64850283c7b20f24c222d31d9820bac3=2238762%7C1745787230%7C4aYneRki3uUfOdWvbCbXtEcB4EYtVvl3FJ1zZoLSZtt%7C1958a7fc2efd44fe8e59fa3871b8b4452948edf0a63d897f10afe1d092493805; _ga_9CR35XX79D=GS1.3.1745511425.1.0.1745511425.0.0.0; wordpress_test_cookie=WP%20Cookie%20check; dawson_tta={}; _ga=GA1.1.469098945.1745511425; _ga_5RDDCMFRZC=GS1.1.1745593398.2.0.1745593398.0.0.0; _ga_Z66L6Q4BDL=GS1.1.1745593398.2.0.1745593398.0.0.0; wordpress_sec_64850283c7b20f24c222d31d9820bac3=2238762%7C1745787230%7C4aYneRki3uUfOdWvbCbXtEcB4EYtVvl3FJ1zZoLSZtt%7C1958a7fc2efd44fe8e59fa3871b8b4452948edf0a63d897f10afe1d092493805; wordpress_logged_in_64850283c7b20f24c222d31d9820bac3=2238762%7C1745787230%7C4aYneRki3uUfOdWvbCbXtEcB4EYtVvl3FJ1zZoLSZtt%7C5adbdbd35e92ff3f9b4db81751ac68d667f6182384ef8215119314ef733fcbae",
             "Referer": "https://timetable.dawsoncollege.qc.ca/",
             "Referrer-Policy": "strict-origin-when-cross-origin"
         },
-        "body": "action=timetable_search&nonce=249f87c2df&specific_ed=&discipline=&general_ed=&special_ed=&certificates=&learning_comm=&course_title=-&section=&teacher=&intensive=&seats=",
+        "body": "action=timetable_search&nonce=b95901777e&specific_ed=&discipline=&general_ed=&special_ed=&certificates=&learning_comm=&course_title=-&section=&teacher=&intensive=&seats=",
         "method": "POST"
     })).text();
     
@@ -38,10 +38,11 @@ const fs = require("fs");
 
     // Check to make sure that data was loaded properly from timetable.
     let data_fetch_error = false;
-    $(".alert alert-danger").each(function() {
-        if (this.text().match("error occurred with your request")) {
+    $(".alert.alert-danger").each(function() {
+        if ($(this).text().match("error occurred with your request")) {
             console.log("Failed to obtain timetable data. It is possible that authentication failed.");
             console.log(timetable_data);
+            data_fetch_error = true;
             return false;
         }
     });
@@ -117,9 +118,9 @@ const fs = require("fs");
 
     console.log("Saving data...");
 
-    const filename = `Data/${term[0].toLowerCase()}${year}.js`;
+    const filename = `Data/${term[0].toLowerCase()}${year}.json`;
 
-    fs.writeFileSync(filename, "const courses=" + JSON.stringify(courses));
+    fs.writeFileSync(filename, JSON.stringify(courses));
 
     console.log("Done!");
 })();

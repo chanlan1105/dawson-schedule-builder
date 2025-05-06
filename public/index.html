@@ -26,13 +26,13 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
         <!-- External Scripts -->
-        <script src="Data/w2025.js"></script>
+        <!-- <script src="Data/w2025.js"></script> -->
         <script src="Modules/html2canvas.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
         <script src="Modules/export.js"></script>
         <script src="Modules/modals.js"></script>
         <script src="Modules/autocomplete.js"></script>
-        <script src="main.js" defer></script>
+        <script src="main.js" type="module" defer></script>
 
         <!-- Hidden Stuff -->
         <link rel="icon" href="Media/icon.png" />
@@ -55,15 +55,15 @@
                     </div>
                     <div class="dropdown-menu dropdown-menu-right mr-3">
                         <div class="dropdown-header">Schedule Tools</div>
-                        <button class="dropdown-item" onclick="clearSchedule()"><icon class="dropdown-icon">delete</icon> Clear schedule</button>
-                        <button class="dropdown-item" onclick="exportSchedule('img')"><icon class="dropdown-icon">image</icon> Export schedule as PNG</button>
-                        <button class="dropdown-item" onclick="exportSchedule('print')"><icon class="dropdown-icon">print</icon> Print schedule</button>
+                        <button class="dropdown-item" id="clear-schedule-btn"><icon class="dropdown-icon">delete</icon> Clear schedule</button>
+                        <button class="dropdown-item" id="export-img-btn"><icon class="dropdown-icon">image</icon> Export schedule as PNG</button>
+                        <button class="dropdown-item" id="export-print-btn"><icon class="dropdown-icon">print</icon> Print schedule</button>
                         
                         <div class="dropdown-divider"></div>
 
                         <div class="dropdown-header">Multiple Schedules</div>
-                        <button class="dropdown-item" onclick="saveSchedule()"><icon class="dropdown-icon">save</icon> Save schedule for later</button>
-                        <button class="dropdown-item" onclick="loadScheduleModal()"><icon class="dropdown-icon">file_upload</icon> Load saved schedule</button>
+                        <button class="dropdown-item" id="save-schedule-btn"><icon class="dropdown-icon">save</icon> Save schedule for later</button>
+                        <button class="dropdown-item" id="load-schedule-btn"><icon class="dropdown-icon">file_upload</icon> Load saved schedule</button>
                         <button class="dropdown-item" disabled><icon class="dropdown-icon">backup_table</icon> Compare saved schedules</button>
 
                         <div class="dropdown-divider"></div>
@@ -382,8 +382,8 @@
 
                     <div class="modal-footer">
                         <button class="btn btn-outline-danger" data-dismiss="modal">Cancel</button>
-                        <button class="btn btn-danger" onclick="deleteSavedSchedule()"><icon>delete</icon> Delete saved schedule</button>
-                        <button class="btn btn-primary" onclick="loadSchedule()"><icon>file_upload</icon> Load schedule</button>
+                        <button class="btn btn-danger" id="delete-saved-schedule-btn"><icon>delete</icon> Delete saved schedule</button>
+                        <button class="btn btn-primary" id="load-saved-schedule-btn"><icon>file_upload</icon> Load schedule</button>
                     </div>
 
                 </div>
@@ -450,7 +450,7 @@
 
                     <div class="modal-footer">
 
-                        <button class="btn btn-success btn-block" onclick="createCustomCourse()">Create custom course</button>
+                        <button class="btn btn-success btn-block" id="create-custom-course-btn">Create custom course</button>
 
                     </div>
 
