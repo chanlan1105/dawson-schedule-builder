@@ -2,11 +2,6 @@ import { checkConflict } from "./conflict.js";
 import { createCourseOptionTiles } from "./ui.js";
 
 /**
- * @todo Move complementary course fetching to the backend
- * @todo Check for other places where courses are accessed, move to backend
- */
-
-/**
  * The sections of the selected course.
  * @type {{courseCode: Course[]}}
  */
