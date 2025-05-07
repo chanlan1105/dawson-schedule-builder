@@ -1,2 +1,3 @@
 helloworld.js
 .wrangler/
+node_modules/

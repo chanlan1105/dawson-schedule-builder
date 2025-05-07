@@ -89,7 +89,8 @@
                             
                             <input type="text" class="form-control" id="course" placeholder="Course name or code" />
     
-                            <div class="invalid-feedback" id="course-error">Sorry, that course does not seem to exist. Try searching by course code and select an option from the dropdown.</div>
+                            <div class="invalid-feedback" id="course-not-found">Sorry, that course does not seem to exist. Try searching by course code and select an option from the dropdown.</div>
+                            <div class="invalid-feedback" id="course-error">An unknown error has occured with your request. Please try again later.</div>
                             <div class="invalid-feedback" id="course-duplicate">You have already added a section of that course to your schedule. To search for a different section, you must first remove the one you have already selected.</div>
                             
                             <div class="alert alert-warning mt-2" id="course-complementary-warning">
@@ -99,151 +100,155 @@
                         
                         Search by:<br>
                         <div class="course-search-options btn-group btn-group-sm mt-1">
-                            <button id="course-search-section" type="button" class="btn btn-outline-primary">Section #</button>
-                            <button id="course-search-teacher" type="button" class="btn btn-outline-primary">Teacher</button>
-                            <button id="course-search-day" type="button" class="btn btn-outline-primary">Day</button>
+                            <button id="course-search-section" type="button" class="btn btn-outline-primary" disabled>Section #</button>
+                            <button id="course-search-teacher" type="button" class="btn btn-outline-primary" disabled>Teacher</button>
+                            <button id="course-search-day" type="button" class="btn btn-outline-primary" disabled>Day</button>
                         </div>
                         <div class="course-search-options btn-group btn-group-sm mt-1">
-                            <button id="course-search-best" type="button" class="btn btn-outline-primary">Try Best</button>
-                            <button id="course-search-all" type="button" class="btn btn-outline-primary">Try All</button>
+                            <button id="course-search-best" type="button" class="btn btn-outline-primary" disabled>Try Best</button>
+                            <button id="course-search-all" type="button" class="btn btn-outline-primary" disabled>Try All</button>
                         </div>
-
-                        <!-- Accordion for additional course search options -->
-                        <div id="course-search-accordion" class="mt-2">
-                            <div id="course-search-section-accordion" class="collapse" data-parent="#course-search-accordion">
-                                <div class="form-group">
-                                    <label for="course-section">Select your section:</label>
-
-                                    <select id="course-section" class="form-control form-control-sm"></select>
+                        
+                        <div id="course-search-additional-options" class="mt-2">
+                            <!-- Accordion for additional course search options -->
+                            <div id="course-search-accordion">
+                                <div id="course-search-section-accordion" class="collapse" data-parent="#course-search-accordion">
+                                    <div class="form-group">
+                                        <label for="course-section">Select your section:</label>
+    
+                                        <select id="course-section" class="form-control form-control-sm"></select>
+                                    </div>
                                 </div>
-                            </div>
-
-                            <div id="course-search-teacher-accordion" class="collapse" data-parent="#course-search-accordion">
-                                <div class="form-group">
-                                    <label for="course-teacher">Select desired teacher(s): <small style="display:block">Click and drag, or use CTRL+Click to select multiple</small></label>
+    
+                                <div id="course-search-teacher-accordion" class="collapse" data-parent="#course-search-accordion">
+                                    <div class="form-group">
+                                        <label for="course-teacher">Select desired teacher(s): <small style="display:block">Click and drag, or use CTRL+Click to select multiple</small></label>
+                                        
+                                        <select multiple id="course-teacher" class="form-control form-control-sm"></select>
+                                    </div>
+                                </div>
+    
+                                <div id="course-search-day-accordion" class="collapse" data-parent="#course-search-accordion">
+                                    <label>Search for sections offered on:</label>
+    
+                                    <div class="form-group">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="course-search-day-m" value="m" name="course-search-day" />
+                                            <label class="custom-control-label" for="course-search-day-m">Monday</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="course-search-day-t" value="t" name="course-search-day" />
+                                            <label class="custom-control-label" for="course-search-day-t">Tuesday</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="course-search-day-w" value="w" name="course-search-day" />
+                                            <label class="custom-control-label" for="course-search-day-w">Wednesday</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="course-search-day-r" value="r" name="course-search-day" />
+                                            <label class="custom-control-label" for="course-search-day-r">Thursday</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="course-search-day-f" value="f" name="course-search-day" />
+                                            <label class="custom-control-label" for="course-search-day-f">Friday</label>
+                                        </div>
+                                    </div>
+    
+                                    <div class="custom-control custom-switch mb-3">
+                                        <input type="checkbox" class="custom-control-input" id="course-search-day-strict" checked />
+                                        <label class="custom-control-label" for="course-search-day-strict">Strict mode?</label>
+                                        <small class="mt-1" style="display: block">
+                                            Strict mode ON: Will search for sections with classes <em>only</em> on the selected days. <br />
+                                            Strict mode OFF: Will search for sections with <em>at least one</em> class on one of the selected days.
+                                        </small>
+                                    </div>
+    
+                                    <button class="btn btn-success btn-sm" id="course-search-day-btn">Search</button>
+    
+                                    <div class="invalid-feedback" id="course-search-day-err">You must select at least one day.</div>
+                                    <div class="invalid-feedback" id="course-search-day-empty">Sorry, there are no sections of this course which match your selection criteria.</div>
+                                </div>
+    
+                                <div id="course-search-best-accordion" class="collapse" data-parent="#course-search-accordion">
                                     
-                                    <select multiple id="course-teacher" class="form-control form-control-sm"></select>
+                                    <p>This option will find the best sections to fit your schedule given the constraints you provide. Note that only sections that fit your current schedule will be proposed.</p>
+    
+                                    <div class="row">
+                                        <!-- Break before class inputs -->
+                                        <div class="col mb-2">
+                                            <label>Prefer break before class to be:</label>
+    
+                                            <div class="input-group input-group-sm mb-1">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">At least</span>
+                                                </div>
+                                                <input type="number" class="form-control" id="course-break-before-min" min="0" max="60" step="30" value="0" required />
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text">min</span>
+                                                </div>
+                                            </div>
+                                            <div class="input-group input-group-sm">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">At most</span>
+                                                </div>
+                                                <input type="number" class="form-control" id="course-break-before-max" min="0" step="30" value="60" required />
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text">min</span>
+                                                </div>
+                                            </div>
+                                        </div>
+    
+                                        <!-- Break after class inputs -->
+                                        <div class="col mb-2">
+                                            <label>Prefer break after class to be:</label>
+    
+                                            <div class="input-group input-group-sm mb-1">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">At least</span>
+                                                </div>
+                                                <input type="number" class="form-control" id="course-break-after-min" min="0" max="60" step="30" value="0" required />
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text">min</span>
+                                                </div>
+                                            </div>
+                                            <div class="input-group input-group-sm">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">At most</span>
+                                                </div>
+                                                <input type="number" class="form-control" id="course-break-after-max" min="0" step="30" value="60" required />
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text">min</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                    <!-- Preferred class time input -->
+                                    <label>Prefer that classes:</label>
+    
+                                    <div class="input-group input-group-sm mb-1">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">Start at or after</span>
+                                        </div>
+                                        <input id="course-start-min" type="text" class="form-control datetimepicker-input" data-toggle="datetimepicker" data-target="#course-start-min" value="8:00" required />
+                                    </div>
+                                    
+                                    <div class="input-group input-group-sm mb-1">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">End at or before</span>
+                                        </div>
+                                        <input id="course-end-max" type="text" class="form-control datetimepicker-input" data-toggle="datetimepicker" data-target="#course-end-max" value="18:00" />
+                                    </div>
+    
+                                    <button type="button" id="course-search-best-btn" class="btn btn-sm btn-success mt-2">Search</button>
+    
+                                    <div class="invalid-feedback" id="course-search-best-err">There are one or more errors that must be addressed. Make sure that your minimum and maximum break times are some multiple of 30 minutes.</div>
+                                    <div class="invalid-feedback" id="course-search-best-empty">Sorry, there are no sections of this course which match your selection criteria.</div>
+    
                                 </div>
                             </div>
 
-                            <div id="course-search-day-accordion" class="collapse" data-parent="#course-search-accordion">
-                                <label>Search for sections offered on:</label>
-
-                                <div class="form-group">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="course-search-day-m" value="m" name="course-search-day" />
-                                        <label class="custom-control-label" for="course-search-day-m">Monday</label>
-                                    </div>
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="course-search-day-t" value="t" name="course-search-day" />
-                                        <label class="custom-control-label" for="course-search-day-t">Tuesday</label>
-                                    </div>
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="course-search-day-w" value="w" name="course-search-day" />
-                                        <label class="custom-control-label" for="course-search-day-w">Wednesday</label>
-                                    </div>
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="course-search-day-r" value="r" name="course-search-day" />
-                                        <label class="custom-control-label" for="course-search-day-r">Thursday</label>
-                                    </div>
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="course-search-day-f" value="f" name="course-search-day" />
-                                        <label class="custom-control-label" for="course-search-day-f">Friday</label>
-                                    </div>
-                                </div>
-
-                                <div class="custom-control custom-switch mb-3">
-                                    <input type="checkbox" class="custom-control-input" id="course-search-day-strict" checked />
-                                    <label class="custom-control-label" for="course-search-day-strict">Strict mode?</label>
-                                    <small class="mt-1" style="display: block">
-                                        Strict mode ON: Will search for sections with classes <em>only</em> on the selected days. <br />
-                                        Strict mode OFF: Will search for sections with <em>at least one</em> class on one of the selected days.
-                                    </small>
-                                </div>
-
-                                <button class="btn btn-success btn-sm" id="course-search-day-btn">Search</button>
-
-                                <div class="invalid-feedback" id="course-search-day-err">You must select at least one day.</div>
-                                <div class="invalid-feedback" id="course-search-day-empty">Sorry, there are no sections of this course which match your selection criteria.</div>
-                            </div>
-
-                            <div id="course-search-best-accordion" class="collapse" data-parent="#course-search-accordion">
-                                
-                                <p>This option will find the best sections to fit your schedule given the constraints you provide. Note that only sections that fit your current schedule will be proposed.</p>
-
-                                <div class="row">
-                                    <!-- Break before class inputs -->
-                                    <div class="col mb-2">
-                                        <label>Prefer break before class to be:</label>
-
-                                        <div class="input-group input-group-sm mb-1">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text">At least</span>
-                                            </div>
-                                            <input type="number" class="form-control" id="course-break-before-min" min="0" max="60" step="30" value="0" required />
-                                            <div class="input-group-append">
-                                                <span class="input-group-text">min</span>
-                                            </div>
-                                        </div>
-                                        <div class="input-group input-group-sm">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text">At most</span>
-                                            </div>
-                                            <input type="number" class="form-control" id="course-break-before-max" min="0" step="30" value="60" required />
-                                            <div class="input-group-append">
-                                                <span class="input-group-text">min</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Break after class inputs -->
-                                    <div class="col mb-2">
-                                        <label>Prefer break after class to be:</label>
-
-                                        <div class="input-group input-group-sm mb-1">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text">At least</span>
-                                            </div>
-                                            <input type="number" class="form-control" id="course-break-after-min" min="0" max="60" step="30" value="0" required />
-                                            <div class="input-group-append">
-                                                <span class="input-group-text">min</span>
-                                            </div>
-                                        </div>
-                                        <div class="input-group input-group-sm">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text">At most</span>
-                                            </div>
-                                            <input type="number" class="form-control" id="course-break-after-max" min="0" step="30" value="60" required />
-                                            <div class="input-group-append">
-                                                <span class="input-group-text">min</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Preferred class time input -->
-                                <label>Prefer that classes:</label>
-
-                                <div class="input-group input-group-sm mb-1">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text">Start at or after</span>
-                                    </div>
-                                    <input id="course-start-min" type="text" class="form-control datetimepicker-input" data-toggle="datetimepicker" data-target="#course-start-min" value="8:00" required />
-                                </div>
-                                
-                                <div class="input-group input-group-sm mb-1">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text">End at or before</span>
-                                    </div>
-                                    <input id="course-end-max" type="text" class="form-control datetimepicker-input" data-toggle="datetimepicker" data-target="#course-end-max" value="18:00" />
-                                </div>
-
-                                <button type="button" id="course-search-best-btn" class="btn btn-sm btn-success mt-2">Search</button>
-
-                                <div class="invalid-feedback" id="course-search-best-err">There are one or more errors that must be addressed. Make sure that your minimum and maximum break times are some multiple of 30 minutes.</div>
-                                <div class="invalid-feedback" id="course-search-best-empty">Sorry, there are no sections of this course which match your selection criteria.</div>
-
-                            </div>
+                            <div id="course-search-spinner" class="spinner-border spinner-border-sm" role="status"></div>
                         </div>
 
                         <div id="course-options" class="mt-4"></div>

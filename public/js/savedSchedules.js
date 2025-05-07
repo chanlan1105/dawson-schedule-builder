@@ -1,5 +1,5 @@
 import { courses } from "../Data/w2025.js";
-import { schedules_key } from "./config.js";
+import { courseSchedule_key, schedules_key } from "./config.js";
 import { clearSchedule } from "./schedule.js";
 import { displayCourseBubbles } from "./ui.js";
 

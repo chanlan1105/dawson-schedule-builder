@@ -1,6 +1,5 @@
 import { courseSchedule_key, schedules_key } from "./config.js";
 import { displayCourseBubbles } from "./ui.js";
-import { courses } from "../Data/w2025.js";
 
 /**
  * Adds a course to the schedule.
@@ -32,7 +31,8 @@ export function addCourse(courseCode, course) {
     $("#course-options").html("");
     $(".course-search-options button.active").removeClass("active");
     $("#course-search-accordion .collapse.show").collapse("hide");
-    $("#course-complementary-warning").hide();
+    $("#course-options-container > .autocomplete > .invalid-feedback").hide();
+    $(".course-search-options > button").prop("disabled", true);
     $("#course").val("").focus();
 }
 
