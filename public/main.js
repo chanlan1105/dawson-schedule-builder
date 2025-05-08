@@ -1,4 +1,4 @@
-﻿import { colours, courseSchedule_key, schedules_key, semester_key, current_semester, last_semester } from "./js/config.js";
+﻿import { courseSchedule_key, schedules_key, semester_key, current_semester, last_semester } from "./js/config.js";
 
 import { courses } from "./Data/w2025.js";
 
@@ -134,39 +134,42 @@ function startUp() {
 
     // Load schedule from localStorage
     try {
-        courseSchedule = JSON.parse(localStorage.getItem(courseSchedule_key) ?? `{}`);
-
-        // Fix courseSchedule to new format if needed
-        if (typeof Object.values(courseSchedule)[0] == 'number') {
-            let counter = 0;
-            for (let i in courseSchedule) {
-                courseSchedule[i] = {
-                    s: courseSchedule[i],
-                    i: courses[i].sections.filter(s => s.ID == courseSchedule[i])[0].intensive,
-                    c: colours[counter % colours.length]
-                };
-                counter ++;
-            }
-            localStorage.setItem(courseSchedule_key, JSON.stringify(courseSchedule));
-        }
-
-        customCourseCount = Object.values(courseSchedule).filter(c => "custom" in c).length;
-
-        savedSchedules = JSON.parse(localStorage.getItem(schedules_key) ?? "[]");
+        window.courseSchedule = JSON.parse(localStorage.getItem(courseSchedule_key) ?? `{}`);
+        window.customCourseCount = Object.values(courseSchedule).filter(c => "custom" in c).length;
+        window.savedSchedules = JSON.parse(localStorage.getItem(schedules_key) ?? "[]");
     }
     catch (err) {
         console.error(err);
-        courseSchedule = {};
-        savedSchedules = [];
+        window.courseSchedule = {};
+        window.savedSchedules = [];
     }
 
-    if (Object.keys(courseSchedule)) {
+    if (Object.keys(window.courseSchedule)) {
         // There are one or more courses already loaded
-        
-        for (let i in courseSchedule) {
-            const course = courseSchedule[i].custom ?? {code: i, ...courses[i].sections.filter(s => s.ID == courseSchedule[i].s)[0]};
-            displayCourseBubbles(i, course, courseSchedule[i].c, "main");
-        }
+
+        fetch("/course/schedule", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(
+                Object.fromEntries(
+                    Object.entries(window.courseSchedule)
+                        .filter(([_, { s }]) => s)          // Fetch only non-custom courses from database
+                        .map(([code, { s }]) => [code, s])
+                )
+            )
+        }).then(async res => {
+            // Create bubbles for fetched courses
+            Object.entries(await res.json()).forEach(([code, section]) => {
+                displayCourseBubbles(code, section, window.courseSchedule[code].c, "main");
+            });
+
+            // Create bubbles for custom courses
+            Object.entries(window.courseSchedule).filter(([_, { custom }]) => custom).forEach(([code, { c, custom }]) => {
+                displayCourseBubbles(code, custom, c, "main");
+            });
+        });
     }
 
     // Check if first time user

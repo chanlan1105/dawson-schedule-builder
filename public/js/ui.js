@@ -93,7 +93,7 @@ export function createCourseOptionTiles(courseCode, options, complementary = fal
 function createCourseBubbles(courseCode, course, colour, options = {stub: false, preview: false}) {
     if (course.intensive && !preview) {
         // If intensive course, go to intensive function
-        return addIntensive(course.code, course.ID);
+        return addIntensive(courseCode, course.ID);
     }
     else if (course.intensive) {
         // Cannot preview an intensive course.
@@ -110,9 +110,9 @@ function createCourseBubbles(courseCode, course, colour, options = {stub: false,
     $code.addClass("course-code");
     $teacher.addClass("course-teacher");
 
-    $title.text(course.title || window.courseList[course.code]);
-    if (course.code && course.ID) $code.text(`${course.code} sect. ${Number(course.ID)}`);
-    else if (course.code) $code.text(`${course.code}`);
+    $title.text(course.title || window.courseList[courseCode]);
+    if (courseCode && course.ID) $code.text(`${courseCode} sect. ${Number(course.ID)}`);
+    else if (courseCode) $code.text(`${courseCode}`);
     else if (course.ID) $code.text(`Section ${Number(course.ID)}`);
     $teacher.text(course.teacher);
 
@@ -186,7 +186,7 @@ function addIntensive(course) {
 export function displayCourseBubbles(courseCode, course, _colour, element) {    
     if (course.intensive && element == "main") {
         // If intensive course, go to intensive function
-        return addIntensive(course.code, course.ID);
+        return addIntensive(courseCode, course.ID);
     }
     else if (course.intensive) {
         // Intensive courses are generally not added as bubbles.
