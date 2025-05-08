@@ -1,7 +1,5 @@
 ﻿import { courseSchedule_key, schedules_key, semester_key, current_semester, last_semester } from "./js/config.js";
 
-import { courses } from "./Data/w2025.js";
-
 import { tutorial, startTutorial } from "./js/tutorial.js";
 window.tutorial = tutorial;
 window.startTutorial = startTutorial;
@@ -9,14 +7,9 @@ window.startTutorial = startTutorial;
 import { displayCourseBubbles, changeBubbleColour } from "./js/ui.js";
 window.changeBubbleColour = changeBubbleColour;
 
-import "./js/schedule.js";
-import "./js/savedSchedules.js";
-import "./js/customCourse.js";
-import "./js/export.js";
-
 window.currentColour = 0;
 
-window.courseSchedule = {}, window.savedSchedules = [];
+window.courseSchedule = {}, window.savedSchedules = [], window.courseCache = {};
 window.customCourseCount = 0;
 
 window.tutorialRunning = false;
@@ -26,6 +19,11 @@ window.tutorialStep = 0;
 window.courseList = await (await fetch("/courses", { method: "GET" })).json();
 // Array of "courseCode courseName"
 window.parsedCourseNames = Object.entries(window.courseList).map(c => c[0] + " " + c[1]).concat(["Complementary Courses", "ENR-SCI-XX Enriched Science"]);
+
+import "./js/schedule.js";
+import "./js/savedSchedules.js";
+import "./js/customCourse.js";
+import "./js/export.js";
 
 await import("./js/search.js");
 
@@ -180,5 +178,3 @@ function startUp() {
     }
 }
 startUp();
-
-// ------------------------------------------------------

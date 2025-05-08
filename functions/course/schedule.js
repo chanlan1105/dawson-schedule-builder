@@ -8,10 +8,22 @@ export async function onRequestPost(context) {
 
     return new Response(JSON.stringify(
         Object.fromEntries(Object.entries(courseSchedule).map(([courseCode, section]) => {
-            return [
-                courseCode,
-                courses[courseCode].sections.filter(s => +s.ID == section)?.[0]
-            ];
+            if (Array.isArray(section)) {
+                // More than one section was requested.
+
+                return [
+                    courseCode,
+                    courses[courseCode].sections.filter(s => section.includes(+s.ID))
+                ];
+            }
+            else {
+                // Only one section was requested.
+
+                return [
+                    courseCode,
+                    courses[courseCode].sections.filter(s => +s.ID == section)?.[0]
+                ];
+            }
         }))
     ));
 }

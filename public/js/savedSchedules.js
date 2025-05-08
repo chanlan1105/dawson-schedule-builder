@@ -1,4 +1,3 @@
-import { courses } from "../Data/w2025.js";
 import { courseSchedule_key, schedules_key } from "./config.js";
 import { clearSchedule } from "./schedule.js";
 import { displayCourseBubbles } from "./ui.js";
@@ -40,6 +39,52 @@ async function saveSchedule() {
 }
 
 /**
+ * Fetches course details from saved schedules and saves them into local cache.
+ */
+async function fetchScheduleCourses() {
+    const coursesToFetch = {};
+
+    window.savedSchedules.forEach(({s: schedule}) => {
+        Object.entries(schedule).forEach(([courseCode, {s: section}]) => {
+            // Check if this is a custom course.
+            if (!section) return;
+
+            // Check if the section already exists in cache.
+            if (courseCode in window.courseCache && window.courseCache[courseCode].find(s => +s.ID == section)) {
+                // Found the course section in cache, skip over.
+                return;
+            }
+
+            // Add this course section to the coursesToFetch.
+            if (courseCode in coursesToFetch) {
+                coursesToFetch[courseCode].push(section);
+            }
+            else {
+                coursesToFetch[courseCode] = [section];
+            }
+        });
+    });
+
+    // Fetch course details from server.
+    const courses = await (await fetch("/course/schedule", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(coursesToFetch)
+    })).json();
+
+    // Save fetched courses into cache.
+    Object.entries(courses).forEach(([courseCode, sections]) => {
+        if (!(courseCode in window.courseCache)) {
+            window.courseCache[courseCode] = [];
+        }
+
+        window.courseCache[courseCode].push(...sections);
+    });
+}
+
+/**
  * Opens the "load schedule" modal.
  * @returns {void}
  */
@@ -54,6 +99,9 @@ function loadScheduleModal() {
         const $option = $("<option></option>").text(s.n).val(s.n);
         $("#load-schedule-select").append($option);
     });
+
+    // Fetch courses from saved schedules from server.
+    fetchScheduleCourses();
 
     // Don't allow schedules to be deleted or loaded until one is actually selected
     $("#delete-saved-schedule-btn, #load-saved-schedule-btn").prop("disabled", true);
@@ -96,7 +144,7 @@ export function loadSchedule() {
     clearSchedule(true);
 
     for (let i in schedule) {
-        const course = schedule[i].custom ?? {code: i, ...courses[i].sections.filter(s => s.ID == schedule[i].s)[0]};
+        const course = schedule[i].custom ?? {code: i, ...window.courseCache[i].filter(s => s.ID == schedule[i].s)[0]};
         displayCourseBubbles(i, course, schedule[i].c, "main");
     }
 
@@ -116,7 +164,7 @@ $("#load-schedule-select").on("change", function() {
     const schedule = window.savedSchedules.filter(s => s.n == $(this).val())[0].s;
     
     for (let i in schedule) {
-        const course = schedule[i].custom ?? {code: i, ...courses[i].sections.filter(s => s.ID == schedule[i].s)[0]};
+        const course = schedule[i].custom ?? {code: i, ...window.courseCache[i].filter(s => s.ID == schedule[i].s)[0]};
         displayCourseBubbles(i, course, schedule[i].c, "load");
     }
 
