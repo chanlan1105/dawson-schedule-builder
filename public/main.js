@@ -62,35 +62,6 @@ function startUp() {
 
     $("#schedule-preview").append(...$col);
 
-    // Add the "fake" Enriched Science course
-    courses["ENR-SCI-XX"] = {
-        "courseName": "Enriched Science",
-        "sections": [
-            {
-                "ID": "00001",
-                "teacher": "Chris Whittaker, Carmen Leung",
-                "schedule": [
-                    [
-                        "W",
-                        "1300",
-                        "1430"
-                    ],
-                    [
-                        "F",
-                        "1300",
-                        "1430"
-                    ],
-                    [
-                        "F",
-                        "1430",
-                        "1730"
-                    ]
-                ],
-                "note": "Select this course to add the Enriched Science seminar and activity periods to your mock schedule."
-            }
-        ]
-    };
-
     // Initiate datetimepickers
     $("#course-start-min").datetimepicker({
         format: "H[:]mm",

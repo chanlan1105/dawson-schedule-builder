@@ -26,11 +26,11 @@ const fs = require("fs");
             "sec-fetch-mode": "cors",
             "sec-fetch-site": "same-origin",
             "x-requested-with": "XMLHttpRequest",
-            "cookie": "wordpress_sec_64850283c7b20f24c222d31d9820bac3=2238762%7C1745787230%7C4aYneRki3uUfOdWvbCbXtEcB4EYtVvl3FJ1zZoLSZtt%7C1958a7fc2efd44fe8e59fa3871b8b4452948edf0a63d897f10afe1d092493805; _ga_9CR35XX79D=GS1.3.1745511425.1.0.1745511425.0.0.0; wordpress_test_cookie=WP%20Cookie%20check; dawson_tta={}; _ga=GA1.1.469098945.1745511425; _ga_5RDDCMFRZC=GS1.1.1745593398.2.0.1745593398.0.0.0; _ga_Z66L6Q4BDL=GS1.1.1745593398.2.0.1745593398.0.0.0; wordpress_sec_64850283c7b20f24c222d31d9820bac3=2238762%7C1745787230%7C4aYneRki3uUfOdWvbCbXtEcB4EYtVvl3FJ1zZoLSZtt%7C1958a7fc2efd44fe8e59fa3871b8b4452948edf0a63d897f10afe1d092493805; wordpress_logged_in_64850283c7b20f24c222d31d9820bac3=2238762%7C1745787230%7C4aYneRki3uUfOdWvbCbXtEcB4EYtVvl3FJ1zZoLSZtt%7C5adbdbd35e92ff3f9b4db81751ac68d667f6182384ef8215119314ef733fcbae",
+            "cookie": "wordpress_sec_64850283c7b20f24c222d31d9820bac3=2238762%7C1746841006%7CV29Vwr2XFCTk7hH2M0k3e8cMxw7012Mi9M0zLLHu6yS%7C5618da8427d1dd901efaf83f8b5b0d5ac9b8bb924168a5e12f79636fe0d6943a; _ga_9CR35XX79D=GS1.3.1745511425.1.0.1745511425.0.0.0; _ga=GA1.1.469098945.1745511425; _ga_5RDDCMFRZC=GS1.1.1745593398.2.0.1745593398.0.0.0; _ga_Z66L6Q4BDL=GS1.1.1745593398.2.0.1745593398.0.0.0; wordpress_test_cookie=WP%20Cookie%20check; wordpress_sec_64850283c7b20f24c222d31d9820bac3=2238762%7C1746841006%7CV29Vwr2XFCTk7hH2M0k3e8cMxw7012Mi9M0zLLHu6yS%7C5618da8427d1dd901efaf83f8b5b0d5ac9b8bb924168a5e12f79636fe0d6943a; wordpress_logged_in_64850283c7b20f24c222d31d9820bac3=2238762%7C1746841006%7CV29Vwr2XFCTk7hH2M0k3e8cMxw7012Mi9M0zLLHu6yS%7C195ffb1f0a6ac2a3b7469944b6c0d2d2b668d6496619ae57db57b1c2537a768f; dawson_tta={}",
             "Referer": "https://timetable.dawsoncollege.qc.ca/",
             "Referrer-Policy": "strict-origin-when-cross-origin"
         },
-        "body": "action=timetable_search&nonce=b95901777e&specific_ed=&discipline=&general_ed=&special_ed=&certificates=&learning_comm=&course_title=-&section=&teacher=&intensive=&seats=",
+        "body": "action=timetable_search&nonce=af5265828d&specific_ed=&discipline=&general_ed=&special_ed=&certificates=&learning_comm=&course_title=-&section=&teacher=&intensive=&seats=",
         "method": "POST"
     })).text();
     
@@ -116,9 +116,38 @@ const fs = require("fs");
         courses[courseNum] = { courseName, sections }; 
     });
 
+    // Add the "fake" Enriched Science course
+    courses["ENR-SCI-XX"] = {
+        "courseName": "Enriched Science",
+        "sections": [
+            {
+                "ID": "00001",
+                "teacher": "Chris Whittaker, Carmen Leung",
+                "schedule": [
+                    [
+                        "W",
+                        "1300",
+                        "1430"
+                    ],
+                    [
+                        "F",
+                        "1300",
+                        "1430"
+                    ],
+                    [
+                        "F",
+                        "1430",
+                        "1730"
+                    ]
+                ],
+                "note": "Select this course to add the Enriched Science seminar and activity periods to your mock schedule."
+            }
+        ]
+    };
+
     console.log("Saving data...");
 
-    const filename = `Data/${term[0].toLowerCase()}${year}.json`;
+    const filename = `../Data/${term[0].toLowerCase()}${year}.json`;
 
     fs.writeFileSync(filename, JSON.stringify(courses));
 
