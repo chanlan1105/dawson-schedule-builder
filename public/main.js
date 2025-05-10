@@ -15,6 +15,11 @@ window.customCourseCount = 0;
 window.tutorialRunning = false;
 window.tutorialStep = 0;
 
+// After 750 ms, show "still loading" alert to user.
+const loadingTimeout = setTimeout(() => {
+    $("#main-page-loading-alert").show().addClass("shake");
+}, 750);
+
 // Object of courseCode: courseName
 window.courseList = await (await fetch("/courses", { method: "GET" })).json();
 // Array of "courseCode courseName"
@@ -42,7 +47,7 @@ $("#intro-modal").on("hide.bs.modal", () => {
     localStorage.setItem("lucas/schedule/seenColour", "true");
 });
 
-function startUp() {
+async function startUp() {
     const $col = [$("<div></div>"), $("<div></div>"), $("<div></div>"), $("<div></div>"), $("<div></div>"), $("<div></div>")];
 
     for (let i = 8; i <= 18; i += 0.5) {
@@ -116,7 +121,7 @@ function startUp() {
     if (Object.keys(window.courseSchedule)) {
         // There are one or more courses already loaded
 
-        fetch("/course/schedule", {
+        const courses = await (await fetch("/course/schedule", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -128,16 +133,16 @@ function startUp() {
                         .map(([code, { s }]) => [code, s])
                 )
             )
-        }).then(async res => {
-            // Create bubbles for fetched courses
-            Object.entries(await res.json()).forEach(([code, section]) => {
-                displayCourseBubbles(code, section, window.courseSchedule[code].c, "main");
-            });
+        })).json();
 
-            // Create bubbles for custom courses
-            Object.entries(window.courseSchedule).filter(([_, { custom }]) => custom).forEach(([code, { c, custom }]) => {
-                displayCourseBubbles(code, custom, c, "main");
-            });
+        // Create bubbles for fetched courses
+        Object.entries(courses).forEach(([code, section]) => {
+            displayCourseBubbles(code, section, window.courseSchedule[code].c, "main");
+        });
+
+        // Create bubbles for custom courses
+        Object.entries(window.courseSchedule).filter(([_, { custom }]) => custom).forEach(([code, { c, custom }]) => {
+            displayCourseBubbles(code, custom, c, "main");
         });
     }
 
@@ -177,4 +182,8 @@ function startUp() {
         }, 12000);
     }
 }
-startUp();
+await startUp();
+
+// Cancel showing loading alert once complete.
+clearTimeout(loadingTimeout);
+$("#main-page-loading-alert").removeClass("shake").hide();

@@ -30,16 +30,10 @@
 #course-search-accordion .form-group {
     margin-bottom: 0;
 }
-#course-search-accordion {
-    flex-grow: 1;
-}
-#course-search-additional-options {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
+
 #course-search-spinner {
-    display: none;
+    margin-left: .5rem;
+    margin-bottom: .25rem;
 }
 
 @media (min-width: 992px) {

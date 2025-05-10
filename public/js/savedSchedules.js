@@ -65,6 +65,8 @@ async function fetchScheduleCourses() {
         });
     });
 
+    if (Object.keys(coursesToFetch).length == 0) return;
+
     // Fetch course details from server.
     const courses = await (await fetch("/course/schedule", {
         method: "POST",
@@ -88,10 +90,19 @@ async function fetchScheduleCourses() {
  * Opens the "load schedule" modal.
  * @returns {void}
  */
-function loadScheduleModal() {
+async function loadScheduleModal() {
     if (window.savedSchedules.length == 0) return alert("You have no saved schedules.");
 
     clearLoadBubbles();
+
+    // Don't allow schedules to be deleted or loaded until one is actually selected
+    $("#delete-saved-schedule-btn, #load-saved-schedule-btn").prop("disabled", true);
+
+    // Fetch courses from saved schedules from server.
+    $("#load-schedule-loading").show();
+    $("#load-schedule-select, #load-schedule-container").hide();
+    $("#load-schedule-modal").modal("show");
+    await fetchScheduleCourses();
 
     // Add options to schedule select
     $("#load-schedule-select").html("<option selected disabled>Select</option>");
@@ -100,13 +111,9 @@ function loadScheduleModal() {
         $("#load-schedule-select").append($option);
     });
 
-    // Fetch courses from saved schedules from server.
-    fetchScheduleCourses();
-
-    // Don't allow schedules to be deleted or loaded until one is actually selected
-    $("#delete-saved-schedule-btn, #load-saved-schedule-btn").prop("disabled", true);
-
-    $("#load-schedule-modal").modal("show");
+    // Remove loading page
+    $("#load-schedule-loading").hide();
+    $("#load-schedule-select, #load-schedule-container").show();
 }
 
 /**

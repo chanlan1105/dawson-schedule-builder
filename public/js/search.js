@@ -308,6 +308,7 @@ autocomplete($("#course"), window.parsedCourseNames, 3, async function() {
     }
 
     // Fetch course sections from server
+    $("#course-search-spinner").show();
     await fetch(complementary ? "/course/complementary" : "/course/sections", {
         method: "POST",
         headers: {
@@ -343,6 +344,8 @@ autocomplete($("#course"), window.parsedCourseNames, 3, async function() {
             // An unknown error has occurred.
             $("#course-error").show();
         }
+
+        $("#course-search-spinner").hide();
     });
 });
 $("#course").on("input", () => {

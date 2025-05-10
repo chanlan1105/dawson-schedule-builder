@@ -177,18 +177,9 @@ main.export #schedule-preview {
   margin-bottom: 0;
 }
 
-#course-search-accordion {
-  flex-grow: 1;
-}
-
-#course-search-additional-options {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
 #course-search-spinner {
-  display: none;
+  margin-left: 0.5rem;
+  margin-bottom: 0.25rem;
 }
 
 @media (min-width: 992px) {
@@ -542,6 +533,31 @@ main:not(.export) .course-bubble:hover .course-delete {
 
 main:not(.export) .course-section .course-title:hover {
   text-decoration: line-through;
+}
+
+@keyframes shakeX {
+  from, to {
+    transform: translate3d(0, 0, 0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate3d(-10px, 0, 0);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translate3d(10px, 0, 0);
+  }
+}
+.alert.shake {
+  animation: shakeX 1s;
+}
+
+#main-page-loading-alert {
+  box-shadow: 0 0.1rem 0.3rem -0.1rem #856404;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  position: fixed;
+  z-index: 1;
+  right: 1rem;
 }
 
 html {
