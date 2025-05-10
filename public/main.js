@@ -23,7 +23,7 @@ const loadingTimeout = setTimeout(() => {
 // Object of courseCode: courseName
 window.courseList = await (await fetch("/courses", { method: "GET" })).json();
 // Array of "courseCode courseName"
-window.parsedCourseNames = Object.entries(window.courseList).map(c => c[0] + " " + c[1]).concat(["Complementary Courses", "ENR-SCI-XX Enriched Science"]);
+window.parsedCourseNames = Object.entries(window.courseList).map(c => c[0] + " " + c[1]).concat(["Complementary Courses"]);
 
 import "./js/schedule.js";
 import "./js/savedSchedules.js";
