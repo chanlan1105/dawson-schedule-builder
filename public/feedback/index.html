@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dawson Mock Schedule Builder - Send Feedback</title>
+    
+        <meta name="robots" content="noindex">
+        <link rel="icon" href="/Media/icon.png" />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- External styles -->
+        <link rel="stylesheet" type="text/css" href="feedback.css" />
+
+        <!-- reCAPTCHA -->
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+        <!-- External scripts -->
+        <script src="feedback.js" defer></script>
+
+        <!-- Bootstrap, jQuery, PopperJS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+        <!-- Icons -->
+        <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet" />
+    </head>
+
+    <body>
+        <nav id="navbar" class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <span class="navbar-brand">Dawson Mock Schedule Builder</span>
+            <span class="navbar-brand text-right" style="font-size: 1em">Made by Lucas<span class="navbar-brand-930"> &bull; &#x2764; Enriched Science</span></span>
+        </nav>
+
+        <main class="container-fluid px-5 py-3">
+            <div class="row">
+                <div class="col-md-3">
+                    <h2>Send Feedback</h2>
+                    <p>I strive to make my schedule builder suit the needs of Dawson students as best I can. Please fill out the form to reach out. I appreciate any feedback you can provide!</p>
+                </div>
+                <div class="col-md-9">
+
+                    <form action="/feedback_submit" method="post" id="feedback-form">
+                        <h4>Personal Details</h4>
+                        <p>Optional. You can provide these details in case I need to reach out to follow up on your request.</p>
+                        <div class="form-group">
+                            <label for="name">Your name:</label>
+                            <input type="text" class="form-control" id="name" name="name" autocomplete="name" maxlength="50" />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email address:</label>
+                            <input type="text" class="form-control" id="email" name="email" autocomplete="email" maxlength="250" />
+                        </div>
+
+                        <hr />
+
+                        <h4>Feedback</h4>
+                        <div class="form-group">
+                            <label for="type">Feedback type:</label>
+                            <select class="form-control" id="type" name="type" required>
+                                <option value="" disabled selected></option>
+                                <option value="bug">Bug Report</option>
+                                <option value="feature">Feature Request</option>
+                                <option value="comment">Other Comment</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="feedback">Feedback detail:</label>
+                            <textarea id="feedback" name="feedback" class="form-control" required></textarea>
+                            <small style="display: block"><span id="feedback-char-remaining"></span> characters remaining</small>
+                        </div>
+
+                        <div class="g-recaptcha" data-sitekey="6LftykcrAAAAAGl4jrTAwlX2UfNjJG6cq7zlvqW6"></div>
+                        <div id="invalid-captcha">Please tick the reCAPTCHA box.</div>
+
+                        <button type="submit" class="btn btn-primary mt-2">Submit</button>
+                    </form>
+
+                    <div id="alert-container">
+                        <div id="feedback-received" class="alert alert-success">
+                            Thanks! Your feedback has been sent.
+                        </div>
+    
+                        <div id="captcha-error" class="alert alert-danger">
+                            There was an error validating the reCAPTCHA. Please try again.
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

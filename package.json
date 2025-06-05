@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "wrangler": "^4.16.1"
+  },
+  "scripts": {
+    "dev": "npx wrangler pages dev"
+  }
+}

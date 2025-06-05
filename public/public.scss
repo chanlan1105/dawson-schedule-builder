@@ -7,6 +7,7 @@
 @import "scss/course-bubbles";
 @import "scss/course-list";
 @import "scss/alert";
+@import "scss/navbar";
 
 html {
     --lightgray: rgb(200, 200, 200);
@@ -53,36 +54,6 @@ button.dropdown-item:disabled {
 
 .table th {
     border-top: none;
-}
-
-#navbar {
-    padding: 0.7rem 2rem;
-    box-shadow: 0px -0.125rem 0.3125rem 0.3125rem rgba(108, 117, 125, 0.8);
-    position: sticky;
-    top: 0;
-    z-index: 10;
-}
-#navbar .navbar-brand {
-    flex-grow: 1;
-}
-.nav-icon {
-	font-size: 1.5em;
-	position: relative;
-	top: .1rem;
-	margin-right: .3rem;
-}
-.nav-link {
-	cursor: pointer;
-}
-@media (max-width: 929px) {
-    .navbar-brand-930 {
-        display: none;
-    }
-}
-@media (max-width: 799px) {
-    .navbar-brand-800 {
-        display: none;
-    }
 }
 
 .popover {

@@ -1,0 +1,12 @@
+{
+    "name": "schedule-maker",
+    "pages_build_output_dir": "./public",
+    "d1_databases": [
+        {
+            "binding": "DB",
+            "database_name": "schedule-maker-db",
+            "database_id": "a561cef3-06d0-4e90-a8c1-4e89b9922d5b"
+        }
+    ],
+    "compatibility_date": "2025-05-08"
+}

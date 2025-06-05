@@ -1,3 +1,7 @@
 helloworld.js
+
 .wrangler/
 node_modules/
+db/
+
+.dev.vars
