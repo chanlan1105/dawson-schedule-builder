@@ -8,5 +8,8 @@
             "database_id": "a561cef3-06d0-4e90-a8c1-4e89b9922d5b"
         }
     ],
+    "compatibility_flags": [
+        "nodejs_compat"
+    ],
     "compatibility_date": "2025-05-08"
 }

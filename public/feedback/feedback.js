@@ -30,7 +30,7 @@ $("#feedback-form").on("submit", function(e) {
 
     console.log(formData);
 
-    fetch("/feedback_submit", {
+    fetch("/feedback/submit", {
         method: "POST",
         body: formData
     }).then(async res => {
