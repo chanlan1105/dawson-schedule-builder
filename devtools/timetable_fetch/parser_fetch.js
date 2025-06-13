@@ -16,21 +16,21 @@ const fs = require("fs");
 
     const timetable_data = await (await fetch("https://timetable.dawsoncollege.qc.ca/wp-content/plugins/timetable/search.php", {
         "headers": {
-            "accept": "*/*",
-            "accept-language": "en-US,en;q=0.9,fr-CA;q=0.8,fr;q=0.7,es-US;q=0.6,es;q=0.5",
-            "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
-            "sec-ch-ua": "\"Google Chrome\";v=\"135\", \"Not-A.Brand\";v=\"8\", \"Chromium\";v=\"135\"",
-            "sec-ch-ua-mobile": "?0",
-            "sec-ch-ua-platform": "\"Windows\"",
-            "sec-fetch-dest": "empty",
-            "sec-fetch-mode": "cors",
-            "sec-fetch-site": "same-origin",
-            "x-requested-with": "XMLHttpRequest",
-            "cookie": "wordpress_sec_64850283c7b20f24c222d31d9820bac3=2238762%7C1746841006%7CV29Vwr2XFCTk7hH2M0k3e8cMxw7012Mi9M0zLLHu6yS%7C5618da8427d1dd901efaf83f8b5b0d5ac9b8bb924168a5e12f79636fe0d6943a; _ga_9CR35XX79D=GS1.3.1745511425.1.0.1745511425.0.0.0; _ga=GA1.1.469098945.1745511425; _ga_5RDDCMFRZC=GS1.1.1745593398.2.0.1745593398.0.0.0; _ga_Z66L6Q4BDL=GS1.1.1745593398.2.0.1745593398.0.0.0; wordpress_test_cookie=WP%20Cookie%20check; wordpress_sec_64850283c7b20f24c222d31d9820bac3=2238762%7C1746841006%7CV29Vwr2XFCTk7hH2M0k3e8cMxw7012Mi9M0zLLHu6yS%7C5618da8427d1dd901efaf83f8b5b0d5ac9b8bb924168a5e12f79636fe0d6943a; wordpress_logged_in_64850283c7b20f24c222d31d9820bac3=2238762%7C1746841006%7CV29Vwr2XFCTk7hH2M0k3e8cMxw7012Mi9M0zLLHu6yS%7C195ffb1f0a6ac2a3b7469944b6c0d2d2b668d6496619ae57db57b1c2537a768f; dawson_tta={}",
-            "Referer": "https://timetable.dawsoncollege.qc.ca/",
-            "Referrer-Policy": "strict-origin-when-cross-origin"
+          "accept": "*/*",
+          "accept-language": "en-US,en;q=0.9,fr-CA;q=0.8,fr;q=0.7,es-US;q=0.6,es;q=0.5",
+          "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+          "sec-ch-ua": "\"Google Chrome\";v=\"137\", \"Chromium\";v=\"137\", \"Not/A)Brand\";v=\"24\"",
+          "sec-ch-ua-mobile": "?0",
+          "sec-ch-ua-platform": "\"Windows\"",
+          "sec-fetch-dest": "empty",
+          "sec-fetch-mode": "cors",
+          "sec-fetch-site": "same-origin",
+          "x-requested-with": "XMLHttpRequest",
+          "cookie": "wordpress_sec_64850283c7b20f24c222d31d9820bac3=2238762%7C1750008292%7CKGgyu4iL4qkNU4BydjvlXaGRUuNT00C7aqbPG1LAUCA%7C65c6606c5101dac7d4629bbc7b73030e143c4b3ab975ccbe4db034ddab4797e9; _ga_9CR35XX79D=GS2.3.s1746738385$o2$g1$t1746738388$j0$l0$h0; _ga=GA1.1.469098945.1745511425; _ga_RYQY8EEFVG=GS2.1.s1747525396$o1$g1$t1747525413$j43$l0$h0$dtBmh4sa1Fty58-0UWoZYMKL8U-4_eYJVwg; _ga_Z66L6Q4BDL=GS2.1.s1749131620$o5$g1$t1749131737$j60$l0$h0; _ga_5RDDCMFRZC=GS2.1.s1749131620$o5$g1$t1749131737$j60$l0$h0; wordpress_test_cookie=WP%20Cookie%20check; wordpress_sec_64850283c7b20f24c222d31d9820bac3=2238762%7C1750008292%7CKGgyu4iL4qkNU4BydjvlXaGRUuNT00C7aqbPG1LAUCA%7C65c6606c5101dac7d4629bbc7b73030e143c4b3ab975ccbe4db034ddab4797e9; wordpress_logged_in_64850283c7b20f24c222d31d9820bac3=2238762%7C1750008292%7CKGgyu4iL4qkNU4BydjvlXaGRUuNT00C7aqbPG1LAUCA%7C1aaa70921a22b75884733d5477a47b42a5e6041e4c1ff4f7a27d4a2aba14db21; dawson_tta={}",
+          "Referer": "https://timetable.dawsoncollege.qc.ca/",
+          "Referrer-Policy": "strict-origin-when-cross-origin"
         },
-        "body": "action=timetable_search&nonce=af5265828d&specific_ed=&discipline=&general_ed=&special_ed=&certificates=&learning_comm=&course_title=-&section=&teacher=&intensive=&seats=",
+        "body": "action=timetable_search&nonce=2b75480be5&specific_ed=&discipline=&general_ed=&special_ed=&certificates=&learning_comm=&course_title=-&section=&teacher=&intensive=&seats=",
         "method": "POST"
     })).text();
     
@@ -147,7 +147,7 @@ const fs = require("fs");
 
     console.log("Saving data...");
 
-    const filename = `../Data/${term[0].toLowerCase()}${year}.json`;
+    const filename = `./Data/${term[0].toLowerCase()}${year}.json`;
 
     fs.writeFileSync(filename, JSON.stringify(courses));
 

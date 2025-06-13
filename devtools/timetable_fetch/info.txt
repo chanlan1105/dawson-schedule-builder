@@ -1,3 +1,14 @@
+UPDATED 2025/06/13
+
+Steps to fetch timetable data:
+1. Navigate to timetable thru Omnivox
+2. Open Chrome Devtools
+3. Network tab 
+4. Enter "-" as the search query in Course Title/Number
+5. Click on the result "search.php" in Chrome Devtools 
+6. ** UPDATED: Copy request as fetch (Node.JS) and paste into parser_fetch.js
+
+
 Steps to copy timetable data:
 
 1. Navigate to timetable thru Omnivox

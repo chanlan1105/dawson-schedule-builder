@@ -8,5 +8,5 @@ export const courseSchedule_key = "lucas/courseSchedule";
 export const schedules_key = "lucas/schedule/list";
 export const semester_key = "lucas/schedule/sem";
 
-export const current_semester = "W2025"; // <-- UPDATE HERE FOR NEW SEMESTERS
-export const last_semester = "W2024-B"; // <-- AND HERE
+export const current_semester = "F2025"; // <-- UPDATE HERE FOR NEW SEMESTERS
+export const last_semester = "W2025"; // <-- AND HERE

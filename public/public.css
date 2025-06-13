@@ -593,6 +593,44 @@ main:not(.export) .course-section .course-title:hover {
     display: none;
   }
 }
+.btn-premium, .btn-premium:disabled, .btn-premium.disabled {
+  color: white;
+  background-color: #b314e3;
+  border-color: #9b11c5;
+}
+.btn-premium:not(:disabled):not(.disabled):hover, .btn-premium:not(:disabled):not(.disabled):active, .btn-premium:not(:disabled):not(.disabled).active, .btn-premium:disabled:not(:disabled):not(.disabled):hover, .btn-premium:disabled:not(:disabled):not(.disabled):active, .btn-premium:disabled:not(:disabled):not(.disabled).active, .btn-premium.disabled:not(:disabled):not(.disabled):hover, .btn-premium.disabled:not(:disabled):not(.disabled):active, .btn-premium.disabled:not(:disabled):not(.disabled).active {
+  background-color: #9014b6;
+  color: white;
+}
+.btn-premium.focus, .btn-premium:focus, .btn-premium:disabled.focus, .btn-premium:disabled:focus, .btn-premium.disabled.focus, .btn-premium.disabled:focus {
+  box-shadow: 0 0 0 0.2rem rgba(190, 67, 227, 0.5);
+}
+
+.btn-outline-premium, .btn-outline-premium:disabled, .btn-outline-premium.disabled {
+  color: #9b11c5;
+  background-color: transparent;
+  border-color: #9b11c5;
+}
+.btn-outline-premium:not(:disabled):not(.disabled):hover, .btn-outline-premium:not(:disabled):not(.disabled).active, .btn-outline-premium:not(:disabled):not(.disabled):active, .btn-outline-premium:disabled:not(:disabled):not(.disabled):hover, .btn-outline-premium:disabled:not(:disabled):not(.disabled).active, .btn-outline-premium:disabled:not(:disabled):not(.disabled):active, .btn-outline-premium.disabled:not(:disabled):not(.disabled):hover, .btn-outline-premium.disabled:not(:disabled):not(.disabled).active, .btn-outline-premium.disabled:not(:disabled):not(.disabled):active {
+  color: white;
+  background-color: #b314e3;
+  border-color: #9b11c5;
+}
+.btn-outline-premium.focus, .btn-outline-premium:focus, .btn-outline-premium:disabled.focus, .btn-outline-premium:disabled:focus, .btn-outline-premium.disabled.focus, .btn-outline-premium.disabled:focus {
+  box-shadow: 0 0 0 0.2rem rgba(190, 67, 227, 0.5);
+}
+
+.premium {
+  background-color: #f4d9fc;
+}
+.premium:hover {
+  background-color: #eec3fa;
+}
+.premium:active, .premium.active {
+  background-color: #b314e3;
+  color: white;
+}
+
 html {
   --lightgray: rgb(200, 200, 200);
   --bubble-red: hsl(0, 81%, 46%);

@@ -1,4 +1,4 @@
-import * as courses from "../../Data/w2025.json";
+import * as courses from "../../Data/f2025.json";
 
 export async function onRequest(context) {
     if (context.request.method != "POST") {

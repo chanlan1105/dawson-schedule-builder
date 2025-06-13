@@ -1,0 +1,55 @@
+@use "sass:color";
+
+$premium-bkg: #b314e3;
+$premium-shadow: color.change(color.scale($premium-bkg, $whiteness: 20%), $alpha: 0.5);
+$premium-border: #9b11c5;
+$premium-hover: color.scale($premium-bkg, $blackness: 20%);
+
+$premium-light-bkg: #f4d9fc;
+$premium-light-hover: color.scale($premium-light-bkg, $lightness: -5%);
+
+.btn-premium, .btn-premium:disabled, .btn-premium.disabled {
+    color: white;
+    background-color: $premium-bkg;
+    border-color: $premium-border;
+
+    &:not(:disabled):not(.disabled) {
+        &:hover, &:active, &.active {
+            background-color: $premium-hover;
+            color: white;
+        }
+    }
+
+    &.focus, &:focus {
+        box-shadow: 0 0 0 .2rem $premium-shadow;
+    }
+}
+.btn-outline-premium, .btn-outline-premium:disabled, .btn-outline-premium.disabled {
+    color: $premium-border;
+    background-color: transparent;
+    border-color: $premium-border;
+
+    &:not(:disabled):not(.disabled) {
+        &:hover, &.active, &:active {
+            color: white;
+            background-color: $premium-bkg;
+            border-color: $premium-border;
+        }
+    }
+
+    &.focus, &:focus {
+        box-shadow: 0 0 0 .2rem $premium-shadow;
+    }
+}
+
+.premium {
+    background-color: $premium-light-bkg;
+
+    &:hover {
+        background-color: $premium-light-hover;
+    }
+    &:active, &.active {
+        background-color: $premium-bkg;
+        color: white;
+    }
+}
