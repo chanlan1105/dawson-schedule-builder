@@ -1,4 +1,4 @@
-import * as courses from "../../Data/f2025.json";
+import * as courses from "../../Data/w2026.json";
 
 export async function onRequestPost(context) {
     // For a given courseSchedule = { courseCode: section }, grab corresponding data
