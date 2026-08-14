@@ -1,4 +1,4 @@
-﻿import { courseSchedule_key, schedules_key, semester_key, current_semester, last_semester } from "./js/config.js";
+import { courseSchedule_key, schedules_key, semester_key, current_semester, last_semester } from "./js/config.js";
 
 import { tutorial, startTutorial } from "./js/tutorial.js";
 window.tutorial = tutorial;
@@ -21,9 +21,19 @@ const loadingTimeout = setTimeout(() => {
 }, 750);
 
 // Object of courseCode: courseName
-window.courseList = await (await fetch("/courses", { method: "GET" })).json();
-// Array of "courseCode courseName"
-window.parsedCourseNames = Object.entries(window.courseList).map(c => c[0] + " " + c[1]).concat(["Complementary Courses"]);
+try {
+    window.courseList = await (await fetch("/courses", { method: "GET" })).json();
+
+    // Array of "courseCode courseName"
+    window.parsedCourseNames = Object.entries(window.courseList).map(c => c[0] + " " + c[1]).concat(["Complementary Courses"]);
+}
+catch (err) {
+    console.error(err);
+    window.courseList = {};
+
+    alert("There was an error fetching the course list. Please try again later.");
+}
+
 
 import "./js/schedule.js";
 import "./js/savedSchedules.js";
@@ -32,11 +42,11 @@ import "./js/export.js";
 
 await import("./js/search.js");
 
-String.prototype.safe = function() {
+String.prototype.safe = function () {
     return $("<div>").text(this).html();
 }
 Object.defineProperty(Object.prototype, "deepCopy", {
-    value: function() {
+    value: function () {
         return JSON.parse(JSON.stringify(this));
     },
     enumerable: false
@@ -118,7 +128,7 @@ async function startUp() {
         window.savedSchedules = [];
     }
 
-    if (Object.keys(window.courseSchedule)) {
+    if (Object.keys(window.courseSchedule).length) {
         // There are one or more courses already loaded
 
         const courses = await (await fetch("/course/schedule", {
@@ -146,9 +156,38 @@ async function startUp() {
         });
     }
 
-    // Check if first time user
-    if (localStorage.getItem("lucas/schedule/seenIntro") != "true") {
-        $("#intro-modal").modal("show");
+    // Handle developer message modal and intro modal
+    const getCookie = (name) => {
+        const nameEQ = name + "=";
+        const ca = document.cookie.split(';');
+        for (let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+    };
+
+    const showIntroModalIfNeeded = () => {
+        if (localStorage.getItem("lucas/schedule/seenIntro") != "true") {
+            $("#intro-modal").modal("show");
+        }
+    };
+
+    $("#dev-message-dismiss-7-btn").off("click.devMessage").on("click.devMessage", () => {
+        const date = new Date();
+        date.setTime(date.getTime() + (7 * 24 * 60 * 60 * 1000));
+        document.cookie = "dismiss_dev_message=true; expires=" + date.toUTCString() + "; path=/";
+    });
+
+    console.log(getCookie("dismiss_dev_message"));
+    if (getCookie("dismiss_dev_message") !== "true") {
+        $("#dev-message-modal").modal("show");
+        $("#dev-message-modal").one("hidden.bs.modal", () => {
+            showIntroModalIfNeeded();
+        });
+    } else {
+        showIntroModalIfNeeded();
     }
 
     // Check for "new" message
