@@ -1,3 +1,5 @@
+import dayjs from "dayjs";
+
 export async function onRequestPost({ request, env }) {
     const formData = await request.formData();
     const { name, email, type, feedback, "g-recaptcha-response": captcha } = Object.fromEntries(formData);
@@ -14,8 +16,8 @@ export async function onRequestPost({ request, env }) {
     if (captchaVerification.success) {
         // Save data to database
         await env.DB
-            .prepare("INSERT INTO Feedback (user_name, user_email, category, feedback) VALUES (?1, ?2, ?3, ?4)")
-            .bind(name, email, type, feedback)
+            .prepare("INSERT INTO Feedback (user_name, user_email, category, feedback, created_at) VALUES (?1, ?2, ?3, ?4, ?5)")
+            .bind(name, email, type, feedback, dayjs().format())
             .run();
 
         return new Response("ok");

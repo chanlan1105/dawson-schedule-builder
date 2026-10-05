@@ -30,3 +30,24 @@ https://dawson-schedule-builder.pages.dev/
 5. Save the schedule locally to edit it later within the web app, or export it to a .png image:
 
     ![](media/image4.png)
+
+# Running this project locally
+1. Clone this repo.
+
+2. Configure the necessary environment variables:
+    ```
+    CAPTCHA_SECRET=
+    ```
+    The secret can be obtained from the reCAPTCHA admin console.
+
+3. Sign in to `wrangler`:
+    ```
+    npx wrangler login
+    ```
+
+4. Use the `npm` script to run the project:
+    ```
+    npm run dev
+    ```
+
+5. Important: Open the page using `localhost`, not `127.0.0.1`, otherwise reCAPTCHA won't work properly!
